@@ -1,0 +1,10 @@
+site_name: Saiblo Wiki
+nav:
+- 首页: index.md
+- 用户手册: user.md
+- 游戏开发者手册: developer/developer.md
+- 游戏手册:
+    - 黑白棋: games/reversi.md
+use_directory_urls: false
+
+theme: readthedocs
