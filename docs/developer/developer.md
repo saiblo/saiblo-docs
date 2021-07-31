@@ -12,9 +12,7 @@
 
 ## 零、平台架构与游戏流程
 
-![](img/新架构.png)
-
-![](img/天梯启动游戏.png)
+![](img/saiblo-structure.png)
 
 ## 一、游戏逻辑
 
