@@ -1,0 +1,1376 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>游戏开发者手册 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              游戏开发者手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          游戏开发者手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="developer.html" class="md-nav__link md-nav__link--active">
+        游戏开发者手册
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    零、平台架构与游戏流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、游戏逻辑
+  </a>
+  
+    <nav class="md-nav" aria-label="一、游戏逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    通信流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    报文格式
+  </a>
+  
+    <nav class="md-nav" aria-label="报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger-4n" class="md-nav__link">
+    judger 向逻辑发包：\(4+n\) 格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-44n" class="md-nav__link">
+    逻辑向 judger 发包：\(4+4+n\) 格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    通信协议
+  </a>
+  
+    <nav class="md-nav" aria-label="通信协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger" class="md-nav__link">
+    judger 向逻辑发送初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_1" class="md-nav__link">
+    逻辑向 judger 发送回合配置信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_2" class="md-nav__link">
+    逻辑向 judger 发送正常回合消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai" class="md-nav__link">
+    逻辑请求 judger 直接将消息转发给指定 AI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_1" class="md-nav__link">
+    judger 向逻辑发送 AI 正常消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_2" class="md-nav__link">
+    judger 向逻辑发送 AI 异常消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_3" class="md-nav__link">
+    逻辑向 judger 发送游戏结束消息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    二、AI
+  </a>
+  
+    <nav class="md-nav" aria-label="二、AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    报文格式
+  </a>
+  
+    <nav class="md-nav" aria-label="报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_3" class="md-nav__link">
+    judger 向 AI 发包：不进行任何封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-judger-4n" class="md-nav__link">
+    AI 向 judger 发包：\(4+n\) 格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    通信协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-sdk" class="md-nav__link">
+    AI SDK
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    三、播放器
+  </a>
+  
+    <nav class="md-nav" aria-label="三、播放器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    与前端页面对接
+  </a>
+  
+    <nav class="md-nav" aria-label="与前端页面对接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    发送在线模式初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    发送离线模式初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    请求加载指定帧的回放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    请求加载下一帧的回放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    告知参与游戏的玩家名称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    告知回放文件的总帧数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    告知所需占用的页面高度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    与评测机对接
+  </a>
+  
+    <nav class="md-nav" aria-label="与评测机对接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    播放器请求进入房间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    播放器发送用户操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    评测机发送局面信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    评测机发送心跳包（可选）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        游戏手册
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games/reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    零、平台架构与游戏流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、游戏逻辑
+  </a>
+  
+    <nav class="md-nav" aria-label="一、游戏逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    通信流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    报文格式
+  </a>
+  
+    <nav class="md-nav" aria-label="报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger-4n" class="md-nav__link">
+    judger 向逻辑发包：\(4+n\) 格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-44n" class="md-nav__link">
+    逻辑向 judger 发包：\(4+4+n\) 格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    通信协议
+  </a>
+  
+    <nav class="md-nav" aria-label="通信协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger" class="md-nav__link">
+    judger 向逻辑发送初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_1" class="md-nav__link">
+    逻辑向 judger 发送回合配置信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_2" class="md-nav__link">
+    逻辑向 judger 发送正常回合消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai" class="md-nav__link">
+    逻辑请求 judger 直接将消息转发给指定 AI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_1" class="md-nav__link">
+    judger 向逻辑发送 AI 正常消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_2" class="md-nav__link">
+    judger 向逻辑发送 AI 异常消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#judger_3" class="md-nav__link">
+    逻辑向 judger 发送游戏结束消息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    二、AI
+  </a>
+  
+    <nav class="md-nav" aria-label="二、AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    报文格式
+  </a>
+  
+    <nav class="md-nav" aria-label="报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judger-ai_3" class="md-nav__link">
+    judger 向 AI 发包：不进行任何封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-judger-4n" class="md-nav__link">
+    AI 向 judger 发包：\(4+n\) 格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    通信协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-sdk" class="md-nav__link">
+    AI SDK
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    三、播放器
+  </a>
+  
+    <nav class="md-nav" aria-label="三、播放器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    与前端页面对接
+  </a>
+  
+    <nav class="md-nav" aria-label="与前端页面对接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    发送在线模式初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    发送离线模式初始化信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    请求加载指定帧的回放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    请求加载下一帧的回放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    告知参与游戏的玩家名称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    告知回放文件的总帧数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    告知所需占用的页面高度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    与评测机对接
+  </a>
+  
+    <nav class="md-nav" aria-label="与评测机对接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    播放器请求进入房间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    播放器发送用户操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    评测机发送局面信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    评测机发送心跳包（可选）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#_1">游戏开发手册</a><ul>
+<li><a href="#_2">零、平台架构与游戏流程</a></li>
+<li><a href="#_3">一、游戏逻辑</a><ul>
+<li><a href="#_4">通信流程</a></li>
+<li><a href="#_5">报文格式</a><ul>
+<li><a href="#judger-4n">judger 向逻辑发包：\(4+n\) 格式</a></li>
+<li><a href="#judger-44n">逻辑向 judger 发包：\(4+4+n\) 格式</a></li>
+</ul>
+</li>
+<li><a href="#_6">通信协议</a><ul>
+<li><a href="#judger">judger 向逻辑发送初始化信息</a></li>
+<li><a href="#judger_1">逻辑向 judger 发送回合配置信息</a></li>
+<li><a href="#judger_2">逻辑向 judger 发送正常回合消息</a></li>
+<li><a href="#judger-ai">逻辑请求 judger 直接将消息转发给指定 AI</a></li>
+<li><a href="#judger-ai_1">judger 向逻辑发送 AI 正常消息</a></li>
+<li><a href="#judger-ai_2">judger 向逻辑发送 AI 异常消息</a></li>
+<li><a href="#judger_3">逻辑向 judger 发送游戏结束消息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ai">二、AI</a><ul>
+<li><a href="#_7">报文格式</a><ul>
+<li><a href="#judger-ai_3">judger 向 AI 发包：不进行任何封装</a></li>
+<li><a href="#ai-judger-4n">AI 向 judger 发包：\(4+n\) 格式</a></li>
+</ul>
+</li>
+<li><a href="#_8">通信协议</a></li>
+<li><a href="#ai-sdk">AI SDK</a></li>
+</ul>
+</li>
+<li><a href="#_9">三、播放器</a><ul>
+<li><a href="#_10">与前端页面对接</a><ul>
+<li><a href="#_11">发送在线模式初始化信息</a></li>
+<li><a href="#_12">发送离线模式初始化信息</a></li>
+<li><a href="#_13">请求加载指定帧的回放</a></li>
+<li><a href="#_14">请求加载下一帧的回放</a></li>
+<li><a href="#_15">告知参与游戏的玩家名称</a></li>
+<li><a href="#_16">告知回放文件的总帧数</a></li>
+<li><a href="#_17">告知所需占用的页面高度</a></li>
+</ul>
+</li>
+<li><a href="#_18">与评测机对接</a><ul>
+<li><a href="#_19">播放器请求进入房间</a></li>
+<li><a href="#_20">播放器发送用户操作</a></li>
+<li><a href="#_21">评测机发送局面信息</a></li>
+<li><a href="#_22">评测机发送心跳包（可选）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="_1">游戏开发手册</h1>
+<p>游戏开发者向平台方提供的完整游戏应包括如下内容：</p>
+<ul>
+<li>游戏逻辑和逻辑说明文档</li>
+<li>AI SDK 和 SDK 说明文档</li>
+<li>播放器和播放器说明文档</li>
+</ul>
+<p>游戏逻辑、AI 和播放器都有模板样例，游戏开发者可以向平台管理员申请获取。</p>
+<h2 id="_2">零、平台架构与游戏流程</h2>
+<p><img alt="" src="img/saiblo-structure.png" /></p>
+<h2 id="_3">一、游戏逻辑</h2>
+<p>游戏逻辑方应提供给评测端：一份可部署、没有异常的游戏逻辑代码。</p>
+<p>游戏逻辑方应提供给网站：面向用户的逻辑说明文档。</p>
+<p>游戏逻辑由 judger 启动进程，并通过标准输入输出与 judger 进行通信。</p>
+<h3 id="_4">通信流程</h3>
+<ol>
+<li>judger 在启动游戏逻辑后，向游戏逻辑发送初始化信息。</li>
+<li>judger 和游戏逻辑开始交互，交互类型分为以下几种：<ul>
+<li>游戏逻辑向 judger 发送各种消息，judger 需要进行解析与处理；</li>
+<li>游戏逻辑请求 judger 直接将消息<strong>原封不动地</strong>转发给AI；</li>
+<li>judger 将 AI 发送的消息<strong>封装后</strong>转发给游戏逻辑；</li>
+<li>judger 将 AI 的异常情况报告给游戏逻辑。</li>
+</ul>
+</li>
+<li>游戏逻辑向 judger 提供玩家得分，并报告游戏结束。<strong>在游戏逻辑发送结束消息之前，请务必确保所有操作（尤其是 IO 操作，如写入回放文件）已经完成。</strong></li>
+</ol>
+<h3 id="_5">报文格式</h3>
+<p>由于游戏逻辑与 judger 之间使用标准输入输出进行通信，约定好一个标准的报文格式以区分报文的开头和结尾非常重要。</p>
+<h4 id="judger-4n">judger 向逻辑发包：<span class="arithmatex">\(4+n\)</span> 格式</h4>
+<p>数据包的包头为 <span class="arithmatex">\(4\)</span> 个字节表示的数据包长度 <span class="arithmatex">\(n\)</span>，字节序为大端序，随后发送数据包正文。</p>
+<h4 id="judger-44n">逻辑向 judger 发包：<span class="arithmatex">\(4+4+n\)</span> 格式</h4>
+<p>数据包的包头由 <span class="arithmatex">\(8\)</span> 个字节组成，前 <span class="arithmatex">\(4\)</span> 个字节为大端序表示的数据包正文长度 <span class="arithmatex">\(n\)</span>，后 <span class="arithmatex">\(4\)</span> 个字节为大端序表示的发送目标。当发送目标为 <span class="arithmatex">\(-1\)</span> 的时候表示该消息需要 judger 进行解析，当发送目标不为 <span class="arithmatex">\(-1\)</span> 的时候表示要转发给的 AI 的编号。</p>
+<p><span class="arithmatex">\(8\)</span> 个字节的包头发送完成后，随后发送数据包正文。</p>
+<h3 id="_6">通信协议</h3>
+<h4 id="judger">judger 向逻辑发送初始化信息</h4>
+<p>在 judger 启动游戏逻辑后，会向逻辑发送 JSON 格式的初始化信息。示例如下：</p>
+<pre><code class="language-json">{
+    &quot;player_list&quot;: [1, 0, 2],
+    &quot;player_num&quot;: 3,
+    &quot;config&quot;: &quot;OMG&quot;,
+    &quot;replay&quot;: &quot;usr/bin/replay.json&quot;
+}
+</code></pre>
+<p><strong>player_list : number[]</strong></p>
+<p>按照玩家编号顺序表示的玩家类型。0 表示未正常启动，1 表示本地 AI，2 表示网页播放器。</p>
+<p><strong>player_num : number</strong></p>
+<p>表示玩家数量。与<code>player_list</code>列表长度一致。</p>
+<p>上例表示游戏一共有 3 名玩家，其中 0 号玩家为本地 AI，1 号玩家未正常启动，2 号玩家使用了网页播放器。</p>
+<p><strong>config : string : deprecated</strong></p>
+<p>废弃的字段。</p>
+<p><strong>replay : string</strong></p>
+<p>表示如果游戏逻辑带有录像文件，则应当写到该路径下。</p>
+<h4 id="judger_1">逻辑向 judger 发送回合配置信息</h4>
+<p>在 <span class="arithmatex">\(4+4+n\)</span> 的报文格式中，第二个 <span class="arithmatex">\(4\)</span>（即发送目标）的取值为 <span class="arithmatex">\(-1\)</span>。</p>
+<p>游戏进行过程中，逻辑可以向 judger 发送关于限制 AI 运行的配置信息。示例如下：</p>
+<pre><code class="language-json">{
+    &quot;state&quot;: 0,
+    &quot;time&quot;: 3,
+    &quot;length&quot;: 1024
+}
+</code></pre>
+<p><strong>time : number</strong></p>
+<p>表示该回合 AI 最长可运行的时间，单位为秒。</p>
+<p><strong>length : number</strong></p>
+<p>表示该回合可以接受的 AI 单条消息正文的最大长度，单位为字节。</p>
+<p>judger 如果未收到此类设置，则默认时间限制为 3s，最大长度为 2048 字节。</p>
+<h4 id="judger_2">逻辑向 judger 发送正常回合消息</h4>
+<p>在 <span class="arithmatex">\(4+4+n\)</span> 的报文格式中，第二个 <span class="arithmatex">\(4\)</span>（即发送目标）的取值为 <span class="arithmatex">\(-1\)</span>。</p>
+<p>游戏进行过程中，逻辑可以向 judger 发送消息，以表示当前需要 judger 进行的操作。示例如下：</p>
+<pre><code class="language-JSON">{
+    &quot;state&quot;: 233,
+    &quot;listen&quot;: [0],
+    &quot;player&quot;: [0, 1],
+    &quot;content&quot;: [&quot;&lt;消息0&gt;&quot;, &quot;&lt;消息1&gt;&quot;]
+}
+</code></pre>
+<p><strong>state : number</strong></p>
+<p>一个<strong>正数</strong>，表示当前的回合数。</p>
+<p><strong>listen : number[]</strong></p>
+<p>表示本回合需要 judger 监听消息的 AI 序号。可以为空。</p>
+<p>judger 允许在同一回合中同时监听多个 AI，<strong>但在实际操作中并不建议这样做，因为这会为玩家超时的异常处理带来困扰。</strong></p>
+<p><strong>player : number[]</strong></p>
+<p>表示本回合需要 judger 发送消息的 AI 序号，与<code>content</code>字段一一对应。可以为空。</p>
+<p><strong>content : string[]</strong></p>
+<p>表示本回合需要 judger 向 AI 发送的具体消息内容，AI 的编号与<code>player</code>字段一一对应。可以为空。</p>
+<p>注意 judger 会将消息内容<strong>原封不动</strong>地转发给对应的 AI，<strong>不会加上任何附加内容</strong>。比如如果 &lt;消息0&gt; 为<code>aglove</code>，那么 0 号 AI 也只会收到<strong>原封不动</strong>的<code>aglove</code>。</p>
+<p>逻辑与 judger 的通信协议对于消息内容的格式没有任何要求，游戏开发方需自行制定游戏逻辑和 AI 的通信协议。</p>
+<p>上例表示当前回合是 233 回合，向 0 号 AI 发送 &lt;消息0&gt;，向 1 号 AI 发送 &lt;消息1&gt;，本回合只接收 0 号 AI 的消息。</p>
+<blockquote>
+<p>judger 视角下回合数的概念和游戏逻辑对于回合数的一般概念并不一致。它更像是一种发起计时的标志，因为 judger 一旦发现<code>state</code>的数值增加，它就会立刻对<code>listen</code>字段中的所有 AI 重新开始计时。</p>
+<p>事实上，如果 judger 两次收到的正常回合消息中，<code>state</code>字段的数值并未发生改变，那么在 judger 第二次收到该正常回合消息时，并不会重置计时。逻辑开发者可以利用这一特性在同一计时回合中多次进行消息广播。</p>
+</blockquote>
+<h4 id="judger-ai">逻辑请求 judger 直接将消息转发给指定 AI</h4>
+<p>在 <span class="arithmatex">\(4+4+n\)</span> 的报文格式中，第二个 <span class="arithmatex">\(4\)</span>（即发送目标）的取值为需要发送给的 AI 编号。</p>
+<p>逻辑与 judger 的通信协议对于 <span class="arithmatex">\(4+4+n\)</span> 中 <span class="arithmatex">\(n\)</span> 的格式没有任何要求，游戏开发方需自行制定游戏逻辑和 AI 的通信协议。</p>
+<p><strong>注意：该事件不会进行任何计时的重置，也不会更新计时回合。</strong></p>
+<h4 id="judger-ai_1">judger 向逻辑发送 AI 正常消息</h4>
+<p>当 judger 收到监听列表中的 AI 发来的消息时，会将其转发给逻辑。格式示例如下：</p>
+<pre><code class="language-JSON">{
+    &quot;player&quot;: 0,
+    &quot;content&quot;: &quot;&lt;消息0&gt;&quot;,
+    &quot;time&quot;: 2785
+}
+</code></pre>
+<p><strong>player : number</strong></p>
+<p>非负整数，表示发送消息的 AI 编号。</p>
+<p><strong>content : string</strong></p>
+<p>表示发送的具体消息内容。</p>
+<p><strong>time : number : experimental</strong></p>
+<p>表示当前回合当前 AI 用时的毫秒数。</p>
+<p>上例表示 0 号 AI 发送了 &lt;消息0&gt;，且从回合开始计时到消息发送时，0 号 AI 总计用时 2785 毫秒。</p>
+<h4 id="judger-ai_2">judger 向逻辑发送 AI 异常消息</h4>
+<p>当 judger 监听列表中的某个 AI 超时或发生错误时，会将这一事件告知逻辑。通信格式示例如下：</p>
+<pre><code class="language-json">{
+    &quot;player&quot;: -1,
+    &quot;content&quot;: &quot;&lt;来自 judger 的消息&gt;&quot;
+}
+</code></pre>
+<p><strong>content : string</strong></p>
+<p>一个 JSON <strong>字符串</strong>，反序列化后表示具体的异常内容，格式如下：</p>
+<pre><code class="language-JSON">{
+   player,
+   state,
+   error,
+   error_log
+}
+</code></pre>
+<p><strong>player : number</strong></p>
+<p>非负整数，表示发生异常的 AI 编号。</p>
+<p><strong>state : number</strong></p>
+<p>正整数，表示 AI 发生的异常所对应的回合数。例如超时异常的<code>state</code>就表示计时结束的回合数。</p>
+<p><strong>error : number</strong></p>
+<p>数字表示的错误类型。</p>
+<ul>
+<li>0: runError</li>
+<li>1: timeOutError</li>
+<li>2: outputLimitError</li>
+</ul>
+<p><strong>error_log : string</strong></p>
+<p>字符串表示的错误类型，与上表对应。</p>
+<h4 id="judger_3">逻辑向 judger 发送游戏结束消息</h4>
+<p>在 <span class="arithmatex">\(4+4+n\)</span> 的报文格式中，第二个 <span class="arithmatex">\(4\)</span>（即发送目标）的取值为 <span class="arithmatex">\(-1\)</span>。</p>
+<p>当游戏结束、逻辑完成其他收尾工作后，逻辑需向 judger 发送游戏结束消息，并告知各玩家的分数。示例如下：</p>
+<pre><code class="language-JSON">{
+    &quot;state&quot;: -1, 
+    &quot;end_info&quot;: &quot;{\&quot;0\&quot;: 0, \&quot;1\&quot;: 1}&quot;
+}
+</code></pre>
+<p><strong>end_info : string</strong></p>
+<p>一个 JSON <strong>字符串</strong>，反序列化后表示各玩家的分数，格式如下：</p>
+<pre><code class="language-JSON">{
+    &quot;0&quot;: &lt;score0&gt;,
+    &quot;1&quot;: &lt;score1&gt;,
+    &quot;2&quot;: &lt;score2&gt;,
+    &quot;3&quot;: &lt;score3&gt;,
+    &quot;4&quot;: &lt;score4&gt;
+}
+</code></pre>
+<p><code>score[0-4]</code>分别为数值表示的 0 号玩家到 4 号玩家的分数。</p>
+<p><strong>由于历史遗留原因，请务必确保逻辑传给 judger 的<code>end_info</code>中，各字段按照玩家编号升序排列。</strong></p>
+<h2 id="ai">二、AI</h2>
+<p>游戏逻辑方应提供给网站：AI SDK，面向用户的 AI SDK 说明文档。最好能够提供一份样例 AI。</p>
+<h3 id="_7">报文格式</h3>
+<h4 id="judger-ai_3">judger 向 AI 发包：不进行任何封装</h4>
+<p>judger 会将逻辑通过<code>逻辑向 judger 发送正常回合消息</code>和<code>逻辑请求 judger 直接将消息转发给指定 AI</code>发来的消息<strong>原封不动</strong>地转发给指定 AI。</p>
+<h4 id="ai-judger-4n">AI 向 judger 发包：<span class="arithmatex">\(4+n\)</span> 格式</h4>
+<p>数据包的包头为 <span class="arithmatex">\(4\)</span> 个字节表示的数据包长度 <span class="arithmatex">\(n\)</span>，字节序为大端序，随后发送数据包正文。</p>
+<h3 id="_8">通信协议</h3>
+<p>游戏逻辑和 AI 的通信协议由游戏开发方制定。judger 对二者进行的消息传输只起到转发功能，<strong>游戏逻辑有义务对 AI 发来的消息进行检查和处理</strong>。</p>
+<h3 id="ai-sdk">AI SDK</h3>
+<p>从事 AI 开发的选手不应关心上述细节，因此游戏开发方在交付游戏时，必须配备封装好基本通信实现的 AI SDK。</p>
+<p>此外，选手也不需要关心游戏开发方制定的逻辑与 AI 的通信协议，因此游戏开发方也应对这一部分进行封装，以方便选手开发。</p>
+<p>平台方提供的 AI 模板中已经给出封装好通信部分的基础 AI SDK。游戏开发方可在此基础上添加对于自己制定的通信协议的封装，也可以加入一些易于使用的函数，方便选手使用。</p>
+<h2 id="_9">三、播放器</h2>
+<p>播放器是指让人类可以在图形化界面下观看对局回放以及与游戏逻辑进行交互的网页程序。网站提供了播放器的连接接口。</p>
+<p>为方便描述，以下用<strong>离线模式</strong>代指观看对局回放的模式，用<strong>在线模式</strong>代指与游戏逻辑进行交互的模式。</p>
+<p>播放器开发者在实现播放器自身的功能之外，还应处理播放器与网站的对接环节，其中分为与前端页面的对接和与评测机的对接。</p>
+<table>
+<thead>
+<tr>
+<th align="center">模式</th>
+<th align="center">与前端页面对接</th>
+<th align="center">与评测机对接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">离线模式</td>
+<td align="center">需要实现</td>
+<td align="center">不需要实现</td>
+</tr>
+<tr>
+<td align="center">在线模式</td>
+<td align="center">需要实现</td>
+<td align="center">需要实现</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">与前端页面对接</h3>
+<p>网页使用 iframe 加载游戏播放器的<code>html</code>文件，并通过传递消息的方式与游戏播放器进行必要的通讯。在一场游戏中，游戏播放器与前端页面可能有如下通信：</p>
+<ul>
+<li>[网→播] 发送在线模式初始化信息</li>
+<li>[网→播] 发送离线模式初始化信息</li>
+<li>[网→播] 请求加载指定帧的回放</li>
+<li>[网→播] 请求加载下一帧的回放</li>
+<li>[网→播] 告知参与游戏的玩家名称</li>
+<li>[播→网] 告知回放文件的总帧数</li>
+<li>[播→网] 告知所需占用的页面高度</li>
+</ul>
+<p>如无特殊说明，通信的数据均为<code>json</code>格式。</p>
+<h4 id="_11">发送在线模式初始化信息</h4>
+<p>通信方向：前端页面→播放器</p>
+<p>通信时机：玩家以人类身份进入在线房间后，点击“准备”按钮时</p>
+<p>通信内容：<code>Base64</code>编码的令牌</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;init_player_player&quot;,
+    &quot;token&quot;: tokenB64
+}
+</code></pre>
+<h4 id="_12">发送离线模式初始化信息</h4>
+<p>通信方向：前端页面→播放器</p>
+<p>通信时机：对局详情回放页加载成功时</p>
+<p>通信内容：表示回放文件的<code>Blob</code>对象，可用<code>FileReader</code>解析</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;init_replay_player&quot;,
+    &quot;replay_data&quot;: replayBlob
+}
+</code></pre>
+<p><strong>注意：网页向播放器发送离线模式初始化信息后，播放器应随即加载首帧回放，因为网页不会再发送加载首帧的请求。</strong></p>
+<h4 id="_13">请求加载指定帧的回放</h4>
+<p>通信方向：前端页面→播放器</p>
+<p>通信时机：用户在对局详情回放页点击上一帧或重新播放按钮时</p>
+<p>通信内容：需加载的帧序号</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;load_frame&quot;,
+    &quot;index&quot;: replayIndex
+}
+</code></pre>
+<h4 id="_14">请求加载下一帧的回放</h4>
+<p>通信方向：前端页面→播放器</p>
+<p>通信时机：用户在对局详情回放页点击下一帧按钮时</p>
+<p>通信内容：仅告知需要加载下一帧</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;load_next_frame&quot;
+}
+</code></pre>
+<h4 id="_15">告知参与游戏的玩家名称</h4>
+<p>通信方向：前端页面→播放器</p>
+<p>通信时机：在线或离线模式下，网页准备就绪并加载完成时</p>
+<p>通信内容：参与游戏的玩家名称列表</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;load_players&quot;,
+    &quot;players&quot;: [&quot;player&quot;, &quot;player&quot;, &quot;player 的 Sample(1)&quot;, &quot;player 的 Sample(1)&quot;]
+}
+</code></pre>
+<h4 id="_16">告知回放文件的总帧数</h4>
+<p>通信方向：播放器→前端页面</p>
+<p>通信时机：播放器完成对回放文件的解析时</p>
+<p>通信内容：回放文件的总帧数</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;init_successfully&quot;,
+    &quot;number_of_frames&quot;: numberOfFrames
+}
+</code></pre>
+<h4 id="_17">告知所需占用的页面高度</h4>
+<p>通信方向：播放器→前端页面</p>
+<p>通信时机：在线或离线模式下，播放器画面加载完成，或因为各种原因高度改变时</p>
+<p>通信内容：播放器所需占用的页面高度</p>
+<p>通信格式：</p>
+<pre><code class="language-javascript">{
+    &quot;message&quot;: &quot;resized&quot;,
+    &quot;height&quot;: height
+}
+</code></pre>
+<h3 id="_18">与评测机对接</h3>
+<p>用户在网站上以人类玩家的身份加入一个房间后，即可接入一个对局，并由人类进行游戏操作。在这之中，播放器与评测机会有如下的远程通信：</p>
+<ul>
+<li>
+<p>播放器请求进入房间（连接服务器）</p>
+</li>
+<li>
+<p>播放器发送用户的操作信息</p>
+</li>
+<li>
+<p>评测机发送游戏的局面信息</p>
+</li>
+<li>
+<p>评测机发送用于计时的心跳包（可选）</p>
+</li>
+</ul>
+<p>如无特殊说明，通信的数据均为<code>json</code>格式。</p>
+<h4 id="_19">播放器请求进入房间</h4>
+<p>根据<code>与前端页面对接</code>一节的描述，播放器将从前端页面取得一个<code>Base64</code>编码的令牌，在这里记为<code>tokenB64</code>。</p>
+<p>对其解码，令<code>token = atob(tokenB64)</code>，你将得到一个人类可读的字符串。该字符串按如下规则生成：</p>
+<pre><code class="language-javascript">token = JUDGER_BASE_URL + &quot;/&quot; + ROOM_ID + &quot;/&quot; + USER_NAME + &quot;/&quot; + SEAT
+</code></pre>
+<p>其中，<code>JUDGER_BASE_URL</code>为评测机服务器的地址，<code>ROOM_ID</code>为房间编号，<code>USER_NAME</code>为播放器用户的用户名，<code>SEAT</code>为该播放器对应在房间中的座位号。</p>
+<p>根据该<code>token</code>，播放器应作为客户端与<code>wss://token</code>建立<code>websocket</code>连接，例如：<code>wss://ares.judge.saiblo.net/human/8/Aglove/1</code>，这表明一个用户名为<code>Aglove</code>的用户在房间<code>8</code>的位置<code>1</code>。</p>
+<p>在播放器成功与评测机建立连接后，应向评测机发送如下消息：</p>
+<pre><code class="language-javascript">{
+    request: &quot;connect&quot;,
+    token: tokenB64
+}
+</code></pre>
+<h4 id="_20">播放器发送用户操作</h4>
+<p>播放器在用户进行操作后需要将操作信息发送给房间，格式如下：</p>
+<pre><code class="language-javascript">{
+    request: &quot;action&quot;,
+    token: tokenB64,
+    content: content
+}
+</code></pre>
+<p>其中<code>content</code>为播放器需要发送给游戏逻辑的回合信息，它应当是一个字符串，房间会将<code>content</code>原封不动地转发给游戏逻辑。<code>content</code>的内容应与游戏逻辑进行约定。</p>
+<h4 id="_21">评测机发送局面信息</h4>
+<p>当游戏逻辑出现了新的信息，需要发送给播放器时，评测机会发送如下信息：</p>
+<pre><code class="language-javascript">{
+    request: &quot;action&quot;,
+    content: content
+}
+</code></pre>
+<p>其中，<code>content</code>为游戏逻辑发送给播放器的局面信息，它是一个字符串。<code>content</code>的内容应与游戏逻辑进行约定。</p>
+<h4 id="_22">评测机发送心跳包（可选）</h4>
+<p>游戏部署方可以选择是否为播放器提供计时接口。</p>
+<p>若评测机为播放器提供计时接口，评测机会每5s向播放器发送一次心跳包，内容如下：</p>
+<pre><code class="language-javascript">{
+    request: &quot;time&quot;,
+    content: remain_time
+}
+</code></pre>
+<p>其中<code>remain_time</code>表示评测机认为该玩家距离该回合超时的剩余时间，以毫秒为单位。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../user.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 用户手册" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              用户手册
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../games/reversi.html" class="md-footer__link md-footer__link--next" aria-label="Next: 黑白棋" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              黑白棋
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+        <script src="../config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
