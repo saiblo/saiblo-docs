@@ -1,10 +1,12 @@
 site_name: Saiblo Wiki
 nav:
 - 首页: index.md
-- 用户手册: user.md
+- 用户手册: user/user.md
+- AI 编写手册: ai/ai.md
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
+    - 贪吃蛇围棋: games/snake-go.md
 use_directory_urls: false
 
 markdown_extensions:
