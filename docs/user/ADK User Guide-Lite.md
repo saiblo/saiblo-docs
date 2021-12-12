@@ -36,8 +36,8 @@
 - `id: int` 蛇的编号。
 - `length_bank: int` 长度银行中保存的长度。
 - `camp: int` 蛇归属于玩家0/1。
-- `get_len(self) -> int ` 返回当前蛇的长度
-- `get_coor(self) -> List[Tuple[int, int]]`：返回当前蛇从头到尾坐标构成的列表
+- `get_len() -> int ` 返回当前蛇的长度
+- `get_coor() -> List[Tuple[int, int]]`：返回当前蛇从头到尾坐标构成的列表
 
 更多成员可见`adk.py`或进阶版指南，它们在编写AI时并不必要。
 
@@ -59,7 +59,7 @@
 - `game_map: Map` 现在的游戏地图，为自定义类`Map`，具体内容见后。
 - `turn: int` 当前回合数
 - `current_player: int` 当前玩家编号
-- `get_map(self) -> Map` 返回当前地图
+- `get_map() -> Map` 返回当前地图
 - `get_snake_count(camp: int) -> int` 返回当前`camp`选手蛇的数量
 - `get_snake(id: int) -> Snake` 返回当前编号为id的蛇
 
@@ -73,7 +73,7 @@
 - `item_list: List[Item]`现存所有道具的列表
 - `length: int` 地图长度
 - `width: int` 地图宽度
-- `get_map_item(self, id: int) -> Item` 返回当前编号为id的道具
+- `get_map_item(id: int) -> Item` 返回当前编号为id的道具
 
 其中，各个地图二维数组的第一维代表`x`坐标，第二维代表`y`坐标，从`0`开始。
 
