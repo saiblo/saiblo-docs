@@ -11,7 +11,7 @@
 ### 输入数据
 
 1. **（游戏配置）** 第一行为四个整数，分别代表
-    
+   
     1. 场地长度
     2. 场地宽度
     3. 总回合数
@@ -354,8 +354,8 @@ client << a_int;
 - `max_round: int` 最大回合数
 - `__init__(self, config: GameConfig)`  根据游戏配置初始化上下文，并将初始两条蛇加入`snake_list`
 - `get_map(self) -> Map` 返回当前地图
-- `get_snake_count(camp: int) -> int` 返回当前`camp`选手蛇的数量
-- `get_snake(id: int) -> Snake` 返回当前编号为id的蛇
+- `get_snake_count(self, camp: int) -> int` 返回当前`camp`选手蛇的数量
+- `get_snake(self, id: int) -> Snake` 返回当前编号为id的蛇
 - `add_snake(self, snake:Snake, index: int)` 在`snake_list`下标为`index`处插入新蛇，并加入地图中
 - `delete_snake(self, id: int) -> int` 删除编号为`id`的蛇
 
@@ -403,7 +403,7 @@ client << a_int;
 
 - `find_first_snake(self) -> int` 查询初始的蛇（用于处理自动增长）
 
-- `find_next_snake -> int` 返回下一条需操作的蛇在`current_snake_list`数组中的编号 
+- `find_next_snake(self) -> int` 返回下一条需操作的蛇在`current_snake_list`数组中的编号 
 
 - `next_player(self) -> int` 切换到下一个玩家
 
