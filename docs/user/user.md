@@ -99,3 +99,66 @@
 你在“AI”一栏所派遣的AI会自动参加到全局排名中。Saiblo会自动将其与其他AI进行对局，并且计算出分数。在游戏内点击“全局排行榜”一栏可以查看各个AI的成绩。你可以在其中得知自己AI的排名。
 
 ![image-20211207173710222](img/image-20211207173710222.png)
+
+## 附录：AI的语言与编译指令
+
+目前，Saiblo 网站支持三种编程语言：`C,C++,Python`，以及六种 AI 文件上传的格式：
+
+- C [.c]：提交单文件，以 .c 为后缀的 C 语言代码，默认的编译命令为：
+
+```bash
+gcc main.c -o main -O2 -std=c11 -DONLINE_JUDGE
+```
+
+- C++ [.cpp]：提交单文件，以 .cpp 为后缀的 C++ 语言代码，默认的编译命令为：
+
+```bash
+g++ main.cpp -o main -O2 -std=c++17 -DONLINE_JUDGE
+```
+
+- C++ with Makefile [.zip]：提交一个 .zip 压缩包，**包含 Makefile（或者 makefile）文件**。假设用户提交的 `zip` 文件为 `source.zip`，那么我们会按照如下命令进行编译：
+
+```bash
+unzip source.zip && cd source
+make
+```
+
+编译完成后应在根目录下生成一名字为 `main` 的可执行文件。如果没有 `main` 可执行文件，则会判为编译失败。
+
+编译成功后的一个样例文件结构可能是：
+
+```text
+source
+├── Makefile
+├── ai_sdk.cpp
+├── main
+└── main.cpp
+```
+
+- C++ with CMake [.zip]：提交一个 .zip 压缩包，**包含`CMakeLists.txt`**。假设用户提交的 `zip` 文件为 `source.zip`，那么我们将会按照如下命令进行编译：
+
+```bash
+unzip source.zip && cd source
+cmake .
+make
+```
+
+编译完毕后应在 `bin` 目录下生成一名字为 `main` 的可执行文件。如果没有 `bin` 目录，或没有 `main` 可执行文件，则会判为编译失败。
+
+编译成功后的一个样例文件结构可能是：
+
+```text
+source
+├── CMakeLists.txt
+├── Makefile
+├── bin
+│   └── main
+├── include
+│   └── ai_sdk.h
+└── src
+    └── main.cpp
+```
+
+- Python [.py]：提交单文件，以 .py 为后缀的 Python 语言代码。
+- Python [.zip]：提交一个 .zip 压缩包，包含若干 .py 文件。压缩包的根目录下应包含 `main.py`，我们将会启动这个脚本进行交互。如果没有 `main.py`，将会被判为编译失败。
+
