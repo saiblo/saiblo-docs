@@ -6,7 +6,10 @@ nav:
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
-    - 贪吃蛇围棋: games/snake-go.md
+    - 贪吃蛇围棋:
+        - 游戏说明: games/snake-go/snake-go.md
+        - AI 编写说明 (Lite): games/snake-go/adk-lite.md
+        - AI 编写说明 (Advanced): games/snake-go/adk-advanced.md
 use_directory_urls: false
 
 markdown_extensions:
