@@ -11,6 +11,7 @@ nav:
         - 游戏规则: games/aquawar/rules.md
         - SDK手册: games/aquawar/sdk.md
         - 通讯协议: games/aquawar/communication.md
+    - 抢金蛋: games/eggs.md
     - 贪吃蛇围棋:
         - 游戏说明: games/snake-go/snake-go.md
         - AI 编写说明 (Lite): games/snake-go/adk-lite.md
