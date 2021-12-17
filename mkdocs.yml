@@ -12,6 +12,15 @@ nav:
         - SDK手册: games/aquawar/sdk.md
         - 通讯协议: games/aquawar/communication.md
     - 抢金蛋: games/eggs.md
+    - 失落深空:
+        - 游戏简介: games/lostspace/lostspace.md
+        - 游戏规则: games/lostspace/rules.md
+        - 通讯协议: games/lostspace/communication.md
+        - C++ AI 快速上手文档: games/lostspace/cpp-quick-start.md
+        - Python AI 快速上手文档: games/lostspace/py-quick-start.md
+        - C++ AI SDK 文档: games/lostspace/cpp-sdk.md
+        - Python AI SDK 文档: games/lostspace/py-sdk.md
+        - 回放文件格式说明: games/lostspace/replay.md
     - 贪吃蛇围棋:
         - 游戏说明: games/snake-go/snake-go.md
         - AI 编写说明 (Lite): games/snake-go/adk-lite.md
