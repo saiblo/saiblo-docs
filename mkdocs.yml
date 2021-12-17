@@ -6,6 +6,11 @@ nav:
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
+    - 鱼洋陷役:
+        - 快速入门: games/aquawar/aquawar.md
+        - 游戏规则: games/aquawar/rules.md
+        - SDK手册: games/aquawar/sdk.md
+        - 通讯协议: games/aquawar/communication.md
     - 贪吃蛇围棋:
         - 游戏说明: games/snake-go/snake-go.md
         - AI 编写说明 (Lite): games/snake-go/adk-lite.md
