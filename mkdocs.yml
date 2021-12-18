@@ -6,6 +6,12 @@ nav:
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
+    - 四子棋: games/connect4.md
+    - 神迹之战:
+        - 游戏介绍: games/miracle/miracle.md
+        - 通讯协议: games/miracle/communicate.md
+        - SDK 文档: games/miracle/sdk.md
+        - 游戏逻辑文档: games/miracle/logic.md
     - 鱼洋陷役:
         - 快速入门: games/aquawar/aquawar.md
         - 游戏规则: games/aquawar/rules.md
