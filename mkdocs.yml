@@ -32,10 +32,6 @@ nav:
         - 游戏规则: games/mahjong/rules.md
         - SDK 文档: games/mahjong/sdk.md
         - 播放器使用说明: games/mahjong/player.md
-    - 贪吃蛇围棋:
-        - 游戏说明: games/snake-go/snake-go.md
-        - AI 编写说明 (Lite): games/snake-go/adk-lite.md
-        - AI 编写说明 (Advanced): games/snake-go/adk-advanced.md
 use_directory_urls: false
 
 markdown_extensions:
