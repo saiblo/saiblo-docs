@@ -139,7 +139,7 @@ source
 
 ```bash
 unzip source.zip && cd source
-cmake .
+cmake -DONLINE_JUDGE=true .
 make
 ```
 
