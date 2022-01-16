@@ -36,6 +36,9 @@ nav:
         - 详细规则及边界情况: games/snake-go/snake-go.md
         - AI 编写说明 (Lite): games/snake-go/adk-lite.md
         - AI 编写说明 (Advanced): games/snake-go/adk-advanced.md
+        - C++ ADK 用户说明: games/snake-go/cpp-guide.md
+        - 通讯协议: games/snake-go/ai-protocol.md
+        - 回放文件格式简介: games/snake-go/replay-guide.md
 use_directory_urls: false
 
 markdown_extensions:
