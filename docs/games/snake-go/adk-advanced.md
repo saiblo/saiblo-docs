@@ -2,7 +2,49 @@
 
 > 建议在阅读本进阶版指南前，首先阅读Lite版指南。
 
-[TOC]
+[toc]
+## 通讯部分
+本ADK按照AI与逻辑之间的通讯协议（见`AI-Protocol.md`)提供了数据的收发功能，具体实现于`Client`类中。
+### 初始化客户端
+```python
+c = adk.Client()
+```
+客户端初始化时，会检查运行时指定的命令行参数，判断是否使用`Socket`与本地调试工具进行连接，具体参数为`--local/-l --port=/-p=`，第二个参数等号后接指定端口号；若不带参数则默认使用`stdio`与评测机进行交互。
+### 接收数据
+`Client`类中的`fetch_data`方法用于从评测机接收数据，根据当前所处状态读取所需数据，状态与数据的对应如下：
+- 状态`__state__ = 0`: 此时接收的数据是游戏对局的配置信息，返回四个整数，包括地图长宽、回合上限、当前玩家编号
+- 状态`__state__ = 1`: 此时接收的数据是游戏生成的道具列表，返回一个`Item`类的列表，类型内容见下。
+- 状态`__state__ = 2`: 此时进入游戏进行阶段，接收的数据为己方、本方的操作或是游戏结束信息，当前为玩家回合时，待玩家发送操作后若正常则会重新发回该操作，否则会接收到游戏结束信息；对手回合则可获取对手操作或是游戏结束信息。正常操作会返回只含一个整数的列表，而错误信息则会返回含五个整数的列表，以-1开头，之后分别为错误类型、获胜玩家、双方得分。
+
+状态的切换无需由玩家手动进行，第一次调用该方法获取配置信息后自动切换至状态1，再一次调用获取道具列表后自动进入状态2。
+
+### 发送数据
+`Client`类中的`send_data`方法用于向评测机发送数据，即当前蛇的操作。需要一个类型为整数的参数，代表当前操作的编号。若该参数不为1~6中的整数，该函数会发出异常。
+
+### 交互流程
+总体客户端的交互流程如下：
+```python
+    c = Client()                                         # 初始化客户端
+    (length, width, max_round, player) = c.fetch_data()  # 获取游戏配置信息
+    item_list = c.fetch_data()                           # 获取道具列表
+    while PLAYING:                                       # 游戏进行
+        if OVER_MAX_ROUND:                               # 到达回合上限
+            RESULT = c.fetch_data()                      # 接收正常游戏结束信息
+            break
+        if PLAYER_TURN:                                  # 当前为玩家回合
+            while NEXT_SNAKE_EXISTS:                     # 还有未进行操作的蛇
+                c.send_data(OPERATION)                   # 发送操作
+                RESULT = c.fetch_data()                  # 接收反馈
+                if res[0] == -1:                         # 游戏提前结束
+                    PLAYING = False
+                    break
+        else:                                            # 对手回合
+            while NEXT_SNAKE_EXISTS:                     # 对手仍有未进行操作的蛇
+                OPERATION = c.fetch_data()               # 获取操作
+                if OPERATION[0] == -1:                   # 游戏提前结束
+                    PLAYING = False
+                    break
+```
 
 ## 游戏状态维护
 
@@ -16,7 +58,7 @@
 - `y: int` y坐标
 - `id: int` 道具编号
 - `time: int` 道具生成的时间
-- `type: int` 道具类型，`1`代表分裂道具，`2`代表融化射线    PS: 长度道具不会被保存，直接存入长度银行
+- `type: int` 道具类型，`0`代表长度道具，`2`代表融化射线    PS: 长度道具不会被保存，直接存入长度银行
 - `param: int` 道具参数，代表道具的有效时间
 - `gotten_time: int` 道具被蛇获取的时间（若道具仍在地图中未被蛇获取，为-1）
 - `item_num: int` 静态成员，用于分配道具编号
@@ -96,14 +138,14 @@
 
 `calc() -> List` 计算固化区域，返回固化区域（不包括蛇本身）
 
-#### Operation 操作类
+#### Operation 操作类 （**该类已于ADK中弃用，操作请依照新的单个整数的形式**）
 
-- `type: int` 操作类型 1移动，2分裂/融化
+- `type: int` 操作类型 1移动，2融化，3分裂
 - `snake: int` 蛇编号
 - `direction: int` 方向 0 : x轴正向，1 : y轴正向, 2 : x轴负向, 3 : y轴负向，若无则为-1
 - `item_id: int` 道具编号，若无则为-1
 
-### 核心类Controller以及逻辑处理流程
+### 核心类Controller以及逻辑处理流程（1.17 有更新）
 
 `Controller`类为逻辑处理的核心，以下是其包含的成员属性与方法：
 
@@ -131,9 +173,9 @@
 
 - `round_init()` 玩家行动前的预处理，初始化`current_snake_list`并寻找第一条待操作的蛇
 
-- `apply(op: List[int]) ` `op`格式为与ADK交互的格式，一个包含2个整数的列表，转换为`Operation`类调用`apply_single`处理操作并寻找下一条蛇
+- `apply(op: int) ` `op`格式为与ADK交互的格式，单个整数，调用`apply_single`处理操作并寻找下一条蛇，**若操作合法返回`True`，否则返回`False`且不执行当前操作、不寻找下一条蛇**
 
-- `apply_single(snake: int, op: Operation)` 处理在`current_snake_list`中下标为`snake`的蛇的操作
+- `apply_single(snake: int, op: int)` 处理在`current_snake_list`中下标为`snake`的蛇的操作，并返回是否合法，**若操作合法返回`True`，否则返回`False`且不执行当前操作**
 
   根据不同操作，分别调用`move`/ `split`/ `fire`函数处理移动、分裂、融化
 
@@ -144,7 +186,7 @@
 游戏开始时，AI读入游戏配置、道具列表后可实例化`Controller`类型，调用构造函数，参数为实例化的`Context`对象。如下就是一段初始化代码：
 
 ```python
-config = GameConfig(width=height, length=width, max_round=round_count)
+config = GameConfig(width=width, length=length, max_round=round_count)
 ctx = Context(config=config)
 ctx.game_map = Map(item_list, config=config)
 controller = Controller(ctx)
@@ -160,11 +202,11 @@ controller = Controller(ctx)
 
 #### 应用操作
 
-玩家每进行一次操作，需要调用`controller.apply`方法处理当前操作并寻找下一条蛇。
+玩家每进行一次操作，需要调用`controller.apply`方法处理当前操作并寻找下一条蛇。**若操作非法会返回`False`，且不进行当前操作，选手可进行异常处理。**
 
 #### 玩家切换
 
-一个玩家结束后，需要调用`controller.next_player`方法切换换到下一个玩家。
+一个玩家结束后，需要调用`controller.next_player`方法切换到下一个玩家。
 
 #### 框架示例
 
@@ -172,35 +214,36 @@ controller = Controller(ctx)
 
 ```python
 while playing:
-    if controller.ctx.turn > max_round: # 超出回合上限，游戏正常结束
+    if controller.ctx.turn > max_round:               # 超出回合上限，游戏正常结束
         res = c.fetch_data() 
-        sys.stderr.write(str(res[1:])) # 获取结束信息并输出
+        sys.stderr.write(str(res[1:]))                # 获取结束信息并输出
         return
     if current_player == 0:
         controller.round_preprocess()
     controller.round_init()
-    if player == current_player:  # 玩家的回合
-        while controller.next_snake != -1: # 还有蛇需要操作
-            op = ai.judge(...) # AI计算当前操作
-            c.send(op) # 输出当前操作
-            controller.apply(op) # 应用当前操作并寻找下一条蛇
-            res = c.fetch_data() # 获取反馈（正常为原操作，若出现错误则为错误信息）
-            if res[0] == -1: # 游戏提前结束
+    if player == current_player:                      # 玩家的回合
+        while controller.next_snake != -1:            # 还有蛇需要操作
+            op = ai.judge(...)                        # AI计算当前操作
+            if not controller.apply(op):              # 应用当前操作并寻找下一条蛇，同时判断操作合法性
+                raise RuntimeError("Illegal Action!!!")
+            c.send(op)                                # 输出当前操作
+            res = c.fetch_data()                      # 获取反馈（原操作或游戏结束信息）
+            if res[0] == -1:                          # 游戏提前结束
                 playing = False
-                sys.stderr.write(str(res[1:])) # 错误信息输出
+                sys.stderr.write(str(res[1:]))        # 错误信息输出
                 break
-        controller.next_player() # 切换玩家
+        controller.next_player()                      # 切换玩家
         c.write_int(0)
     else:
        while True:
-          if controller.next_snake == -1: # 对手回合是否结束
+          if controller.next_snake == -1:             # 对手回合是否结束
               controller.next_player()
               break
-          op = c.fetch_data() # 获取操作
-          if op[0] == -1: # 出现错误，游戏提前结束
+          op = c.fetch_data()                         # 获取操作
+          if op[0] == -1:                             # 游戏提前结束
               playing = False
-              sys.stderr.write(str(op[1:])) # 错误信息输出
+              sys.stderr.write(str(op[1:]))           # 错误信息输出
               break
-          controller.apply(op) # 应用对手操作
-    current_player = 1 - current_player # 切换玩家
+          controller.apply(op)                        # 应用对手操作
+    current_player = 1 - current_player               # 切换玩家
 ```
