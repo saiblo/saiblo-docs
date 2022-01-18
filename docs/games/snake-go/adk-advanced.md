@@ -59,7 +59,7 @@ c = adk.Client()
 - `id: int` 道具编号
 - `time: int` 道具生成的时间
 - `type: int` 道具类型，`0`代表长度道具，`2`代表融化射线    PS: 长度道具不会被保存，直接存入长度银行
-- `param: int` 道具参数，代表道具的有效时间
+- `param: int` 道具参数，代表融化道具的有效时间（无作用）或长度道具的增长长度
 - `gotten_time: int` 道具被蛇获取的时间（若道具仍在地图中未被蛇获取，为-1）
 - `item_num: int` 静态成员，用于分配道具编号
 - `__init__(self, x, y, time, type, param)` 初始化道具，id会自动分配
