@@ -134,7 +134,7 @@ c = adk.Client()
 
 该类实际实现了floodfill用于计算固化围成的区域，使用方法如下：
 
-`__init__(self, bound, h, w)` 初始化固化边界、地图长宽
+`__init__(self, bound, l, w)` 初始化固化边界、地图长宽
 
 `calc() -> List` 计算固化区域，返回固化区域（不包括蛇本身）
 
