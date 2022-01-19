@@ -2,7 +2,9 @@ site_name: Saiblo Wiki
 nav:
 - 首页: index.md
 - 用户手册: user/user.md
-- AI 编写手册: ai/ai.md
+- AI 编写手册:
+  - AI 编写手册: ai/ai.md
+  - 基于 CLion 的 C++ 环境配置: ai/cpp-env-clion.md
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
