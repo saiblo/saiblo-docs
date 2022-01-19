@@ -5,6 +5,7 @@ nav:
 - AI 编写手册:
   - AI 编写手册: ai/ai.md
   - 基于 CLion 的 C++ 环境配置: ai/cpp-env-clion.md
+  - 基于 VS Code 的 C++ 环境配置: ai/cpp-env-vscode.md
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
