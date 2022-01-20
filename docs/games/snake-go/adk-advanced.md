@@ -61,8 +61,7 @@ c = adk.Client()
 - `type: int` 道具类型，`0`代表长度道具，`2`代表融化射线    PS: 长度道具不会被保存，直接存入长度银行
 - `param: int` 道具参数，代表融化道具的有效时间（无作用）或长度道具的增长长度
 - `gotten_time: int` 道具被蛇获取的时间（若道具仍在地图中未被蛇获取，为-1）
-- `item_num: int` 静态成员，用于分配道具编号
-- `__init__(self, x, y, time, type, param)` 初始化道具，id会自动分配
+- `__init__(self, x, y, time, type, param, id)` 初始化道具
 
 #### GameConfig 游戏配置类
 
@@ -79,8 +78,7 @@ c = adk.Client()
 - `id: int` 蛇的编号
 - `length_bank: int` 长度银行中保存的长度
 - `camp: int` 蛇归属于玩家0/1
-- `snake_num: int` 静态成员，用于分配蛇的编号
-- `__init__(self, coor_list, item_list, camp, id=-1)` 初始化道具，若无指定id会自动分配
+- `__init__(self, coor_list, item_list, camp, id)` 初始化蛇，参数为坐标列表、道具列表、阵营、编号
 - `get_len() -> int ` 返回当前蛇的长度
 - `add_item(item: Item)` 为当前蛇增添道具`item`，若为长度道具则直接加入长度银行
 - `get_item(id: int)` 获取当前蛇的编号为`id`的道具，若无返回`None`
@@ -156,6 +154,7 @@ c = adk.Client()
 - `player: int`当前玩家
 
 - `next_snake: int` 待操作的蛇的编号，没有则为-1
+- `snake_num: int` 分配给下一条新产生蛇的编号
 
 - `current_snake_list: List[Tuple(Snake, boolean)]` 处理下一条蛇时的辅助数组，复制`ctx.snake_list`中的蛇，但删除死亡的蛇时通过元组中的布尔值标记是否死亡，不直接在列表中删除
 
