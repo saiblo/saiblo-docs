@@ -72,6 +72,9 @@
 - `get_map() -> Map` 返回当前地图
 - `get_snake_count(camp: int) -> int` 返回当前`camp`选手蛇的数量
 - `get_snake(id: int) -> Snake` 返回当前编号为id的蛇
+- `get_player_snake(camp: int) -> List[Snake]` 返回玩家`camp`的蛇，按照行动顺序排序
+- `player_operations: List[List[int]]` 包含双方的历史操作，`player_operations[i]`为玩家`i`的历史操作，每个操作为包含三个整数的列表`[turn, snake, opt]`，依次为回合数、蛇编号、操作类型
+
 
 更多成员可见`adk.py`或进阶版指南，它们在编写AI时并不必要。
 

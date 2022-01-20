@@ -113,8 +113,9 @@ c = adk.Client()
 - `add_map_snake(coor_list:List[Tuple[int, int]], id: int)`  将编号为`id`的蛇加入地图中，坐标区域为`coor_list`
 - `delete_map_item(coor_list:List[Tuple[int, int]])` 删除地图中原来坐标区域为`coor_list`的蛇
 
-#### Context 上下文类
+#### Context 上下文类 (1.20有更新)
 
+- `player_operations: List[List[int]]` 包含双方的历史操作，`player_operations[i]`为玩家`i`的历史操作，每个操作为包含三个整数的列表`[turn, snake, opt]`，依次为回合数、蛇编号、操作类型
 - `snake_list: List[Snake]` 包含现存所有蛇，同一个玩家的蛇按照操作顺序排序。
 - `game_map: Map` 现在的游戏地图，为自定义类`Map`，具体内容见后。
 - `turn: int` 当前回合数
@@ -127,6 +128,7 @@ c = adk.Client()
 - `get_snake(id: int) -> Snake` 返回当前编号为id的蛇
 - `add_snake(snake:Snake, index: int)` 在`snake_list`下标为`index`处插入新蛇，并加入地图中
 - `delete_snake(id: int) -> int` 删除编号为`id`的蛇
+- `get_player_snake(camp: int) -> List[Snake]` 返回玩家`camp`的蛇，按照行动顺序排序
 
 #### Graph 固化计算
 
