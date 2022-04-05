@@ -43,6 +43,10 @@ nav:
         - 常见问题解答: games/snake-go/faq.md
         - 通讯协议: games/snake-go/ai-protocol.md
         - 回放文件格式简介: games/snake-go/replay-guide.md
+    - 冰雪杯:
+        - 游戏简介: games/snow-cup/snow-cup.pdf
+        - C++ SDK 手册: games/snow-cup/cpp-intro.pdf
+        - Python SDK 手册: games/snow-cup/py-intro.pdf
 use_directory_urls: false
 
 markdown_extensions:
