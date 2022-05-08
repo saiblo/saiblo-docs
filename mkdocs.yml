@@ -9,7 +9,12 @@ nav:
 - 游戏开发者手册: developer/developer.md
 - 游戏手册:
     - 黑白棋: games/reversi.md
-    - 四子棋: games/connect4.md
+    - 四子棋:
+        - 游戏介绍: games/connect4/connect4.md
+        - 实验框架介绍: games/connect4/sdk.md
+        - 在线平台介绍: games/connect4/saiblo-guide.md
+        - 本地评测工具介绍: games/connect4/local-guide.md
+        - 作业提交与评分细则: games/connect4/submission.md
     - 神迹之战:
         - 游戏介绍: games/miracle/miracle.md
         - 通讯协议: games/miracle/communicate.md
