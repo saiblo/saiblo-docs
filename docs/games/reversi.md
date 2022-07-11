@@ -16,7 +16,7 @@
 
 ### AI 编写说明
 
-目前黑白棋仅提供了 Python 版本的 AI SDK，用户需要在 `ai_1.py` 中实现一个 `player_ai(board, player, logic)` 函数, 根据当前棋盘状态返回下一步走子操作 (x, y)。
+黑白棋提供了 Python 版本的 AI SDK，用户需要在 `main.py` 中实现一个 `player_ai(board, player, logic)` 函数, 根据当前棋盘状态返回下一步走子操作 (x, y)。
 
 `board` 为 `int` 类型的列表, 长度为 64，从上到下，从左到右依次表示棋盘每个格子，0 代表黑棋子, 1 代表白棋子，2 代表空格子，`player` 表示当前玩家, 
 
