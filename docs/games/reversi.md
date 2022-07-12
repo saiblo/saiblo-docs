@@ -1,4 +1,4 @@
-### 游戏规则
+## 游戏规则
 
 **玩家数目：**两人（分为黑白双方）
 
@@ -14,7 +14,9 @@
 
 如果位置 A 周围不同方向的棋子都可以翻转, 那么它们都会被同时翻转。
 
-### AI 编写说明
+## AI 编写说明
+
+### Python 版
 
 黑白棋提供了 Python 版本的 AI SDK，用户需要在 `main.py` 中实现一个 `player_ai(board, player, logic)` 函数, 根据当前棋盘状态返回下一步走子操作 (x, y)。
 
@@ -25,7 +27,39 @@
 - `logic.get_id(x, y)`：获取 (x, y) 点在长度为 64 的 Board List 里的下标
 - `logic.ask_next_pos(board, player)`: 参数为长度为 64 描述棋盘的 Board List 和描述当前落子方的 Player，返回值为长度为 64 的 list，list 中数字 1 代表可以落子, 数字 0 代表不可落子
 
-### 播放器使用说明
+### C++ 版
+
+黑白棋提供了 C++ 版本的 AI SDK，用户需要在 `main.cpp` 中实现一个 `getNext(int* board_init, int& nxt_x, int& nxt_y, const int& player_now)` 函数，根据当前棋盘状态返回下一步走子操作 `(nxt_x, nxt_y)`。
+
+`board_init` 为一个 `int` 数组，长度为 64，从上到下，从左到右依次表示棋盘每个格子，0 代表黑棋子, 1 代表白棋子，2 代表空格子。
+
+`player_now` 表示当前玩家，0 为白方，1 为黑方。
+
+作出的决策应保存在 `nxt_x` 和 `nxt_y` 中，分别存放 x 和 y 坐标。
+
+你还可以调用这些函数：
+
+- `int getIndex(int i, int j)`：获取 (i, j) 点在长度为 64 的 board 数组中的下标
+- `bool checkIn(int i, int j)`：判断 (i, j) 是否在允许的范围内
+- `void printBoard(int* board)`：打印当前棋盘，用于调试
+
+## 如何调试
+
+AI需要通过`stderr`标准错误流来输出自己的调试信息，具体操作方式如下：
+
+`Python`
+
+```python
+sys.stderr.write(msg)
+```
+
+`C++`
+
+```c++
+std::cerr << msg;
+```
+
+## 播放器使用说明
 
 黑白棋提供了 html5 版本的播放器，可以支持观看回放和在线游戏。
 
