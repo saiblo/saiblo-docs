@@ -56,7 +56,7 @@ $8$ 个字节的包头发送完成后，随后发送数据包正文。
 {
     "player_list": [1, 0, 2],
     "player_num": 3,
-    "config": "OMG",
+    "config": {"random_seed": 1674552577091},
     "replay": "usr/bin/replay.json"
 }
 ```
@@ -71,9 +71,9 @@ $8$ 个字节的包头发送完成后，随后发送数据包正文。
 
 上例表示游戏一共有 3 名玩家，其中 0 号玩家为本地 AI，1 号玩家未正常启动，2 号玩家使用了网页播放器。
 
-**config : string : deprecated**
+**config : string**
 
-废弃的字段。
+由后端传给评测机的超参数，该字段的功能尚不成熟。
 
 **replay : string**
 
