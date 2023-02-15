@@ -57,7 +57,7 @@ $8$ 个字节的包头发送完成后，随后发送数据包正文。
     "player_list": [1, 0, 2],
     "player_num": 3,
     "config": {"random_seed": 1674552577091},
-    "replay": "usr/bin/replay.json"
+    "replay": "/replay/replay.json"
 }
 ```
 
