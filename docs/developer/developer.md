@@ -314,6 +314,8 @@ judger 收到逻辑发来的 `request_end_state` 报文（见上一节）后，�
 
 游戏逻辑可以覆盖 judger 给出的结束状态。比较典型的应用场景是，游戏逻辑希望给出 IA 结果（表示 Illegal Action），而这一点显然不可能由 judger 自己给出判断。
 
+允许的结束状态有："OK", "RE", "TLE", "MLE", "OLE", "STLE", "EXIT", "UE", "CANCEL", "IA"。
+
 ## 二、AI
 
 游戏逻辑方应提供给网站：AI SDK，面向用户的 AI SDK 说明文档。最好能够提供一份样例 AI。
