@@ -52,6 +52,8 @@ nav:
         - 游戏简介: games/snow-cup/snow-cup.pdf
         - C++ SDK 手册: games/snow-cup/cpp-intro.pdf
         - Python SDK 手册: games/snow-cup/py-intro.pdf
+    - AntWar:
+        - 播放器操作指南: games/antwar/player_manual.pdf
 use_directory_urls: false
 
 markdown_extensions:
