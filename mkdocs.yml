@@ -54,6 +54,7 @@ nav:
         - Python SDK 手册: games/snow-cup/py-intro.pdf
     - AntWar:
         - 播放器操作指南: games/antwar/player_manual.pdf
+        - 回放文件格式: games/antwar/replay-guide.md
 use_directory_urls: false
 
 markdown_extensions:
