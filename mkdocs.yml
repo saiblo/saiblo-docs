@@ -56,6 +56,7 @@ nav:
         - 游戏说明: games/antwar/info.pdf
         - 播放器操作指南: games/antwar/player_manual.pdf
         - 回放文件格式: games/antwar/replay-guide.md
+    - 疯狂 Geek 兔: games/geek-rabbit.md
 use_directory_urls: false
 
 markdown_extensions:
