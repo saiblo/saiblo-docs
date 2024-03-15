@@ -1,0 +1,3265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="communicate.html">
+      
+      
+        <link rel="next" href="logic.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>SDK 文档 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sdk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SDK 文档
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="true">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="miracle.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SDK 文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sdk.html" class="md-nav__link md-nav__link--active">
+        SDK 文档
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    ai运行流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    测试
+  </a>
+  
+    <nav class="md-nav" aria-label="测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judgerai" class="md-nav__link">
+    使用judger启动游戏逻辑和ai
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_cpp" class="md-nav__link">
+    example_cpp
+  </a>
+  
+    <nav class="md-nav" aria-label="example_cpp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    makefile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonhpp" class="md-nav__link">
+    json.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gameunith-gameunitcpp" class="md-nav__link">
+    gameunit.h &amp; gameunit.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardh" class="md-nav__link">
+    card.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculatorh-calculatorcpp" class="md-nav__link">
+    calculator.h &amp; calculator.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_clienth-ai_clientcpp" class="md-nav__link">
+    ai_client.h &amp; ai_client.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类属性
+  </a>
+  
+    <nav class="md-nav" aria-label="类属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players" class="md-nav__link">
+    players
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_camp" class="md-nav__link">
+    my_camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_artifacts" class="md-nav__link">
+    my_artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_creatures" class="md-nav__link">
+    my_creatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aicpp" class="md-nav__link">
+    ai.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-samplecpp" class="md-nav__link">
+    ai-sample.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_py" class="md-nav__link">
+    example_py
+  </a>
+  
+    <nav class="md-nav" aria-label="example_py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameunitpy" class="md-nav__link">
+    gameunit.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardpy" class="md-nav__link">
+    card.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculatorpy" class="md-nav__link">
+    calculator.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_clientpy" class="md-nav__link">
+    ai_client.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类属性
+  </a>
+  
+    <nav class="md-nav" aria-label="类属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map_1" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players_1" class="md-nav__link">
+    players
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round_1" class="md-nav__link">
+    round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_camp_1" class="md-nav__link">
+    my_camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_artifacts_1" class="md-nav__link">
+    my_artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_creatures_1" class="md-nav__link">
+    my_creatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aipy" class="md-nav__link">
+    ai.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    main.py
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gameunit" class="md-nav__link">
+    gameunit
+  </a>
+  
+    <nav class="md-nav" aria-label="gameunit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost" class="md-nav__link">
+    cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk" class="md-nav__link">
+    atk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_hp" class="md-nav__link">
+    max_hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hp" class="md-nav__link">
+    hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk_range" class="md-nav__link">
+    atk_range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_move" class="md-nav__link">
+    max_move
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down" class="md-nav__link">
+    cool_down
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying" class="md-nav__link">
+    flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk_flying" class="md-nav__link">
+    atk_flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agility" class="md-nav__link">
+    agility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holy_shield" class="md-nav__link">
+    holy_shield
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can_atk" class="md-nav__link">
+    can_atk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can_move" class="md-nav__link">
+    can_move
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barrack" class="md-nav__link">
+    Barrack
+  </a>
+  
+    <nav class="md-nav" aria-label="Barrack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pos_1" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp_1" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon_pos_list" class="md-nav__link">
+    summon_pos_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miracle" class="md-nav__link">
+    Miracle
+  </a>
+  
+    <nav class="md-nav" aria-label="Miracle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camp_2" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_hp_1" class="md-nav__link">
+    max_hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hp_1" class="md-nav__link">
+    hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos_2" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon_pos_list_1" class="md-nav__link">
+    summon_pos_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_1" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacle" class="md-nav__link">
+    Obstacle
+  </a>
+  
+    <nav class="md-nav" aria-label="Obstacle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos_3" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow_flying" class="md-nav__link">
+    allow_flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow_ground" class="md-nav__link">
+    allow_ground
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact" class="md-nav__link">
+    Artifact
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id_2" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp_3" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost_1" class="md-nav__link">
+    cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_cool_down" class="md-nav__link">
+    max_cool_down
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down_time" class="md-nav__link">
+    cool_down_time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target_type" class="md-nav__link">
+    target_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last_used_pos" class="md-nav__link">
+    last_used_pos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creaturecapacity" class="md-nav__link">
+    CreatureCapacity
+  </a>
+  
+    <nav class="md-nav" aria-label="CreatureCapacity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_2" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available_count" class="md-nav__link">
+    available_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down_list" class="md-nav__link">
+    cool_down_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_2" class="md-nav__link">
+    Map
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barracks" class="md-nav__link">
+    barracks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miracles" class="md-nav__link">
+    miracles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacles" class="md-nav__link">
+    obstacles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying_obstacles" class="md-nav__link">
+    flying_obstacles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ground_obstacles" class="md-nav__link">
+    ground_obstacles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player" class="md-nav__link">
+    Player
+  </a>
+  
+    <nav class="md-nav" aria-label="Player">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camp_4" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact_1" class="md-nav__link">
+    artifact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    mana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_mana" class="md-nav__link">
+    max_mana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creature_capacity" class="md-nav__link">
+    creature_capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newly_summoned_id_list" class="md-nav__link">
+    newly_summoned_id_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/aquawar.html" class="md-nav__link">
+        快速入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/sdk.html" class="md-nav__link">
+        SDK手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="false">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="false">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-lite.html" class="md-nav__link">
+        Python ADK 用户说明 (Lite)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    ai运行流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    测试
+  </a>
+  
+    <nav class="md-nav" aria-label="测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#judgerai" class="md-nav__link">
+    使用judger启动游戏逻辑和ai
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_cpp" class="md-nav__link">
+    example_cpp
+  </a>
+  
+    <nav class="md-nav" aria-label="example_cpp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    makefile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonhpp" class="md-nav__link">
+    json.hpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gameunith-gameunitcpp" class="md-nav__link">
+    gameunit.h &amp; gameunit.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardh" class="md-nav__link">
+    card.h
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculatorh-calculatorcpp" class="md-nav__link">
+    calculator.h &amp; calculator.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_clienth-ai_clientcpp" class="md-nav__link">
+    ai_client.h &amp; ai_client.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类属性
+  </a>
+  
+    <nav class="md-nav" aria-label="类属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players" class="md-nav__link">
+    players
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_camp" class="md-nav__link">
+    my_camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_artifacts" class="md-nav__link">
+    my_artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_creatures" class="md-nav__link">
+    my_creatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aicpp" class="md-nav__link">
+    ai.cpp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-samplecpp" class="md-nav__link">
+    ai-sample.cpp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_py" class="md-nav__link">
+    example_py
+  </a>
+  
+    <nav class="md-nav" aria-label="example_py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameunitpy" class="md-nav__link">
+    gameunit.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardpy" class="md-nav__link">
+    card.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculatorpy" class="md-nav__link">
+    calculator.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_clientpy" class="md-nav__link">
+    ai_client.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类属性
+  </a>
+  
+    <nav class="md-nav" aria-label="类属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map_1" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#players_1" class="md-nav__link">
+    players
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round_1" class="md-nav__link">
+    round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_camp_1" class="md-nav__link">
+    my_camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_artifacts_1" class="md-nav__link">
+    my_artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_creatures_1" class="md-nav__link">
+    my_creatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aipy" class="md-nav__link">
+    ai.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainpy" class="md-nav__link">
+    main.py
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gameunit" class="md-nav__link">
+    gameunit
+  </a>
+  
+    <nav class="md-nav" aria-label="gameunit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit" class="md-nav__link">
+    Unit
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost" class="md-nav__link">
+    cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk" class="md-nav__link">
+    atk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_hp" class="md-nav__link">
+    max_hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hp" class="md-nav__link">
+    hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk_range" class="md-nav__link">
+    atk_range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_move" class="md-nav__link">
+    max_move
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down" class="md-nav__link">
+    cool_down
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying" class="md-nav__link">
+    flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atk_flying" class="md-nav__link">
+    atk_flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agility" class="md-nav__link">
+    agility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holy_shield" class="md-nav__link">
+    holy_shield
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can_atk" class="md-nav__link">
+    can_atk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can_move" class="md-nav__link">
+    can_move
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barrack" class="md-nav__link">
+    Barrack
+  </a>
+  
+    <nav class="md-nav" aria-label="Barrack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pos_1" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp_1" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon_pos_list" class="md-nav__link">
+    summon_pos_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miracle" class="md-nav__link">
+    Miracle
+  </a>
+  
+    <nav class="md-nav" aria-label="Miracle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camp_2" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_hp_1" class="md-nav__link">
+    max_hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hp_1" class="md-nav__link">
+    hp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos_2" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summon_pos_list_1" class="md-nav__link">
+    summon_pos_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_1" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacle" class="md-nav__link">
+    Obstacle
+  </a>
+  
+    <nav class="md-nav" aria-label="Obstacle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos_3" class="md-nav__link">
+    pos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow_flying" class="md-nav__link">
+    allow_flying
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow_ground" class="md-nav__link">
+    allow_ground
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact" class="md-nav__link">
+    Artifact
+  </a>
+  
+    <nav class="md-nav" aria-label="Artifact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id_2" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camp_3" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost_1" class="md-nav__link">
+    cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_cool_down" class="md-nav__link">
+    max_cool_down
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down_time" class="md-nav__link">
+    cool_down_time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target_type" class="md-nav__link">
+    target_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last_used_pos" class="md-nav__link">
+    last_used_pos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creaturecapacity" class="md-nav__link">
+    CreatureCapacity
+  </a>
+  
+    <nav class="md-nav" aria-label="CreatureCapacity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type_2" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available_count" class="md-nav__link">
+    available_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool_down_list" class="md-nav__link">
+    cool_down_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_2" class="md-nav__link">
+    Map
+  </a>
+  
+    <nav class="md-nav" aria-label="Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barracks" class="md-nav__link">
+    barracks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miracles" class="md-nav__link">
+    miracles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obstacles" class="md-nav__link">
+    obstacles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flying_obstacles" class="md-nav__link">
+    flying_obstacles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ground_obstacles" class="md-nav__link">
+    ground_obstacles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player" class="md-nav__link">
+    Player
+  </a>
+  
+    <nav class="md-nav" aria-label="Player">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camp_4" class="md-nav__link">
+    camp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact_1" class="md-nav__link">
+    artifact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mana" class="md-nav__link">
+    mana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_mana" class="md-nav__link">
+    max_mana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creature_capacity" class="md-nav__link">
+    creature_capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newly_summoned_id_list" class="md-nav__link">
+    newly_summoned_id_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sdk">SDK 文档</h1>
+<p>C++版ai位于游戏包内example_cpp文件夹中。</p>
+<p>python版ai位于游戏包内example_py文件夹中。</p>
+<p>以下是对ai运行流程、游戏包中各文件结构等的解释。</p>
+<h2 id="ai">ai运行流程</h2>
+<p>1、ai启动后，会获得自己的阵营。此后会根据己方阵营选取卡组。</p>
+<blockquote>
+<p>阵营为0的玩家先手，阵营为1的玩家后手。</p>
+<p>在chooseCards()/choose_cards()函数中，玩家可以根据阵营做出自己的卡牌选择。</p>
+</blockquote>
+<p>2、每位玩家的回合开始时，judger会向ai发送当前游戏局面信息(json格式)。updateGameInfo()/update_game_info()函数会处理相关的json串并将游戏局面信息存储在类属性中。</p>
+<blockquote>
+<p>存储游戏局面信息的结构体/类的具体结构可见gameunit.hpp/gameunit.py,对其的解读可见gameunit。</p>
+<p>利用这些结构体/类存储的类属性可见AI类属性。</p>
+</blockquote>
+<p>玩家根据当前游戏局面信息进行自己的处理，并调用相关的函数发送自己的操作。</p>
+<blockquote>
+<p>目前相关的游戏操作函数包括summon、move、attack、use函数。</p>
+</blockquote>
+<p>每次操作后，judger会向ai发送操作后的当前游戏局面信息。</p>
+<blockquote>
+<p>在summon、move、attack、use函数中已包含更新信息的操作，玩家无需再次更新。</p>
+</blockquote>
+<p>玩家可以不断发送自己的操作，直到发送结束回合的指令为止。</p>
+<blockquote>
+<p>用于结束当前回合的函数是endRound()/self.end_round()函数。</p>
+<p>一些其它的状况也可能导致回合结束，比如超时等。</p>
+</blockquote>
+<p>2、非当前回合的ai将不会接收到任何信息，发出的信息也不会得到接收。</p>
+<p>3、建议直接调用相关的函数进行消息的收发。您需要的做的仅仅是处理相关的数据。</p>
+<blockquote>
+<p>不合法的信息发送可能导致回合结束/直接判负等后果。</p>
+</blockquote>
+<p><strong>注意AI的通信使用标准输入/输出流。除了直接使用sdk中相关的函数外，请不要在标准输出流中输出任何信息。</strong></p>
+<h2 id="_1">测试</h2>
+<h3 id="judgerai">使用judger启动游戏逻辑和ai</h3>
+<p>附带了可供玩家本地测试用的评测机和游戏逻辑文件（版本与实际版本略有差别）。</p>
+<p>启动指令: python <judger路径> &lt;启动逻辑command&gt; &lt;启动AI 1 command&gt; &lt;启动AI 2 command&gt; &lt;逻辑生成replay路径&gt;</p>
+<p>启动指令示例(在根目录下运行，注意确认路径是否正确)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python ./game/Judger/judger.py python+./game/main.py python+./example/example_py/main.py  ./example/example_cpp/main  record
+</code></pre></div>
+<p>AI可以是C++版本，也可以选择python版本。选择其一即可。C++版本的AI需要使用对应的可执行文件，python版本的AI需要使用对应的.py文件。</p>
+<p>（对于样例C++版本AI，可以使用<code>make</code>命令编译出对应的可执行文件。）</p>
+<p>运行时，注意在工作路径下需要Data.json文件。实际评测时，（如果用到）只需确认压缩包里有Data.json文件即可。</p>
+<p>运行结束后，会输出<code>{"end_info": "{\"0\": ..., \"1\": ...}", "record": [...]}</code>，其中end_info表示0、1号玩家的得分，record记录了每个回合AI的物理用时和状态。（得分=1000*对对手神迹造成的伤害+击杀对手生物总星数。掉线/超时AI得分会被清零，同时其对手得分加1。得分相同时会额外再给后手玩家加一分，判定后手玩家胜利。此得分仅表示游戏得分，与天梯积分无关。）</p>
+<p><strong>注意judger与AI的通信使用标准输入/输出流。除了直接使用sdk中相关的函数外，请不要在标准输出流中输出任何信息。</strong></p>
+<p>main.py中有一个DEBUG参数，设置为True的时候会在当前目录下生成一个log.txt文件，记录收发的信息。</p>
+<h2 id="example_cpp">example_cpp</h2>
+<p>此为对C++版本的AI的文件夹内的各文件的解释。</p>
+<h3 id="makefile">makefile</h3>
+<p>C++的makefile文件，目前仅适用于样例AI。玩家编写自己的AI后，需要根据实际情况修改makefile。</p>
+<h3 id="jsonhpp">json.hpp</h3>
+<p>开源的json库。</p>
+<p>需要调用该json库的地方已经给出相关代码，您不必关注相关细节。</p>
+<h3 id="gameunith-gameunitcpp">gameunit.h &amp; gameunit.cpp</h3>
+<p>包含若干结构体，用于表述游戏中各单位的信息。</p>
+<blockquote>
+<p>具体的结构体的结构可查看gameunit板块。</p>
+</blockquote>
+<h3 id="cardh">card.h</h3>
+<p>包含生物、神器的基本属性。启动ai时会从Data.json中读取。</p>
+<h3 id="calculatorh-calculatorcpp">calculator.h &amp; calculator.cpp</h3>
+<p>计算几何库。包含以下函数。您可以调用以下函数来进行相关的位置计算。</p>
+<p>其中Point与gameunit::Pos类型相同。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">search_path</span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="n">to</span><span class="p">,</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obstacles</span><span class="o">=</span><span class="p">{},</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obstructs</span><span class="o">=</span><span class="p">{})</span>
+</code></pre></div>
+​       通过起点、终点、阻挡列表、拦截列表寻找路径，obstacles代表不能停留也不能经过的点，obstructs代表可以停留但不能经过的点。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">path</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Map</span><span class="w"> </span><span class="n">_map</span><span class="p">)</span>
+</code></pre></div>
+​       用A*算法给出从生物unit到dest点的路径（包含起点），无法给出路径时返回空数组。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">cube_distance</span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+​       给出两个位置之间的距离。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">reachable</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Map</span><span class="w"> </span><span class="n">_map</span><span class="p">)</span>
+</code></pre></div>
+​       给出生物unit在其最大步数内可达的位置，结果为数组，数组中的元素为经过等于下标的步数可达的位置的数组（例如result[1]为经过1步能到达的位置的数组）。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">units_in_range</span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dist</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Map</span><span class="w"> </span><span class="n">_map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">camp</span><span class="o">=</span><span class="mi">-1</span><span class="p">,</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">                                </span><span class="kt">bool</span><span class="w"> </span><span class="n">flyingIncluded</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">onlandIncluded</span><span class="o">=</span><span class="nb">true</span><span class="p">)</span>
+</code></pre></div>
+​       给出某点pos在给定范围内存在的生物,dist为给定的范围（步数），camp默认为-1，将会返回所有阵营的生物，0为先手阵营，1为后手阵营；flyingIncluded表示将飞行生物包含其中，onlandIncluded为将地面生物包含其中，默认两者都包含。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">in_map</span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+​       判断某个点pos是否在地图范围之内，返回布尔值。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">all_pos_in_map</span><span class="p">()</span>
+</code></pre></div>
+​       给出地图内的所有点。</p>
+<h3 id="ai_clienth-ai_clientcpp">ai_client.h &amp; ai_client.cpp</h3>
+<p>包含ai基类。封装好了部分通信函数和查找函数。</p>
+<h3 id="_2">类属性</h3>
+<h4 id="map">map</h4>
+<p>Map。</p>
+<h4 id="players">players</h4>
+<p>Player数组。长度为2。Player在数组中的下标与其camp相同。</p>
+<h4 id="round">round</h4>
+<p>int。当前游戏回合。</p>
+<h4 id="my_camp">my_camp</h4>
+<p>int。己方阵营。</p>
+<h4 id="my_artifacts">my_artifacts</h4>
+<p>string数组。用于确认己方神器。</p>
+<h4 id="my_creatures">my_creatures</h4>
+<p>string数组。用于确认己方生物。</p>
+<blockquote>
+<p>注：神器与生物已经确定后便无法在游戏中修改。但可以通过访问my_artifacts与my_creatures快速获取己方所选神器与生物。</p>
+</blockquote>
+<p>前一部分为与游戏通信的函数。建议您不要修改它们。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">updateGameInfo</span><span class="p">()</span>
+</code></pre></div>
+​       读入游戏信息并更新相关数据。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">chooseCards</span><span class="p">()</span>
+</code></pre></div>
+​       设置卡组，并调用init()函数确定初始卡组。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">play</span><span class="p">()</span>
+</code></pre></div>
+​       结合当前局面信息做出操作。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">init</span><span class="p">()</span>
+</code></pre></div>
+<p>​       选择初始神器(my_artifacts)和生物(my_creatures)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">summon</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<p>​       在地图(<strong>x</strong>, <strong>y</strong>, <strong>z</strong>)处召唤一个本方类型为<strong>type</strong>，星级为<strong>level</strong>的生物</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">summon</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">summon</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">)</span>
+</code></pre></div>
+<p>​       在地图<strong>position</strong>处召唤一个本方类型为<strong>type</strong>，星级为<strong>level</strong>的生物</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">move</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mover</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+<p>​       将地图上id为<strong>mover</strong>的生物移动到地图(<strong>x</strong>, <strong>y</strong>, <strong>z</strong>)处。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">move</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mover</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">move</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mover</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">)</span>
+</code></pre></div></p>
+<p>​       将地图上id为<strong>mover</strong>的生物移动到地图<strong>position</strong>处。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">attack</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">attacker</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+<p>​       令地图上id为<strong>attacker</strong>的生物攻击地图上id为<strong>target</strong>的生物或神迹。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">use</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">artifact</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+<p>​       对id为<strong>target</strong>的生物使用id为<strong>artifact</strong>的神器</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">use</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">artifact</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">use</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">artifact</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+​       对<strong>target</strong>位置使用id为<strong>artifact</strong>的神器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">endRound</span><span class="p">()</span>
+</code></pre></div>
+<p>​       结束当前回合。</p>
+<p>除了以上与游戏通信相关的函数外，ai_client还包含以下可能有助于快速写AI的函数。这些函数仅在本地进行相关的查询操作。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">getDistanceOnGround</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos_a</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos_b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取<strong>camp</strong>阵营生物从位置<strong>pos_a</strong>到位置<strong>pos_b</strong>的地面距离(不经过地面障碍或敌方地面生物)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">getDistanceInSky</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos_a</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos_b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取<strong>camp</strong>阵营生物从位置<strong>pos_a</strong>到位置<strong>pos_b</strong>的飞行距离(不经过飞行障碍或敌方飞行生物)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">checkBarrack</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+<p>​       判定位置<strong>pos</strong>的驻扎情况。不是驻扎点返回-2,中立返回-1,否则返回占领该驻扎点的阵营(0或1)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">canAttack</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">attacker</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+<p>​       判断生物<strong>attacker</strong>能否攻击到生物<strong>target</strong>(只考虑攻击力、攻击范围)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">canUseArtifact</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Artifact</span><span class="w"> </span><span class="n">artifact</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+<p>​       判断能否对位置<strong>pos</strong>使用神器<strong>artifact</strong>(不考虑消耗、冷却)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">canUseArtifact</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Artifact</span><span class="w"> </span><span class="n">artifact</span><span class="p">,</span><span class="w"> </span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+<p>​       判断能否对生物<strong>pos</strong>使用神器<strong>artifact</strong>(不考虑消耗、冷却)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">getUnitByPos</span><span class="p">(</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">flying</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取位置<strong>pos</strong>上的生物。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="w"> </span><span class="n">getUnitById</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">unit_id</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取上id为<strong>unit_id</strong>的生物。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Unit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getUnitsByCamp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">unit_camp</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取所有阵营为<strong>unit_camp</strong>的生物。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">gameunit</span><span class="o">::</span><span class="n">Pos</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getSummonPosByCamp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+<p>​       获取所有属于阵营<strong>camp</strong>的出兵点(初始出兵点+额外出兵点)。</p>
+<h3 id="aicpp">ai.cpp</h3>
+<p>包含类AI。该类继承自AiClient类。玩家需要在AiClient类的基础上，重写play()函数及其它函数，完成自己的AI。</p>
+<p>同时该文件中也包含main()函数，用于启动AI。</p>
+<h3 id="ai-samplecpp">ai-sample.cpp</h3>
+<p>一个样例AI，玩家可以用于参考。</p>
+<h2 id="example_py">example_py</h2>
+<p>此为对python版本的AI的文件夹内的各文件的解释。</p>
+<h3 id="gameunitpy">gameunit.py</h3>
+<p>包含若干类，用于表述游戏中各单位的信息。</p>
+<blockquote>
+<p>具体的类的结构可查看gameunit板块。</p>
+</blockquote>
+<h3 id="cardpy">card.py</h3>
+<p>包含生物、神器的基本属性。会从Data.json中读取。</p>
+<h3 id="calculatorpy">calculator.py</h3>
+<p>计算几何库。包含以下函数。您可以调用以下函数来进行相关的位置计算。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">search_path</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">obstacles</span><span class="p">,</span> <span class="n">obstructs</span><span class="p">)</span>
+</code></pre></div>
+<p>​       通过起点、终点、阻挡列表、拦截列表寻找路径，obstacles代表不能停留也不能经过的点，obstructs代表可以停留但不能经过的点。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">path</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">_map</span><span class="p">)</span>
+</code></pre></div>
+<p>​       用A*算法给出生物unit到位置dest的路径（包含起点）。无法给出路径时返回False。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">cube_distance</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">)</span>
+</code></pre></div>
+<p>​       给出两个位置之间的距离。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">reachable</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">_map</span><span class="p">)</span>
+</code></pre></div>
+<p>​       给出生物unit在其最大步数内可达的位置，结果为列表，列表中的元素为经过等于下标的步数可达的位置的列表（例如result[1]为经过1步能到达的位置的列表）。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">units_in_range</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">_map</span><span class="p">,</span> <span class="n">camp</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">flyingIncluded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">onlandIncluded</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p>​       给出某点pos在给定范围内存在的生物,dist为给定的范围（步数），camp默认为-1，将会返回所有阵营的生物，0为先手阵营，1为后手阵营；flyingIncluded表示将飞行生物包含其中，onlandIncluded为将地面生物包含其中，默认两者都包含。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">in_map</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+<p>​       判断某个点pos是否在地图范围之内，返回布尔值。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">all_pos_in_map</span><span class="p">()</span>
+</code></pre></div>
+<p>​       给出地图内的所有点。</p>
+<h3 id="ai_clientpy">ai_client.py</h3>
+<p>包含ai基类。封装好了部分通信函数和查找函数。</p>
+<h3 id="_3">类属性</h3>
+<h4 id="map_1">map</h4>
+<p>Map。</p>
+<h4 id="players_1">players</h4>
+<p>Player数组。长度为2。Player在数组中的下标与其camp相同。</p>
+<h4 id="round_1">round</h4>
+<p>int。当前游戏回合。</p>
+<h4 id="my_camp_1">my_camp</h4>
+<p>int。己方阵营。</p>
+<h4 id="my_artifacts_1">my_artifacts</h4>
+<p>string数组。用于确认己方神器。</p>
+<h4 id="my_creatures_1">my_creatures</h4>
+<p>string数组。用于确认己方生物。</p>
+<blockquote>
+<p>注：神器与生物已经确定后便无法在游戏中修改。但可以通过访问my_artifacts与my_creatures快速获取己方所选神器与生物。</p>
+</blockquote>
+<p>前一部分为与游戏通信的函数。建议您不要修改它们。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">update_game_info</span><span class="p">()</span>
+</code></pre></div>
+​       读入游戏信息并更新相关数据。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">choose_cards</span><span class="p">()</span>
+</code></pre></div>
+​   设置卡组，并调用init()函数确定初始卡组。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">play</span><span class="p">()</span>
+</code></pre></div>
+​   结合当前局面信息做出操作。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a> <span class="n">init</span><span class="p">()</span>
+</code></pre></div>
+​       选择初始神器(my_artifacts)和生物(my_creatures)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a> <span class="n">summon</span><span class="p">(</span><span class="n">_type</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
+</code></pre></div>
+​       在<strong>position</strong>处召唤一个本方类型为<strong>_type</strong>，星级为<strong>level</strong>的生物。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">move</span><span class="p">(</span><span class="n">mover</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
+</code></pre></div>
+​       将id为<strong>mover</strong>的生物移动到<strong>position</strong>处。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">attack</span><span class="p">(</span><span class="n">attacker</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+​       令id为<strong>attacker</strong>的生物攻击id为<strong>target</strong>的生物或神迹。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="n">use</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+​       对id为<strong>target</strong>的生物/<strong>target</strong>位置使用id为<strong>artifact</strong>的神器。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">end_round</span><span class="p">()</span>
+</code></pre></div>
+​       结束当前回合。</p>
+<p>除了以上与游戏通信相关的函数外，ai_client还包含以下可能有助于快速写AI的函数。这些函数仅在本地进行相关的查询操作。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">get_distance_on_ground</span><span class="p">(</span><span class="n">pos_a</span><span class="p">,</span> <span class="n">pos_b</span><span class="p">,</span> <span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+​       获取<strong>camp</strong>阵营生物从位置<strong>pos_a</strong>到位置<strong>pos_b</strong>的地面距离(不经过地面障碍或敌方地面生物)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="n">get_distance_in_sky</span><span class="p">(</span><span class="n">pos_a</span><span class="p">,</span> <span class="n">pos_b</span><span class="p">,</span> <span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+​       获取<strong>camp</strong>阵营生物从位置<strong>pos_a</strong>到位置<strong>pos_b</strong>的飞行距离(不经过飞行障碍或敌方飞行生物)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">check_barrack</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+​       判定位置<strong>pos</strong>的驻扎情况。不是驻扎点返回-2,中立返回-1,否则返回占领该驻扎点的阵营(0或1)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="n">can_attack</span><span class="p">(</span><span class="n">attacker</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</code></pre></div>
+​       判断生物<strong>attacker</strong>能否攻击到生物<strong>target</strong>(只考虑攻击力、攻击范围)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="n">can_use_artifact</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+​       判断阵营<strong>camp</strong>的玩家能否对目标<strong>target</strong>使用神器<strong>artifact</strong>(不考虑消耗、冷却)。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">get_unit_by_pos</span><span class="p">(</span><span class="n">_map</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">flying</span><span class="p">)</span>
+</code></pre></div>
+​       获取位置<strong>pos</strong>上的生物。无生物时返回None。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="n">get_unit_by_id</span><span class="p">(</span><span class="n">unit_id</span><span class="p">)</span>
+</code></pre></div>
+​       获取id为<strong>unit_id</strong>的生物。无生物时返回None。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">get_units_by_camp</span><span class="p">(</span><span class="n">_map</span><span class="p">,</span> <span class="n">unit_camp</span><span class="p">)</span>
+</code></pre></div>
+​       获取所有阵营为<strong>unit_camp</strong>的生物。无生物时返回空数组。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="n">get_summon_pos_by_camp</span><span class="p">(</span><span class="n">camp</span><span class="p">)</span>
+</code></pre></div>
+​       获取所有属于阵营<strong>camp</strong>的出兵点(初始出兵点+额外出兵点)。</p>
+<h3 id="aipy">ai.py</h3>
+<p>包含类AI。该类继承自AiClient类。玩家需要在AiClient类的基础上，重写play()函数及其它函数，完成自己的AI。</p>
+<p>同时该文件中也包含main()函数，用于启动AI。</p>
+<h3 id="mainpy">main.py</h3>
+<p>（即ai-sample）一个样例AI，玩家可以用于参考。</p>
+<h2 id="gameunit">gameunit</h2>
+<p>ai回合开始时/每次执行非结束回合的游戏操作时会收到一个表述游戏当前局面信息的json格式的字符串。对该字符串的解析已于updateGameInfo()函数中实现。(gameunit.h中的from_json()用于把json转化成相应对象，细节此处不表。)updateGameInfo()函数会将相关的信息以结构体的形式存入类属性中。相关的结构体在gameunit.h中给出。以下为gameunit.h相关结构体的具体参数的解释。</p>
+<p>python版本的gameunit与C++版本的gameunit的设计完全相同（不过由于类型上的不同，C++的vector对应python的list，C++的std::tuple&lt;&gt;对应python的tuple，等），此处不再赘述。</p>
+<p>以下叙述中Pos类型表示std::tuple<int, int, int>，用于表示位置。</p>
+<h3 id="unit">Unit</h3>
+<p>表示单个生物。</p>
+<h4 id="id">id</h4>
+<p>int。表示生物的id。</p>
+<h4 id="camp">camp</h4>
+<p>int。表示生物所属阵营。</p>
+<h4 id="type">type</h4>
+<p>string。表示生物的种类。有"Archer", "Swordsman", "BlackBat", "Priest", "VolcanoDragon", "Inferno", "FrostDragon"七种取值。</p>
+<h4 id="cost">cost</h4>
+<p>int。表示生物的法力消耗。</p>
+<h4 id="atk">atk</h4>
+<p>int。表示生物的攻击。</p>
+<h4 id="max_hp">max_hp</h4>
+<p>int。表示生物的生命上限。</p>
+<h4 id="hp">hp</h4>
+<p>int。表示生物的当前生命。</p>
+<h4 id="atk_range">atk_range</h4>
+<p>二元int数组。表示生物攻击最小范围/最大范围。</p>
+<blockquote>
+<p>（攻击范围0表示不可攻击/反击，0-0表示可攻击与自身相同格子的生物）</p>
+</blockquote>
+<h4 id="max_move">max_move</h4>
+<p>int。表示生物的行动力。</p>
+<h4 id="cool_down">cool_down</h4>
+<p>int。表示生物的冷却。</p>
+<h4 id="pos">pos</h4>
+<p>Pos。表示生物的位置。</p>
+<h4 id="level">level</h4>
+<p>int。表示生物的等级。</p>
+<h4 id="flying">flying</h4>
+<p>bool。表示生物是否飞行。</p>
+<h4 id="atk_flying">atk_flying</h4>
+<p>bool。表示生物能否攻击飞行生物。</p>
+<h4 id="agility">agility</h4>
+<p>bool。表示生物是否迅捷。</p>
+<h4 id="holy_shield">holy_shield</h4>
+<p>bool。表示生物是否具有圣盾。</p>
+<h4 id="can_atk">can_atk</h4>
+<p>bool。表示生物能否攻击。</p>
+<h4 id="can_move">can_move</h4>
+<p>bool。表示生物能否移动。</p>
+<h3 id="barrack">Barrack</h3>
+<p>表示一个驻扎点。</p>
+<h4 id="pos_1">pos</h4>
+<p>Pos。表示驻扎点的位置。</p>
+<h4 id="camp_1">camp</h4>
+<p>int。表示驻扎点所属阵营。</p>
+<h4 id="summon_pos_list">summon_pos_list</h4>
+<p>Pos数组。表示驻扎点所控制的出兵点的位置。</p>
+<h3 id="miracle">Miracle</h3>
+<p>表示一个神迹。</p>
+<h4 id="camp_2">camp</h4>
+<p>int。表示神迹所属阵营。</p>
+<h4 id="max_hp_1">max_hp</h4>
+<p>int。表示神迹生命上限。</p>
+<h4 id="hp_1">hp</h4>
+<p>int。表示神迹生命值。</p>
+<h4 id="pos_2">pos</h4>
+<p>Pos。表示神迹的位置。</p>
+<h4 id="summon_pos_list_1">summon_pos_list</h4>
+<p>Pos数组。表示神迹控制的初始出兵点的位置。</p>
+<h4 id="id_1">id</h4>
+<p>int。表示神迹的id。</p>
+<h3 id="obstacle">Obstacle</h3>
+<p>表示一个地图障碍。</p>
+<h4 id="type_1">type</h4>
+<p>string。表示障碍的种类。</p>
+<h4 id="pos_3">pos</h4>
+<p>Pos。表示障碍的位置。</p>
+<h4 id="allow_flying">allow_flying</h4>
+<p>bool。表示障碍是否允许飞行生物通过。</p>
+<h4 id="allow_ground">allow_ground</h4>
+<p>bool。表示障碍是否允许地面生物通过。</p>
+<h3 id="artifact">Artifact</h3>
+<p>表示一个神器。</p>
+<h4 id="id_2">id</h4>
+<p>int。表示神器的id。</p>
+<h4 id="name">name</h4>
+<p>string。表示神器的名字。有"HolyLight", "SalamanderShield", "InfernoFlame", "WindBlessing"四种取值。</p>
+<h4 id="camp_3">camp</h4>
+<p>int。表示神器所属的阵营。</p>
+<h4 id="cost_1">cost</h4>
+<p>int。表示神器的法力消耗。</p>
+<h4 id="max_cool_down">max_cool_down</h4>
+<p>int。表示神器的最大冷却时间。</p>
+<h4 id="cool_down_time">cool_down_time</h4>
+<p>int。表示神器的目前冷却时间。</p>
+<h4 id="state">state</h4>
+<p>string。表示神器的目前使用状态。有"Ready", "In Use", "Cooling Down"三种取值。</p>
+<h4 id="target_type">target_type</h4>
+<p>string。表示神器使用对象的种类。有"Unit", "Pos"两种取值。</p>
+<h4 id="last_used_pos">last_used_pos</h4>
+<p>Pos。表示神器上次使用对象的位置。默认值为(-1, -1, -1)。（target_type为"Unit"时，表示使用时对象的位置。）</p>
+<h3 id="creaturecapacity">CreatureCapacity</h3>
+<p>生物召唤情况。</p>
+<h4 id="type_2">type</h4>
+<p>string。表示生物种类。有"Archer", "Swordsman", "BlackBat", "Priest", "VolcanoDragon", "Inferno", "FrostDragon"七种取值。</p>
+<h4 id="available_count">available_count</h4>
+<p>int。表示生物的生物槽容量。</p>
+<h4 id="cool_down_list">cool_down_list</h4>
+<p>int数组。表示生物的冷却时间。</p>
+<h3 id="map_2">Map</h3>
+<h4 id="units">units</h4>
+<p>Unit数组。包括地图上所有生物。</p>
+<h4 id="barracks">barracks</h4>
+<p>Barrack数组。包括地图上所有驻扎点。</p>
+<h4 id="miracles">miracles</h4>
+<p>Miracle数组。包括地图上所有神迹。</p>
+<h4 id="obstacles">obstacles</h4>
+<p>Obstacle数组。包括地图上所有障碍。</p>
+<h4 id="flying_obstacles">flying_obstacles</h4>
+<p>Obstacle数组。包括地图上所有飞行障碍。</p>
+<h4 id="ground_obstacles">ground_obstacles</h4>
+<p>Obstacle数组。包括地图上所有地面障碍。</p>
+<h3 id="player">Player</h3>
+<p>表示一个玩家。</p>
+<h4 id="camp_4">camp</h4>
+<p>int。表示玩家所处的阵营。</p>
+<h4 id="artifact_1">artifact</h4>
+<p>Artifact数组。表示玩家所拥有的神器的情况。</p>
+<h4 id="mana">mana</h4>
+<p>int。表示玩家当前法力值。</p>
+<h4 id="max_mana">max_mana</h4>
+<p>int。表示玩家最大法力值。</p>
+<h4 id="creature_capacity">creature_capacity</h4>
+<p>CreatureCapacity数组。表示生物的召唤情况。</p>
+<h4 id="newly_summoned_id_list">newly_summoned_id_list</h4>
+<p>int数组。表示玩家最新召唤的生物的id。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

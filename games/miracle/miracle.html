@@ -1,0 +1,2970 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../connect4/submission.html">
+      
+      
+        <link rel="next" href="communicate.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>游戏介绍 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              游戏介绍
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="true">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          游戏介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="miracle.html" class="md-nav__link md-nav__link--active">
+        游戏介绍
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    游戏介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    地图介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="地图介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    神迹
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    驻扎点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    出兵点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    深渊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    基本机制
+  </a>
+  
+    <nav class="md-nav" aria-label="基本机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    游戏流程
+  </a>
+  
+    <nav class="md-nav" aria-label="游戏流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    确定先后手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    提交卡组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    对局开始
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    法力值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    冷却
+  </a>
+  
+    <nav class="md-nav" aria-label="冷却">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    生物
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    神器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    玩家回合
+  </a>
+  
+    <nav class="md-nav" aria-label="玩家回合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    回合开始
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    冷却阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    主要阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    回合结束
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    胜利判定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    生物
+  </a>
+  
+    <nav class="md-nav" aria-label="生物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    生物单元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    星级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    基本属性
+  </a>
+  
+    <nav class="md-nav" aria-label="基本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    法力消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    攻击力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    攻击距离
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    最大生命值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    最大行动力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    冷却时间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    相关操作
+  </a>
+  
+    <nav class="md-nav" aria-label="相关操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    召唤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    移动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    死亡
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    词条
+  </a>
+  
+    <nav class="md-nav" aria-label="词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    长词条
+  </a>
+  
+    <nav class="md-nav" aria-label="长词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    触发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    光环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    亡语
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    短词条
+  </a>
+  
+    <nav class="md-nav" aria-label="短词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    对空
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    飞行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    圣盾
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    神器
+  </a>
+  
+    <nav class="md-nav" aria-label="神器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本属性
+  </a>
+  
+    <nav class="md-nav" aria-label="基本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    法力消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    冷却时间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    使用方式
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    释放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    装备
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    卡牌一览
+  </a>
+  
+    <nav class="md-nav" aria-label="卡牌一览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    生物
+  </a>
+  
+    <nav class="md-nav" aria-label="生物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    剑士
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    弓箭手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    火山之龙
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    冰霜之龙
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    神器
+  </a>
+  
+    <nav class="md-nav" aria-label="神器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    塞瓦哈拉的圣光之耀
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    洛古萨斯的地狱之火
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    马尔瑞恩的阳炎之盾
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    塞浦洛斯的风神之佑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/aquawar.html" class="md-nav__link">
+        快速入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/sdk.html" class="md-nav__link">
+        SDK手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="false">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="false">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-lite.html" class="md-nav__link">
+        Python ADK 用户说明 (Lite)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    游戏介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    地图介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="地图介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    神迹
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    驻扎点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    出兵点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    深渊
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    基本机制
+  </a>
+  
+    <nav class="md-nav" aria-label="基本机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    游戏流程
+  </a>
+  
+    <nav class="md-nav" aria-label="游戏流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    确定先后手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    提交卡组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    对局开始
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    法力值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    冷却
+  </a>
+  
+    <nav class="md-nav" aria-label="冷却">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    生物
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    神器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    玩家回合
+  </a>
+  
+    <nav class="md-nav" aria-label="玩家回合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    回合开始
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    冷却阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    主要阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    回合结束
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    胜利判定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    生物
+  </a>
+  
+    <nav class="md-nav" aria-label="生物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    生物单元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    星级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    基本属性
+  </a>
+  
+    <nav class="md-nav" aria-label="基本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    法力消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    攻击力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    攻击距离
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    最大生命值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    最大行动力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    冷却时间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    相关操作
+  </a>
+  
+    <nav class="md-nav" aria-label="相关操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    召唤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    移动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    死亡
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    词条
+  </a>
+  
+    <nav class="md-nav" aria-label="词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    长词条
+  </a>
+  
+    <nav class="md-nav" aria-label="长词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    触发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    光环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    亡语
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    短词条
+  </a>
+  
+    <nav class="md-nav" aria-label="短词条">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    对空
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    飞行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    圣盾
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    神器
+  </a>
+  
+    <nav class="md-nav" aria-label="神器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本属性
+  </a>
+  
+    <nav class="md-nav" aria-label="基本属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    法力消耗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    冷却时间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    使用方式
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    释放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    生成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    装备
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    卡牌一览
+  </a>
+  
+    <nav class="md-nav" aria-label="卡牌一览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    生物
+  </a>
+  
+    <nav class="md-nav" aria-label="生物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    剑士
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    弓箭手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    火山之龙
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    冰霜之龙
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    神器
+  </a>
+  
+    <nav class="md-nav" aria-label="神器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    塞瓦哈拉的圣光之耀
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    洛古萨斯的地狱之火
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    马尔瑞恩的阳炎之盾
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    塞浦洛斯的风神之佑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">神迹之战</h1>
+<h2 id="_2">游戏介绍</h2>
+<p>神迹之战是一款同时为人类玩家和AI设计的,基于六边形地图的战棋游戏。具有丰富的策略性与趣味性。</p>
+<h2 id="_3">地图介绍</h2>
+<p><img alt="地图" src="img/map.jpg" /></p>
+<p><strong>要素</strong> ：</p>
+<ul>
+<li>
+<p>地图中心对称，但不轴对称</p>
+</li>
+<li>
+<p>双方 <strong>神迹</strong> （红色与蓝色的房屋标志）在地图两侧，拥有5个 <strong>初始出兵点</strong> （红色与蓝色的小人标志）</p>
+</li>
+<li>
+<p>地图上有4处 <strong>驻扎点</strong> （紫色帐篷标志），每个被 <strong>占领</strong> 的驻扎点提供 <strong>3</strong> 个 <strong>额外出兵点</strong> （紫色小人标志）</p>
+</li>
+<li>
+<p>被黑色 ⨂ 标记的格子为 <strong>深渊</strong> ，深渊仅有 <strong>飞行生物</strong> 可以 <strong>经过</strong> 与 **停留</p>
+</li>
+</ul>
+<h3 id="_4">神迹</h3>
+<p>双方 <strong>神迹</strong> 具有 <em>30</em> 生命上限，不会恢复</p>
+<ul>
+<li>
+<p>神迹不属于 <em>生物</em></p>
+</li>
+<li>
+<p>神迹生命值率先降至 <strong>0</strong> 及以下的一方落败</p>
+</li>
+</ul>
+<h3 id="_5">驻扎点</h3>
+<p><strong>驻扎点</strong> 默认为中立。</p>
+<p>每个回合开始，当一名 <strong>地面生物</strong> 位于一个 <strong>驻扎点</strong> 上方时，该 <strong>驻扎点</strong> 被 该生物所属的一方占领。</p>
+<p><strong>驻扎点</strong> 被 <strong>另一方占领</strong> 前， <strong>驻扎点</strong> 的占领状态不会因为（用于占领的生物离开等）任何因素而改变。</p>
+<p>被己方占领的 <strong>驻扎点</strong> 周围的 <strong>出兵点</strong> 视为 <strong>己方出兵点</strong> （<strong>额外出兵点</strong>） 。 </p>
+<blockquote>
+<p>即现在，你不再需要一个生物驻守在驻扎点以维持占领状态了。但是与此同时，驻扎点被对手窃取所带来的后果将更加严重。</p>
+<p>不要忘了边角位的驻扎点，现在，利用空闲的生物占据边角位可能带来更大的优势</p>
+</blockquote>
+<h3 id="_6">出兵点</h3>
+<p><strong>初始出兵点</strong> 和 <strong>额外出兵点</strong> 统称 <strong>出兵点</strong> 。</p>
+<p>每回合都可以在 <strong>己方出兵点</strong> 召唤生物，如果某个召唤行为会导致 <strong>生物重叠</strong> ，则不能进行召唤。</p>
+<ul>
+<li>一个 <strong>己方出兵点</strong> 上如果有一个 <strong>地面生物</strong> （无论敌我），则你不可以在此召唤 <strong>地面生物</strong> ，但你可以在此召唤 <strong>飞行生物</strong> 。反之亦然。</li>
+</ul>
+<h3 id="_7">深渊</h3>
+<p><strong>深渊</strong> 是一种特殊地形。</p>
+<p><strong>地面生物</strong> 无法 <strong>经过</strong> 或 <strong>停留</strong> 在 <strong>深渊</strong> 中~~<em>（，如果 地面单位 被 强制位移 并停留至 深渊 则立即死亡（但 穿过不会））【暂无强制位移机制】</em>~~。</p>
+<p><strong>飞行生物</strong> 可以自由 <strong>经过</strong> 和 <strong>停留</strong> 在 <strong>深渊</strong> 中。</p>
+<h2 id="_8">基本机制</h2>
+<h3 id="_9">游戏流程</h3>
+<h4 id="_10">确定先后手</h4>
+<p>随机确定先后手，并告知双方玩家</p>
+<h4 id="_11">提交卡组</h4>
+<p>双方玩家提交自己的卡组，卡组包含 <em>1</em> 种 <strong>神器</strong> 和 <em>3</em> 种不同 <strong>生物</strong></p>
+<blockquote>
+<p>实际上由于不存在抽卡，可以理解为这些卡一开始就全在手牌里</p>
+</blockquote>
+<p>不合法的卡组直接判负。</p>
+<h4 id="_12">对局开始</h4>
+<p>公布双方卡组 。</p>
+<p>进入 <strong>先手玩家</strong> 的回合，之后轮流进行回合。</p>
+<h3 id="_13">法力值</h3>
+<p>游戏开始时， <strong>先手玩家</strong> 拥有 <em>1</em> <strong>法力上限</strong> ， <strong>后手玩家</strong> 拥有 <em>2</em> <strong>法力上限</strong>。</p>
+<p>回合开始时：</p>
+<ol>
+<li>
+<p>先手玩家的奇数回合，即总第 <em>4k+1</em> 回合， <strong>法力上限</strong> 增大 <strong>1</strong> ；后手玩家的偶数回合，即总第 <em>4k</em> 回合， <strong>法力上限</strong> 增大 <strong>1</strong> </p>
+</li>
+<li>
+<p>当前玩家 <strong>法力值</strong> 设置为 <strong>法力上限</strong></p>
+</li>
+</ol>
+<blockquote>
+<p>实际上，先手玩家的第一个回合也会增长法力上限，所以实际上双方玩家前几个回合的法力上限如下表：</p>
+<table>
+<thead>
+<tr>
+<th>回合数</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先后手</td>
+<td>先</td>
+<td>后</td>
+<td>先</td>
+<td>后</td>
+<td>先</td>
+<td>后</td>
+<td>先</td>
+<td>后</td>
+</tr>
+<tr>
+<td>法力上限</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>先手在自己的第21回合，总的第41回合到达12法力上限；后手在自己的第20回合，即总的第40回合到达12法力上限。</p>
+</blockquote>
+<p>召唤生物、使用神器都会消耗法力值。</p>
+<p><strong>法力上限</strong> 最高为 <strong>12</strong></p>
+<h3 id="_14">冷却</h3>
+<h4 id="_15">生物</h4>
+<p>每种生物在加入卡组后会提供若干张 <strong>生物单元</strong> 。</p>
+<blockquote>
+<p>生物单元的数量由生物种类决定，如：将剑士编入卡组将获得6张剑士生物单元，而将弓箭手编入卡组将获得3张弓箭手生物单元</p>
+</blockquote>
+<p>每张 <strong>生物单元</strong> 可以被 独立地 消耗，用于一次任意 <strong>星级</strong> 的该种生物召唤。</p>
+<p>召唤出的 <strong>生物 死亡</strong> 后，召唤其所消耗的 <strong>生物单元</strong> 会进入 <strong>冷却</strong> ， 冷却结束后才能再次用于召唤。</p>
+<p>冷却所需回合数与生物 <strong>种类</strong> 和 <strong>星级</strong> 有关。</p>
+<p>在全局第51回合（先手回合）和第76回合（后手回合），双方生物单元数量会得到补充。</p>
+<blockquote>
+<p>在生物介绍中，将用 初始/51回合/76回合 的格式描述各次变化后的生物单元数量</p>
+</blockquote>
+<h4 id="_16">神器</h4>
+<p><strong>神器-回收</strong> 后进入冷却，冷却结束后可再次使用。</p>
+<blockquote>
+<p><strong>神器-回收</strong> 的相关描述参见 <strong>神器</strong> 条目</p>
+</blockquote>
+<p><strong>回收</strong> 时机和 <strong>冷却时间</strong> 与神器有关。</p>
+<h3 id="_17">玩家回合</h3>
+<p>双方玩家轮流进入 <strong>回合</strong> ，每个回合分为以下阶段：</p>
+<h4 id="_18">回合开始</h4>
+<p>按顺序处理以下事件：</p>
+<ol>
+<li>
+<p>当前玩家 <strong>法力上限</strong> 按规则增大 <strong>0 or 1</strong></p>
+</li>
+<li>
+<p>当前玩家 <strong>法力值</strong> 设置为 <strong>法力上限</strong></p>
+</li>
+<li>
+<p>当前玩家占领 <strong>驻扎点</strong></p>
+</li>
+<li>
+<p>处理描述带有 <strong>回合开始</strong> 的效果</p>
+</li>
+</ol>
+<h4 id="_19">冷却阶段</h4>
+<p>己方 <strong>生物单元</strong> 和 <strong>神器 剩余冷却时间</strong> 减少 1 。</p>
+<p><strong>剩余冷却时间</strong> 为 0 的 <strong>生物单元</strong> 和 <strong>神器</strong> 变为可用。</p>
+<h4 id="_20">主要阶段</h4>
+<p>在该阶段，玩家可以任意进行以下操作：</p>
+<ul>
+<li>
+<p><strong>召唤生物</strong></p>
+</li>
+<li>
+<p><strong>生物-移动</strong></p>
+</li>
+<li>
+<p><strong>生物-攻击</strong></p>
+</li>
+<li>
+<p><strong>神器-使用</strong></p>
+</li>
+</ul>
+<h4 id="_21">回合结束</h4>
+<p>处理描述带有 <strong>回合结束</strong> 的效果</p>
+<h3 id="_22">胜利判定</h3>
+<p>满足如下条件时，游戏结束：</p>
+<ol>
+<li>
+<p>一方AI回合超时</p>
+</li>
+<li>
+<p>一方神迹血量小于等于0 </p>
+</li>
+<li>
+<p>双方完成的回合总数到达 <strong>100</strong></p>
+</li>
+</ol>
+<p>依次按照以下规则判定胜者：</p>
+<ol>
+<li>
+<p>回合超时的AI判负，其对手获胜</p>
+</li>
+<li>
+<p>如果没有AI超时，神迹剩余血量更多的一方获胜</p>
+</li>
+<li>
+<p>如果神迹剩余血量相同，计算所有阵亡的己方生物的 <strong>星级</strong> 之和，阵亡己方生物星级和较小的一方获胜</p>
+</li>
+</ol>
+<h2 id="_23">生物</h2>
+<h3 id="_24">生物单元</h3>
+<p>每张 <strong>生物单元</strong> 可以被 <em>独立地</em> 消耗，用于一次任意 <strong>星级</strong> 的该种生物召唤。</p>
+<p>召唤出的 <strong>生物 死亡</strong> 后，召唤其所消耗的 <strong>生物单元</strong> 会进入 <strong>冷却</strong> ， 冷却结束后才能再次用于召唤。</p>
+<p>冷却所需回合数与生物 <strong>种类</strong> 和 <strong>星级</strong> 有关。</p>
+<p>在全局第51回合（先手回合）和第76回合（后手回合），双方生物单元数量会得到补充。</p>
+<h3 id="_25">星级</h3>
+<p><strong>生物</strong> 拥有 <strong>3</strong> 个 <strong>星级</strong> 不同的版本，不同 <strong>星级</strong> 的生物拥有相似的定位和特性，但往往具有不同的 <strong>基本属性</strong> 。</p>
+<p><strong>生物单元</strong> 可以用于任意 <strong>星级</strong> 的该种生物召唤。</p>
+<h3 id="_26">基本属性</h3>
+<p>生物拥有6种 <strong>基本属性</strong> —— <strong>法力消耗</strong> 、 <strong>攻击力</strong> 、 <strong>攻击距离</strong> 、 <strong>最大生命值</strong> 、 <strong>最大行动力</strong> 、 <strong>冷却时间</strong> 。</p>
+<h4 id="_27">法力消耗</h4>
+<p>生物 <strong>召唤</strong> 时会消耗等同于 <strong>法力消耗</strong> 的 <strong>法力值</strong> 。</p>
+<h4 id="_28">攻击力</h4>
+<p>决定生物 <strong>攻击</strong> 和 <strong>反击</strong> 造成的 <strong>伤害</strong></p>
+<h4 id="_29">攻击距离</h4>
+<p>决定生物攻击的范围。在棋盘中，两个格子的 <strong>直线距离</strong> 定义为从一个格子走到另一个格子，无视地形</p>
+<p>和生物所需要的最少步数。而 <strong>攻击距离X-Y</strong> 意为该生物能攻击到与其所在格 <strong>直线距离</strong> 在 <strong>X-Y</strong> 范围内的格子上的生物。</p>
+<p><strong>飞行生物</strong> 的 <strong>攻击范围</strong> 包括 <strong>空中层</strong> 和 <strong>地面层</strong> ， <strong>地面生物</strong> 的 <strong>攻击范围</strong> 包含 <strong>地面层</strong> ， 如果有 <strong>对空</strong> 属性，则还包含 <strong>空中层</strong> 。</p>
+<h4 id="_30">最大生命值</h4>
+<p>生物 <strong>生命值</strong> 的最大值， <strong>生物-召唤</strong> 后， <strong>初始生命值</strong> 等于 <strong>最大生命值</strong> 。</p>
+<p>受到 <strong>治疗</strong> 后，生命值不会超过最大生命值。</p>
+<h4 id="_31">最大行动力</h4>
+<p><strong>生物</strong><strong>-</strong><strong>移动</strong> 时，一条 <strong>合法移动路径</strong> 的最大格数。</p>
+<p><strong>地面生物</strong> 计算 <strong>合法路径</strong> 时，不能 <strong>经过</strong> 或 <strong>停留</strong> 于 <strong>其他地面生物</strong> 、<strong>神迹</strong> 、 <strong>深渊</strong> ；不能 <strong>经过</strong> 但能 <strong>停留</strong> 于 <strong>敌方飞行生物</strong> 、 <strong>敌方地面生物周围</strong><strong>1</strong><strong>格</strong> 。</p>
+<p><strong>飞行生物</strong> 计算 <strong>合法路径</strong> 时，不能 <strong>经过</strong> 或 <strong>停留</strong> 于 <strong>其他飞行生物</strong> ；不能 <strong>经过</strong> 但能 <strong>停留</strong> 于 <strong>敌方地面生物</strong> 、 <strong>敌方飞行生物周围1格</strong> 。</p>
+<p><strong>路径</strong> 的格子不包含移动前的位置。</p>
+<p><strong>停留</strong> 的格子即路径的最后一格。</p>
+<p><strong>经过</strong> 的格子不包含最后停留的格子。</p>
+<p><strong>另一种描述方式</strong>：</p>
+<p>每个生物 <strong>占据</strong> 某一格的某一层，这使得双方生物都不能经过/停留于该格该层。同时，每个生物 <strong>拦截</strong> 同层的周围6格和同格的另一层，这使得 <strong>敌方生物</strong> 不得经过这些区域，一旦走入就必须停止移动。</p>
+<blockquote>
+<p>提示：间断（生物之间间隔1格）防线能很好地阻击敌方同层生物，同时减少需要用到的生物数量和增大攻击面积。但对于非同层生物仅能起到有限的拖延作用。</p>
+</blockquote>
+<h4 id="_32">冷却时间</h4>
+<p>指 <strong>生物</strong><strong>-</strong><strong>死亡</strong> 后，对应 <strong>生物单元</strong> 重新可用前，需要经历的 <strong>冷却阶段</strong> 数。</p>
+<h3 id="_33">相关操作</h3>
+<h4 id="_34">召唤</h4>
+<p>消耗 <strong>法力值</strong> 和 <strong>对应生物单元</strong> ，在指定位置，召唤一个指定 <strong>种类</strong> 和 <strong>星级</strong> 的生物。</p>
+<p>如无特殊 <strong>词条</strong> ，生物 <strong>召唤</strong> 出来的当回合不能 <strong>攻击</strong> 或 <strong>移动</strong> 。</p>
+<h4 id="_35">攻击</h4>
+<p>让一个处于 <strong>可攻击状态</strong> 的 <strong>生物（攻击者）</strong> 对攻击范围内 <strong>敌方生物/神迹（被攻击者）</strong> 发起一次攻击，</p>
+<p>造成等同于 <strong>攻击者 攻击力</strong> 的伤害。</p>
+<p>如果 <strong>攻击者</strong> 同时也在 <strong>被攻击者</strong> 的攻击范围内， <strong>被攻击者</strong> 会对 <strong>攻击者</strong> 进行 <strong>反击</strong> ，造成等同于 <strong>被攻击者 攻击力</strong> 的伤害。</p>
+<p><strong>攻击力</strong> 为 0 的生物不可 <strong>攻击</strong> 。</p>
+<p>如无特殊 <strong>词条</strong> ，一个生物在一个回合内不可以既 <strong>移动</strong> ，又 <strong>攻击</strong> 。</p>
+<h4 id="_36">移动</h4>
+<p>让一个处于 <strong>可移动状态</strong> 的 <strong>生物</strong> 移动到指定地点。</p>
+<p>移动时的 <strong>占据</strong> 与 <strong>拦截</strong> 的相关概念，参见 <strong>最大行动力</strong> 一条。</p>
+<h3 id="_37">死亡</h3>
+<p>如果玩家的一次指令所引发的事件全部处理完毕后，进行一次 <strong>死亡检索</strong> ，如果存在场上生物 <strong>生命值</strong> 降至 0 或更低，则这样的生物会进入 <strong>濒死状态</strong> 。这些 <strong>濒死</strong> 生物会依次进入 <strong>死亡结算</strong> ——他们的 <strong>亡语</strong> 会被触发，接着模型被删除，召唤他们所用的 <strong>生物单元</strong> 会进入冷却。</p>
+<p>生物一旦进入 <strong>濒死状态</strong> ，即使因为其他生物的 <strong>亡语</strong> ，生命恢复到 0 以上，也一样会进行 <strong>死亡结算</strong>。</p>
+<p>当所有 <strong>濒死</strong> 生物 <strong>死亡结算</strong> 完成后，进行一轮新的 <strong>死亡检索</strong> ，直到不再有生物生命值为 0 或更低。</p>
+<h3 id="_38">词条</h3>
+<h4 id="_39">长词条</h4>
+<h5 id="_40">触发</h5>
+<p>达成某种条件时，触发某种效果</p>
+<h5 id="_41">光环</h5>
+<p>对一定范围内满足条件的生物产生持续效果</p>
+<h5 id="_42">亡语</h5>
+<p>死亡时生效的触发效果</p>
+<h4 id="_43">短词条</h4>
+<h5 id="_44">对空</h5>
+<p>仅 <strong>地面生物</strong> 可能有本词条</p>
+<p>可攻击 <strong>攻击范围</strong> 内的 <strong>地面生物</strong> 和<strong>飞行生物</strong></p>
+<h5 id="_45">飞行</h5>
+<p>是 <strong>飞行生物</strong> ，可攻击 <strong>攻击范围</strong> 内的 <strong>地面生物</strong> 和<strong>飞行生物</strong></p>
+<h5 id="_46">圣盾</h5>
+<p>抵消受到的第一次伤害，不可叠加</p>
+<h2 id="_47">神器</h2>
+<h3 id="_48">基本属性</h3>
+<p>神器拥有基本属性： <strong>法力消耗</strong> 、 <strong>冷却时间</strong> 、 <strong>使用方式</strong> 。</p>
+<h4 id="_49">法力消耗</h4>
+<p><strong>使用</strong> 神器时需要消耗的 <strong>法力值</strong> 。</p>
+<h4 id="_50">冷却时间</h4>
+<p>神器 <strong>回收</strong> 后直到变为 <strong>可用</strong> 所需经历的 <strong>回合数</strong>。</p>
+<p><strong>回收</strong> 时机由使用方式决定。</p>
+<h3 id="_51">使用方式</h3>
+<p>神器有3种使用方式，每个神器的使用方式是固定的。</p>
+<h4 id="_52">释放</h4>
+<p>可以理解为魔法卡，当即使用，产生效果，立即 <strong>回收</strong></p>
+<h4 id="_53">生成</h4>
+<p>当即使用，产生效果（可能没有即时效果）。</p>
+<p>产生效果之后，会在目标地点生成一个 <strong>神器生物</strong> ，被看作 <strong>生物</strong>。</p>
+<p><strong>神器生物</strong> 死亡后， <strong>神器</strong> 才 <strong>回收</strong> 。</p>
+<h4 id="_54">装备</h4>
+<p>以 <strong>友方生物</strong> 为目标使用，使用后为目标生物增加 <strong>属性</strong> 和 <strong>词条</strong></p>
+<p>装备神器的生物死亡后， <strong>神器回收</strong></p>
+<h2 id="_55">卡牌一览</h2>
+<h3 id="_56">生物</h3>
+<blockquote>
+<p>以下用 初始/51回合/76回合 的格式描述各次变化后的生物单元数量</p>
+<p>费用/攻击/生命/最小范围-最大范围/行动力/冷却</p>
+</blockquote>
+<h4 id="_57">剑士</h4>
+<ul>
+<li>生物单元数量：6/7/8</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>2/2/2/1-1/3/2</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>4/4/4/1-1/3/2</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>6/6/6/1-1/3/3</li>
+</ul>
+<h4 id="_58">弓箭手</h4>
+<ul>
+<li>生物单元数量： 3/4/5</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>
+<p>2/1/2/3-4/3/4</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>
+<p>4/2/3/3-4/3/4</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>
+<p>6/3/4/3-4/3/4</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<p><strong>黑蝙蝠</strong></p>
+<ul>
+<li>生物单元数量：3/4/5</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>
+<p>2/1/1/0-1/4/3</p>
+</li>
+<li>
+<p><strong>飞行</strong></p>
+</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>
+<p>3/2/1/0-1/4/3</p>
+</li>
+<li>
+<p><strong>飞行</strong></p>
+</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>
+<p>5/4/2/0-1/5/4</p>
+</li>
+<li>
+<p><strong>飞行</strong></p>
+</li>
+</ul>
+<p><strong>牧师</strong></p>
+<ul>
+<li>生物单元数量：3/4/4</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>
+<p>2/0/3/0-1/5/3</p>
+</li>
+<li>
+<p>触发 ： <strong>己方回合结束</strong> 时，(范围2) <strong>友方生物</strong> 回复 1 生命</p>
+</li>
+<li>
+<p>光环 ： (范围2) <strong>其他友方生物</strong> +1 攻击力 </p>
+</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>
+<p>4/0/4/0-1/5/3</p>
+</li>
+<li>
+<p>触发 ： <strong>己方回合结束</strong> 时，(范围3) <strong>友方生物</strong> 回复 1 生命</p>
+</li>
+<li>
+<p>光环 ： (范围3) <strong>其他友方生物</strong> +1 攻击力 </p>
+</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>
+<p>7/0/6/0-2/5/5</p>
+</li>
+<li>
+<p>触发 ： <strong>己方回合结束</strong> 时，(范围3) <strong>友方生物</strong> 回复 1 生命</p>
+</li>
+<li>
+<p>光环 ： (范围3) <strong>其他友方生物</strong> +1 攻击力 </p>
+</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>： <strong>攻击力</strong> 为 0 的生物不可 <strong>攻击</strong> 。</p>
+<p>虽然牧师攻击力仍然为0，但当多个牧师彼此靠近时，他们将有一定的近战和对空反制能力，必要时可以进行少量输出</p>
+<p>回复生命效果对自身起作用，加攻击力效果对自身不起作用</p>
+<p>如果范围内有其他牧师，加攻击力会对其他牧师起作用</p>
+</blockquote>
+<h4 id="_59">火山之龙</h4>
+<ul>
+<li>生物单元数量： 3/4/5</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>
+<p>5/3/5/1-2/2/5</p>
+</li>
+<li>
+<p><strong>触发</strong> ：<strong>攻击 敌方地面生物</strong> 后，对 （与目标距离1） 且 （与自身距离2） 的 <strong>敌方地面生物</strong> 造成 3 点伤害</p>
+</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>
+<p>7/4/7/1-2/2/5</p>
+</li>
+<li>
+<p><strong>触发</strong> ：<strong>攻击 敌方地面生物</strong> 后，对 （与目标距离1） 且 （与自身距离2） 的 <strong>敌方地面生物</strong> 造成 4 点伤害</p>
+</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>
+<p>9/5/9/1-2/2/5</p>
+</li>
+<li>
+<p><strong>触发</strong> ：<strong>攻击 敌方地面生物</strong> 后，对 （与目标距离1） 且 （与自身距离2） 的 <strong>敌方地面生物</strong> 造成 5 点伤害</p>
+</li>
+</ul>
+<blockquote>
+<p>相当于锥形攻击（攻击距离2目标不会溅射距离1目标），溅射伤害不享受攻击力加成</p>
+<p>如下图，红色箭头为选取的目标，蓝色箭头为溅射到的位置</p>
+<p>选择距离为2的目标时，距离为1的生物并不会被溅射</p>
+<p><img alt="火山之龙" src="img/card.png" /></p>
+</blockquote>
+<h4 id="_60">冰霜之龙</h4>
+<ul>
+<li>生物单元数量： 3/4/5</li>
+</ul>
+<p><strong>L1</strong></p>
+<ul>
+<li>
+<p>5/3/4/0-2/2/4</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<p><strong>L2</strong></p>
+<ul>
+<li>
+<p>7/4/6/0-2/2/4</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<p><strong>L3</strong></p>
+<ul>
+<li>
+<p>9/5/8/0-2/2/5</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+</ul>
+<h2 id="_61">神器</h2>
+<blockquote>
+<p>法力值/冷却</p>
+</blockquote>
+<h3 id="_62">塞瓦哈拉的圣光之耀</h3>
+<ul>
+<li>
+<p>6/5</p>
+</li>
+<li>
+<p><strong>释放</strong>：任意位置（包括 <strong>深渊</strong> ）</p>
+</li>
+<li>
+<p>回复 (<strong>目标地点</strong> 范围2) <strong>友方生物</strong> 生命值至生命上限，(<strong>目标地点</strong> 范围2) 友方生物 <strong>直到下下个回合开始</strong> 获得 +2 攻击。</p>
+</li>
+</ul>
+<h3 id="_63">洛古萨斯的地狱之火</h3>
+<ul>
+<li>
+<p>8/6</p>
+</li>
+<li>
+<p><strong>生成</strong> ： (神迹范围7 或 占领驻扎点范围5) 且 无地面生物 且 非深渊 的位置</p>
+</li>
+<li>
+<p><strong>召唤物</strong><strong>-</strong><strong>地狱火</strong> ：</p>
+</li>
+<li>
+<p>8/12/0-1/3</p>
+</li>
+<li>
+<p><strong>对空</strong></p>
+</li>
+<li>
+<p>使用时对 (目标范围2) 内 <strong>敌方生物</strong> 造成 2 伤害，然后 <strong>生成</strong> 一个 <strong>召唤物</strong><strong>-</strong><strong>地狱火</strong></p>
+</li>
+</ul>
+<h3 id="_64">马尔瑞恩的阳炎之盾</h3>
+<ul>
+<li>
+<p>6/4</p>
+</li>
+<li>
+<p><strong>装备</strong>：友方生物</p>
+</li>
+<li>
+<p>+0/+3</p>
+</li>
+<li>
+<p><strong>圣盾</strong>（抵消受到的第一次伤害，不可叠加）</p>
+</li>
+<li>
+<p><strong>触发</strong> ： <strong>己方回合开始</strong> 时，获得 <strong>圣盾</strong></p>
+</li>
+</ul>
+<h3 id="_65">塞浦洛斯的风神之佑</h3>
+<ul>
+<li>
+<p>8/12</p>
+</li>
+<li>
+<p><strong>释放</strong>：任意地点（包括 深渊 ）</p>
+</li>
+<li>
+<p>重置 (<strong>目标地点</strong> 范围1) <strong>友方生物</strong> 行动次数。</p>
+</li>
+</ul>
+<blockquote>
+<p>即目标范围内的友方生物，无论本回合是否行动过，无论是否为本回合新召唤的生物，都可以立即行动一次。对行动过的生物使用即可达到双倍行动的效果。</p>
+<p>特别注意：对未行动过的生物使用并不能使其行动两次！</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

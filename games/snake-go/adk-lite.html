@@ -1,0 +1,1510 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="snake-go.html">
+      
+      
+        <link rel="next" href="adk-advanced.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Python ADK 用户说明 (Lite) - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adk-user-guide-lite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python ADK 用户说明 (Lite)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/miracle.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/aquawar.html" class="md-nav__link">
+        快速入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/sdk.html" class="md-nav__link">
+        SDK手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="false">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="true">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python ADK 用户说明 (Lite)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="adk-lite.html" class="md-nav__link md-nav__link--active">
+        Python ADK 用户说明 (Lite)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    0. 预备工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 开始！
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ai" class="md-nav__link">
+    2. 样例AI的优化方向
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 可供利用的信息
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 可供利用的信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-snake" class="md-nav__link">
+    3.1 参数snake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ctx" class="md-nav__link">
+    3.2 参数ctx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    0. 预备工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 开始！
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ai" class="md-nav__link">
+    2. 样例AI的优化方向
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 可供利用的信息
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 可供利用的信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-snake" class="md-nav__link">
+    3.1 参数snake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ctx" class="md-nav__link">
+    3.2 参数ctx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="adk-user-guide-lite">ADK User Guide-Lite</h1>
+<blockquote>
+<p>本Lite版指南旨在让选手在较短时间内创作出简单AI，更多ADK的详细使用方法请看进阶版指南。</p>
+</blockquote>
+<h2 id="0">0. 预备工作</h2>
+<p>请先前往Saiblo官网下载ADK包，确认内含<code>adk.py</code>、<code>sampleAI.py</code>以及<code>main.py</code>。</p>
+<p><code>adk.py</code>为你的AI提供的功能有：与Judger进行通讯，发送你的操作、读取对手的操作等；游戏状态维护，提供逻辑维护代码，能为你处理玩家的操作并提供当前局面信息。</p>
+<p><code>sampleAI.py</code>为一个已经实现的简易AI的代码，其中的框架可以沿用至你的AI程序中，或者你也可以直接在其上进行修改。</p>
+<p><code>main.py</code>用于运行你的AI程序。注意，如果你修改了<code>sampleAI.py</code>的文件名或新创建文件编写你的AI，请在<code>main.py</code>中同步修改。</p>
+<h2 id="1">1. 开始！</h2>
+<p>你需要做的是在<code>sampleAI.py</code>中实现你自己的策略，而当前其中已经有一个简单的策略实现了，即蛇不断朝最近的道具进发，并在长度较长时分裂，原蛇头部分（“主蛇”）继续如上操作，而原蛇尾部分（“副蛇”）进行固化，样例AI的策略实现过程解析可参见代码中的注释。</p>
+<p>为了简化编写AI的流程，你只需要修改<code>sampleAI.py</code>的<code>AI</code>类中的<code>judge</code>函数进行对当前蛇的操作，而其余部分代码会帮助你处理你当前的操作、对手的操作等其他流程。<code>judge</code>函数的参数可以自行修改，返回值应为一个<code>int</code>，代表你的操作类型，具体见下表：</p>
+<table>
+<thead>
+<tr>
+<th>操作类型</th>
+<th>操作编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>移动-x轴正向</td>
+<td>1</td>
+</tr>
+<tr>
+<td>移动-y轴正向</td>
+<td>2</td>
+</tr>
+<tr>
+<td>移动-x轴负向</td>
+<td>3</td>
+</tr>
+<tr>
+<td>移动-y轴负向</td>
+<td>4</td>
+</tr>
+<tr>
+<td>融化射线</td>
+<td>5</td>
+</tr>
+<tr>
+<td>分裂</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>当前judge函数有两个参数：<code>snake</code>以及<code>ctx</code>。<code>snake</code>代表当前操作对应的蛇，<code>ctx</code>则保存了当前局面的详细信息。你可以利用它们来优化你的决策过程。最后一小节中简要介绍了它们的部分使用方法。</p>
+<h2 id="2-ai">2. 样例AI的优化方向</h2>
+<ul>
+<li><code>closest_food_strategy</code> 寻找最近的道具：是否每次都找最近的道具是最优解？考虑安全性、可能的收益以及寻找的范围</li>
+<li><code>active_strategy</code> 主蛇策略：何时分裂更优？考虑分裂时长度以及其它因素；何时使用融化射线？考虑使用后的收益</li>
+<li><code>solidify_strategy</code> 固化（副蛇策略）：怎样使蛇固化后围成的区域能够较大？在何处、以怎样的路径固化？</li>
+<li>更多其他策略，如主动去围对手、从对手处逃跑</li>
+</ul>
+<h2 id="3">3. 可供利用的信息</h2>
+<h3 id="31-snake">3.1 参数snake</h3>
+<p><code>snake</code>代表当前需进行操作的蛇，其类型为自定义类<code>Snake</code>，在<code>adk.py</code>中实现。可供使用的成员属性及方法有：</p>
+<ul>
+<li><code>coor_list: List[Tuple[int, int]]</code> 一个顺序（蛇头 -&gt; 蛇尾）包含所有坐标的列表，列表中元素为包含两个<code>int</code>的元组，第一个为<code>x</code>坐标，第二个为<code>y</code>坐标。</li>
+<li><code>item_list: List[Item]</code> 当前蛇所有的道具列表，列表中元素类型为自定义类<code>Item</code>，具体内容见后。</li>
+<li><code>id: int</code> 蛇的编号。</li>
+<li><code>length_bank: int</code> 长度银行中保存的长度。</li>
+<li><code>camp: int</code> 蛇归属于玩家0/1。</li>
+<li><code>get_len() -&gt; int</code> 返回当前蛇的长度</li>
+</ul>
+<p>更多成员可见<code>adk.py</code>或进阶版指南，它们在编写AI时并不必要。</p>
+<p>其中提到的<code>Item</code>道具类包含以下成员：</p>
+<ul>
+<li><code>x: int</code> x坐标</li>
+<li><code>y: int</code> y坐标</li>
+<li><code>id: int</code> 道具编号</li>
+<li><code>time: int</code> 道具生成的时间</li>
+<li><code>type: int</code> 道具类型，<code>0</code>代表长度道具，<code>2</code>代表融化射线。PS: 长度道具不会被保存，直接存入长度银行。</li>
+<li><code>param: int</code> 道具参数，代表融化道具的有效时间（无作用）或长度道具的增长长度。</li>
+<li><code>gotten_time: int</code> 道具被蛇获取的时间（若道具仍在地图中未被蛇获取，为-1）。</li>
+</ul>
+<h3 id="32-ctx">3.2 参数ctx</h3>
+<p><code>ctx</code>中保存了当前游戏的局面信息，类型为自定义类<code>Context</code>，在<code>adk.py</code>中实现。可供使用的成员属性及方法有：</p>
+<ul>
+<li><code>snake_list: List[Snake]</code> 包含现存所有蛇，同一个玩家的蛇按照操作顺序排序。</li>
+<li><code>game_map: Map</code> 现在的游戏地图，为自定义类<code>Map</code>，具体内容见后。</li>
+<li><code>turn: int</code> 当前回合数</li>
+<li><code>current_player: int</code> 当前玩家编号</li>
+<li><code>get_map() -&gt; Map</code> 返回当前地图</li>
+<li><code>get_snake_count(camp: int) -&gt; int</code> 返回当前<code>camp</code>选手蛇的数量</li>
+<li><code>get_snake(id: int) -&gt; Snake</code> 返回当前编号为id的蛇</li>
+<li><code>get_player_snake(camp: int) -&gt; List[Snake]</code> 返回玩家<code>camp</code>的蛇，按照行动顺序排序</li>
+<li><code>player_operations: List[List[int]]</code> 包含双方的历史操作，<code>player_operations[i]</code>为玩家<code>i</code>的历史操作，每个操作为包含三个整数的列表<code>[turn, snake, opt]</code>，依次为回合数、蛇编号、操作类型</li>
+</ul>
+<p>更多成员可见<code>adk.py</code>或进阶版指南，它们在编写AI时并不必要。</p>
+<p>其中提到的<code>Map</code>地图类包含以下成员：</p>
+<ul>
+<li><code>wall_map: List[List[int]]</code> -1 / 0 / 1 代表无墙 / 0号选手的墙 / 1号选手的墙</li>
+<li><code>snake_map: List[List[int]]</code> -1 / id 代表无 / id号蛇占据</li>
+<li><code>item_map: List[List[int]]</code> -1 / id 代表无 / id号道具占据</li>
+<li><code>item_list: List[Item]</code>现存所有道具的列表</li>
+<li><code>length: int</code> 地图长度</li>
+<li><code>width: int</code> 地图宽度</li>
+<li><code>get_map_item(id: int) -&gt; Item</code> 返回当前编号为id的道具</li>
+</ul>
+<p>其中，各个地图二维数组的第一维代表<code>x</code>坐标，第二维代表<code>y</code>坐标，从<code>0</code>开始。</p>
+<p>利用上述信息，相信智慧的你一定能够设计出一个和你一样智慧的AI！如果你想要更详细地了解AI程序处理的流程以及ADK的其他内容，请继续阅读进阶版指南。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

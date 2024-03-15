@@ -1,0 +1,3456 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="rules.html">
+      
+      
+        <link rel="next" href="player.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>SDK 文档 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sdk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SDK 文档
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/miracle.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/aquawar.html" class="md-nav__link">
+        快速入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/sdk.html" class="md-nav__link">
+        SDK手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aquawar/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="true">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SDK 文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sdk.html" class="md-nav__link md-nav__link--active">
+        SDK 文档
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sdk" class="md-nav__link">
+    SDK文件结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    选手填写函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手填写函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    函数原型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    更多说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    预定义类介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义类介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-aiclient" class="md-nav__link">
+    AI / AIClient
+  </a>
+  
+    <nav class="md-nav" aria-label="AI / AIClient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-benchangprotected" class="md-nav__link">
+    int benchang(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-jibangprotected" class="md-nav__link">
+    int jibang(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-roundprotected" class="md-nav__link">
+    int round(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-stdstring-doraprotected" class="md-nav__link">
+    std::vector&lt; std::string &gt;  dora(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-dorasprotected" class="md-nav__link">
+    std::string doras(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-recorderprotected" class="md-nav__link">
+    Record recorder(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-my_player_idprotected" class="md-nav__link">
+    int my_player_id(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-my_stateprotected" class="md-nav__link">
+    State my_state(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerinfo-players4-protected" class="md-nav__link">
+    PlayerInfo players[4] (protected)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-transstate-action" class="md-nav__link">
+    State trans(State, Action)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-get_yps" class="md-nav__link">
+    std::string Get_Yps()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_ypstdstring-card" class="md-nav__link">
+    bool is_YP(std::string card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    其他成员函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-typepublic" class="md-nav__link">
+    int type(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-payloadpublic" class="md-nav__link">
+    std::string payload(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-is_lizhipublic" class="md-nav__link">
+    int is_lizhi(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_menqingpublic" class="md-nav__link">
+    bool is_menqing(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-last_cardpublic" class="md-nav__link">
+    std::string last_card(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-frompublic" class="md-nav__link">
+    int from(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-handcardspublic" class="md-nav__link">
+    std::vector&lt; Card &gt; handcards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-cardtuple-show_cardspublic" class="md-nav__link">
+    std::vector&lt; CardTuple* &gt; show_cards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver-draw_cardspublic" class="md-nav__link">
+    CardRiver draw_cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-insertcard" class="md-nav__link">
+    void Insert(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-showcardtuple" class="md-nav__link">
+    void Show(CardTuple*)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-drawcard" class="md-nav__link">
+    void Draw(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_existcard" class="md-nav__link">
+    bool is_exist(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_exist_unrededcard-card" class="md-nav__link">
+    bool is_exist_unreded(Card card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-countcard" class="md-nav__link">
+    int count(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-get_diff_cards" class="md-nav__link">
+    std::vector&lt; Card &gt; get_diff_cards()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_1" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerinfo" class="md-nav__link">
+    PlayerInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic_1" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-pointpublic" class="md-nav__link">
+    int point(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_lizhipublic" class="md-nav__link">
+    bool is_lizhi(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-sp_cntpublic" class="md-nav__link">
+    int sp_cnt(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-cardtuple-show_cardspublic_1" class="md-nav__link">
+    std::vector&lt; CardTuple* &gt; show_cards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver-draw_cardspublic_1" class="md-nav__link">
+    CardRiver draw_cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_1" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-showcardtuple_1" class="md-nav__link">
+    void Show(CardTuple*)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    Record
+  </a>
+  
+    <nav class="md-nav" aria-label="Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdmap-stdstring-int-mppublic" class="md-nav__link">
+    std::map&lt; std::string, int &gt; mp(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_2" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    Card
+  </a>
+  
+    <nav class="md-nav" aria-label="Card">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-typepublic_1" class="md-nav__link">
+    int type(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-numpublic" class="md-nav__link">
+    int num(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic_2" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-tuple_typepublic" class="md-nav__link">
+    int tuple_type(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_moqiepublic" class="md-nav__link">
+    bool is_moqie(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-getnum" class="md-nav__link">
+    int GetNum()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-getstring" class="md-nav__link">
+    std::string GetString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_2" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardtuple" class="md-nav__link">
+    CardTuple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver" class="md-nav__link">
+    CardRiver
+  </a>
+  
+    <nav class="md-nav" aria-label="CardRiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-cardspublic" class="md-nav__link">
+    std::vector&lt; Card &gt; cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-insertcard_1" class="md-nav__link">
+    void Insert(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_existcard_1" class="md-nav__link">
+    bool is_exist(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_3" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_3" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    牌型表示
+  </a>
+  
+    <nav class="md-nav" aria-label="牌型表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    有序牌集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    无序牌型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    有序牌型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    逻辑接口
+  </a>
+  
+    <nav class="md-nav" aria-label="逻辑接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    和牌型接口（将无序牌型转化为可能的有序牌型）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    算役接口（判断无序牌型是否有役）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    听牌接口（判断无序牌型是否听牌）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    和牌接口（判断无序牌型接受一种牌后是否和牌）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    算点接口（计算一次和牌最终得点）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="false">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-lite.html" class="md-nav__link">
+        Python ADK 用户说明 (Lite)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sdk" class="md-nav__link">
+    SDK文件结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    选手填写函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手填写函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    函数原型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    更多说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    预定义类介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义类介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-aiclient" class="md-nav__link">
+    AI / AIClient
+  </a>
+  
+    <nav class="md-nav" aria-label="AI / AIClient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-benchangprotected" class="md-nav__link">
+    int benchang(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-jibangprotected" class="md-nav__link">
+    int jibang(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-roundprotected" class="md-nav__link">
+    int round(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-stdstring-doraprotected" class="md-nav__link">
+    std::vector&lt; std::string &gt;  dora(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-dorasprotected" class="md-nav__link">
+    std::string doras(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record-recorderprotected" class="md-nav__link">
+    Record recorder(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-my_player_idprotected" class="md-nav__link">
+    int my_player_id(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-my_stateprotected" class="md-nav__link">
+    State my_state(protected)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerinfo-players4-protected" class="md-nav__link">
+    PlayerInfo players[4] (protected)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-transstate-action" class="md-nav__link">
+    State trans(State, Action)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-get_yps" class="md-nav__link">
+    std::string Get_Yps()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_ypstdstring-card" class="md-nav__link">
+    bool is_YP(std::string card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    其他成员函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-typepublic" class="md-nav__link">
+    int type(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-payloadpublic" class="md-nav__link">
+    std::string payload(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-is_lizhipublic" class="md-nav__link">
+    int is_lizhi(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_menqingpublic" class="md-nav__link">
+    bool is_menqing(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-last_cardpublic" class="md-nav__link">
+    std::string last_card(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-frompublic" class="md-nav__link">
+    int from(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-handcardspublic" class="md-nav__link">
+    std::vector&lt; Card &gt; handcards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-cardtuple-show_cardspublic" class="md-nav__link">
+    std::vector&lt; CardTuple* &gt; show_cards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver-draw_cardspublic" class="md-nav__link">
+    CardRiver draw_cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-insertcard" class="md-nav__link">
+    void Insert(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-showcardtuple" class="md-nav__link">
+    void Show(CardTuple*)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-drawcard" class="md-nav__link">
+    void Draw(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_existcard" class="md-nav__link">
+    bool is_exist(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_exist_unrededcard-card" class="md-nav__link">
+    bool is_exist_unreded(Card card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-countcard" class="md-nav__link">
+    int count(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-get_diff_cards" class="md-nav__link">
+    std::vector&lt; Card &gt; get_diff_cards()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_1" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerinfo" class="md-nav__link">
+    PlayerInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic_1" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-pointpublic" class="md-nav__link">
+    int point(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_lizhipublic" class="md-nav__link">
+    bool is_lizhi(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-sp_cntpublic" class="md-nav__link">
+    int sp_cnt(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-cardtuple-show_cardspublic_1" class="md-nav__link">
+    std::vector&lt; CardTuple* &gt; show_cards(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver-draw_cardspublic_1" class="md-nav__link">
+    CardRiver draw_cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_1" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-showcardtuple_1" class="md-nav__link">
+    void Show(CardTuple*)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    Record
+  </a>
+  
+    <nav class="md-nav" aria-label="Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdmap-stdstring-int-mppublic" class="md-nav__link">
+    std::map&lt; std::string, int &gt; mp(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_2" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    Card
+  </a>
+  
+    <nav class="md-nav" aria-label="Card">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-typepublic_1" class="md-nav__link">
+    int type(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-numpublic" class="md-nav__link">
+    int num(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic_2" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-tuple_typepublic" class="md-nav__link">
+    int tuple_type(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_moqiepublic" class="md-nav__link">
+    bool is_moqie(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-getnum" class="md-nav__link">
+    int GetNum()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-getstring" class="md-nav__link">
+    std::string GetString()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_2" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardtuple" class="md-nav__link">
+    CardTuple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardriver" class="md-nav__link">
+    CardRiver
+  </a>
+  
+    <nav class="md-nav" aria-label="CardRiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector-card-cardspublic" class="md-nav__link">
+    std::vector&lt; Card &gt; cards(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-insertcard_1" class="md-nav__link">
+    void Insert(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_existcard_1" class="md-nav__link">
+    bool is_exist(Card)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-reset_3" class="md-nav__link">
+    void Reset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdstring-to_string_3" class="md-nav__link">
+    std::string to_string()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    牌型表示
+  </a>
+  
+    <nav class="md-nav" aria-label="牌型表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    有序牌集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    无序牌型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    有序牌型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    逻辑接口
+  </a>
+  
+    <nav class="md-nav" aria-label="逻辑接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    和牌型接口（将无序牌型转化为可能的有序牌型）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    算役接口（判断无序牌型是否有役）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    听牌接口（判断无序牌型是否听牌）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    和牌接口（判断无序牌型接受一种牌后是否和牌）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    算点接口（计算一次和牌最终得点）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>SDK 文档</h1>
+
+<h2 id="sdk">SDK文件结构</h2>
+<p>在游戏包下发的 <code>AI_SDK</code> 文件夹下，你可以看到这样的文件结构：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>+-- main.cpp
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+-- Action.hpp
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>+-- Action.cpp
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>+-- sdk
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|   +-- ai_client.hpp
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|   +-- logic.hpp
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|   +-- jsoncpp
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|   +-- card.h
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|   +-- ……
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+-- CMakeLists.txt
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>+-- example_ai
+</code></pre></div>
+<p>其中在 <code>sdk</code> 文件夹中的文件是我们给你提供的一套 <code>C++ SDK</code> ，包括了与 judger 的通信、按协议解析收到的信息或打包需要做出的操作、各种游戏中需要用的如牌、手牌状态、记牌器等类的封装和方法的提供以及如计算役种、计算听牌等常见逻辑方法。</p>
+<p><code>example_ai</code> 是我们提供的样例 <code>ai</code> ，你也可以通过参考熟悉 <code>sdk</code> 该如何上手。</p>
+<h2 id="_1">选手填写函数</h2>
+<p>如果选手想要实现自己的AI，应该填写 Action.cpp 中的 solve 函数，该函数说明如下：</p>
+<h3 id="_2">功能</h3>
+<p>已知当前局面信息，当前需要你的AI进行操作，给定了你的AI可以进行的所有合法操作，你需要选择一种操作执行。</p>
+<h3 id="_3">函数原型</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">AI::solve</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Action</span><span class="o">&gt;</span><span class="w"> </span><span class="n">actions</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">indexes</span><span class="p">){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="_4">参数</h3>
+<p>传入的第一个参数 actions 是关于类 Action 的列表，里面存储了所有合法的操作，同一种操作类型将占据连续的一段下标。关于 Action 类的具体定义请查看本文档中关于 Action 类的说明。</p>
+<p>传入的第二个参数 indexes 是一个映射表，它的 key 是操作的名称（字符串类型，可查看本文档关于 Action 类的说明中提到的操作字符串表示），它的 value 是一个 pair ，其第一个值表示该种操作在 actions 出现的首个下标（整数类型），第二个值表示该种操作在 actions 中出现的次数（整数类型）。</p>
+<h3 id="_5">返回值</h3>
+<p>返回值是一个整数类型，表示选择 actions 中下标多少的对应操作。</p>
+<p>如果你的返回值非法（如返回值不在 actions 的合法下标范围中），我们将为你做出默认合法行动。</p>
+<h3 id="_6">更多说明</h3>
+<p>在 Action.hpp 中，我们为你定义了 AI 类， solve 函数便是 AI 类中的一个成员方法。</p>
+<p>你可以通过查看对 AI 类的介绍了解你可以在 solve 函数中获得哪些信息以及如何使用各种操作及判断接口。</p>
+<h2 id="_7">预定义类介绍</h2>
+<h3 id="ai-aiclient">AI / AIClient</h3>
+<p>AIClient 类定义于 sdk/ai_client.hpp 中，用于完成与 judger 的通信，包括解析信息与封装信息。</p>
+<p>AI 类定义于 Action.hpp 中，公有继承自 AIClient 类，是玩家实现的 AI 实例。</p>
+<h4 id="_8">成员变量</h4>
+<h5 id="int-benchangprotected">int benchang(protected)</h5>
+<p>本场数，代表现在场供里有多少本场棒（一个本场棒代表 300 点）。</p>
+<h5 id="int-jibangprotected">int jibang(protected)</h5>
+<p>积棒数，代表现在场供里有多少立直棒（一个立直棒代表 1000 点）。</p>
+<h5 id="int-roundprotected">int round(protected)</h5>
+<p>轮数，代表目前是第几轮，从 0 开始编号，其中 0~3 代表东风场， 4~7 代表南风场。</p>
+<h5 id="stdvector-stdstring-doraprotected">std::vector&lt; std::string &gt;  dora(protected)</h5>
+<p>当前可以看到的表宝牌指示牌的列表，每一项是一个字符串（可查看本文档关于牌的字符串表示的说明）。</p>
+<h5 id="stdstring-dorasprotected">std::string doras(protected)</h5>
+<p>表宝牌集合的字符串表示，每两个字符表示一张表宝牌（可查看本文档关于牌的字符串表示的说明），如 <code>6p1s</code> 。</p>
+<h5 id="record-recorderprotected">Record recorder(protected)</h5>
+<p>记牌器，可查看本文档关于 Record 类的具体定义。</p>
+<h5 id="int-my_player_idprotected">int my_player_id(protected)</h5>
+<p>玩家自己的 id ，表示游戏开始时坐在哪一家，如东一局东家 id 为 0，南家 id 为1。</p>
+<h5 id="state-my_stateprotected">State my_state(protected)</h5>
+<p>玩家的状态，包括是否立直、手牌及副露情况等，可查看本文档关于 State 类的具体定义。</p>
+<h5 id="playerinfo-players4-protected">PlayerInfo players[4] (protected)</h5>
+<p>各玩家的状态，包括点数、是否立直、手牌数及副露情况、牌河等，下标为玩家的 id ，可查看本文档关于 PlayerInfo 类的具体定义。</p>
+<h4 id="_9">成员函数</h4>
+<h5 id="state-transstate-action">State trans(State, Action)</h5>
+<p><strong>非常好用的转移函数！</strong></p>
+<p>给定一个状态和一个合法操作，得到该状态经由该操作后得到的状态。</p>
+<p><strong>注意，你需要保证传入的操作对于该状态是合法操作！否则可能导致出错！</strong></p>
+<h5 id="stdstring-get_yps">std::string Get_Yps()</h5>
+<p>获得对于该玩家而言，这一轮的役牌有哪些，整合为一个字符串，每两个字符表示一张役牌（可查看本文档关于牌的字符串表示的说明），按顺序排布，最后结尾额外加上一个<code>#</code> 。</p>
+<p>例如，东一局东家会得到 <code>0z4z5z6z#</code> （东白发中）。</p>
+<h5 id="bool-is_ypstdstring-card">bool is_YP(std::string card)</h5>
+<p>给定一张牌的字符串表示（可查看本文档关于牌的字符串表示的说明），判断其是否是对于本轮本玩家而言的役牌， true 表示是役牌。</p>
+<p>例如，东一局东家传入 <code>1z</code> （南），则会得到 false 。</p>
+<h5 id="_10">其他成员函数</h5>
+<p>其余的成员函数都用于与 judger 交互，接收 judger 的信息并解析，在需要 AI 操作时调用 solve ，接收AI 的操作并打包信息发给 judger，一般而言你不需要明白它们的工作原理。如果你想要了解，可以配合通讯协议文档并阅读代码和注释。</p>
+<h3 id="action">Action</h3>
+<p>Action 类定义于 sdk/ai_client.hpp 中，封装了一种操作的类型和参数。</p>
+<p>操作类型的字符串表示将会在下面介绍，操作本身的字符串表示将由操作类型的字符串表示与参数通过 <code>#</code> 拼接而成，如 <code>chi#3m0m</code> ，  <code>moqieli#0p</code>  或  <code>skip#</code>  。</p>
+<h4 id="_11">成员变量</h4>
+<h5 id="int-typepublic">int type(public)</h5>
+<p>描述操作类型，预定义了枚举变量，可以在代码中查看。</p>
+<p>操作类型的数字、实际操作与字符串表示（ solve 函数的参数 indexes 就使用这种字符串表示索引）对应如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>type</code></th>
+<th align="center">操作</th>
+<th align="center">字符串表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center">吃</td>
+<td align="center"><code>chi</code></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center">碰</td>
+<td align="center"><code>peng</code></td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="center">暗杠</td>
+<td align="center"><code>angang</code></td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="center">加杠</td>
+<td align="center"><code>jiagang</code></td>
+</tr>
+<tr>
+<td align="center"><code>4</code></td>
+<td align="center">明杠</td>
+<td align="center"><code>gang</code></td>
+</tr>
+<tr>
+<td align="center"><code>5</code></td>
+<td align="center">手切立直</td>
+<td align="center"><code>lizhi</code></td>
+</tr>
+<tr>
+<td align="center"><code>6</code></td>
+<td align="center">摸切立直</td>
+<td align="center"><code>moqieli</code></td>
+</tr>
+<tr>
+<td align="center"><code>7</code></td>
+<td align="center">自摸</td>
+<td align="center"><code>zimo</code></td>
+</tr>
+<tr>
+<td align="center"><code>8</code></td>
+<td align="center">和</td>
+<td align="center"><code>hu</code></td>
+</tr>
+<tr>
+<td align="center"><code>9</code></td>
+<td align="center">手切切牌</td>
+<td align="center"><code>qiepai</code></td>
+</tr>
+<tr>
+<td align="center"><code>10</code></td>
+<td align="center">摸切切牌</td>
+<td align="center"><code>moqie</code></td>
+</tr>
+<tr>
+<td align="center"><code>11</code></td>
+<td align="center">跳过</td>
+<td align="center"><code>skip</code></td>
+</tr>
+<tr>
+<td align="center"><code>12</code></td>
+<td align="center">非法操作</td>
+<td align="center"><code>invalid</code></td>
+</tr>
+</tbody>
+</table>
+<p>各操作可以通过阅读游戏简易规则得知其发动时机及操作内涵。</p>
+<h4 id="stdstring-payloadpublic">std::string payload(public)</h4>
+<p>表示各操作的参数，操作类型、参数格式与内涵的对应如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作类型</th>
+<th align="center">参数格式</th>
+<th align="center">内涵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>chi</code></td>
+<td align="center"><code>3m0m</code></td>
+<td align="center">用来吃的牌</td>
+</tr>
+<tr>
+<td align="center"><code>peng</code></td>
+<td align="center"><code>5s0s</code></td>
+<td align="center">用来碰的牌</td>
+</tr>
+<tr>
+<td align="center"><code>angang</code></td>
+<td align="center"><code>5m</code></td>
+<td align="center">暗杠的杠牌，不含红五</td>
+</tr>
+<tr>
+<td align="center"><code>jiagang</code></td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center"><code>gang</code></td>
+<td align="center"><code>5m5m0m</code></td>
+<td align="center">用来杠的牌</td>
+</tr>
+<tr>
+<td align="center"><code>lizhi</code></td>
+<td align="center"><code>0p</code></td>
+<td align="center">切哪张牌宣布立直</td>
+</tr>
+<tr>
+<td align="center"><code>moqieli</code></td>
+<td align="center"><code>0p</code></td>
+<td align="center">切哪张牌宣布立直（一定是刚摸的这张）</td>
+</tr>
+<tr>
+<td align="center"><code>zimo</code></td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center"><code>hu</code></td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center"><code>qiepai</code></td>
+<td align="center"><code>0p</code></td>
+<td align="center">切哪张牌</td>
+</tr>
+<tr>
+<td align="center"><code>moqie</code></td>
+<td align="center"><code>0p</code></td>
+<td align="center">切哪张牌（一定是刚摸的这张）</td>
+</tr>
+<tr>
+<td align="center"><code>skip</code></td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center"><code>invalid</code></td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">成员函数</h4>
+<h5 id="stdstring-to_string">std::string to_string()</h5>
+<p>获得操作的字符串表示。</p>
+<h3 id="state">State</h3>
+<p>State 类定义于 sdk/ai_client.hpp 中，封装了玩家的状态，包括是否立直、手牌及副露情况等。</p>
+<h4 id="_13">成员变量</h4>
+<h5 id="int-idpublic">int id(public)</h5>
+<p>玩家自己的 id ，表示游戏开始时坐在哪一家，如东一局东家 id 为 0，南家 id 为1。</p>
+<h5 id="int-is_lizhipublic">int is_lizhi(public)</h5>
+<p>玩家是否立直， 1 表示已立直， 0 表示未立直。</p>
+<h5 id="bool-is_menqingpublic">bool is_menqing(public)</h5>
+<p>玩家是否还是门前清状态， 1 表示是门前清状态， 0 表示不是门前清状态。</p>
+<h5 id="stdstring-last_cardpublic">std::string last_card(public)</h5>
+<p>玩家最后接收的牌：</p>
+<p>1、玩家最后摸到的牌，如到出牌回合摸牌，开杠之后摸牌（摸到的牌不会立即加入手牌中）。</p>
+<p>2、需要玩家响应的牌，如上家打出的能吃的牌、对家打出的能碰的牌、下家打出的能和的牌。</p>
+<h5 id="int-frompublic">int from(public)</h5>
+<p>玩家最后接收的牌来自哪个 id 的玩家。</p>
+<h5 id="stdvector-card-handcardspublic">std::vector&lt; Card &gt; handcards(public)</h5>
+<p>玩家当前手牌的列表，每一项是一个 Card 类，保证有序。可查看本文档关于 Card 类的具体定义。</p>
+<h5 id="stdvector-cardtuple-show_cardspublic">std::vector&lt; CardTuple* &gt; show_cards(public)</h5>
+<p>玩家当前非手牌区的列表（吃后的顺子、碰后的刻子、杠或加杠的杠子与暗杠），每一项是一个 CardTuple 类的指针，按进入非手牌区时间有序（通过加杠将明刻变成明杠不改变顺序）。可查看本文档关于 CardTuple 类的具体定义。</p>
+<h5 id="cardriver-draw_cardspublic">CardRiver draw_cards(public)</h5>
+<p>玩家当前的牌河，可查看本文档关于 CardRiver 类的具体定义。</p>
+<h4 id="_14">成员函数</h4>
+<h5 id="void-reset">void Reset()</h5>
+<p>重置状态，包括手牌、非手牌情况，立直状态回归未立直，门清状态回归门清，初始化最后接收牌和最后接收牌来向，重置牌河。</p>
+<h5 id="void-insertcard">void Insert(Card)</h5>
+<p>往手牌中加入一张牌。</p>
+<h5 id="void-showcardtuple">void Show(CardTuple*)</h5>
+<p>往非手牌区中加入一组牌组。</p>
+<h5 id="void-drawcard">void Draw(Card)</h5>
+<p>删除手牌中一张牌（如果手牌中不存在同样的牌，则不操作），区分红五与普通五。</p>
+<h5 id="bool-is_existcard">bool is_exist(Card)</h5>
+<p>返回手牌中是否存在某种牌，区分红五与普通五。</p>
+<h5 id="bool-is_exist_unrededcard-card">bool is_exist_unreded(Card card)</h5>
+<p>返回手牌中是否存在某种牌，不区分红五与普通五。</p>
+<h5 id="int-countcard">int count(Card)</h5>
+<p>返回手牌中有多少张某种牌，区分红五与普通五。</p>
+<h5 id="stdvector-card-get_diff_cards">std::vector&lt; Card &gt; get_diff_cards()</h5>
+<p>获得手牌中种类互不相同的牌的列表，区分红五与普通五。</p>
+<h5 id="stdstring-to_string_1">std::string to_string()</h5>
+<p>获得当前状态的<strong>无序牌型</strong>表示，可查看本文档关于无序牌型表示的具体定义。</p>
+<h3 id="playerinfo">PlayerInfo</h3>
+<p>PlayerInfo 类定义于 sdk/ai_client.hpp 中，封装了玩家的状态，包括点数、是否立直、手牌数及副露情况、牌河等。</p>
+<h4 id="_15">成员变量</h4>
+<h5 id="int-idpublic_1">int id(public)</h5>
+<p>玩家自己的 id ，表示游戏开始时坐在哪一家，如东一局东家 id 为 0，南家 id 为1。</p>
+<h5 id="int-pointpublic">int point(public)</h5>
+<p>玩家的点数，初始为 25000 点。</p>
+<h5 id="bool-is_lizhipublic">bool is_lizhi(public)</h5>
+<p>玩家是否立直， true 表示已经立直。</p>
+<h5 id="int-sp_cntpublic">int sp_cnt(public)</h5>
+<p>玩家当前的手牌数。</p>
+<h5 id="stdvector-cardtuple-show_cardspublic_1">std::vector&lt; CardTuple* &gt; show_cards(public)</h5>
+<p>玩家当前非手牌区的列表（吃后的顺子、碰后的刻子、杠或加杠的杠子与暗杠），每一项是一个 CardTuple 类的指针，按进入非手牌区时间有序（通过加杠将明刻变成明杠不改变顺序）。可查看本文档关于 CardTuple 类的具体定义。</p>
+<h5 id="cardriver-draw_cardspublic_1">CardRiver draw_cards(public)</h5>
+<p>玩家当前的牌河，可查看本文档关于 CardRiver 类的具体定义。</p>
+<h4 id="_16">成员函数</h4>
+<h5 id="void-reset_1">void Reset()</h5>
+<p>重置一个玩家的信息，包括清空手牌数、清空非手牌区以及重置牌河。</p>
+<h5 id="void-showcardtuple_1">void Show(CardTuple*)</h5>
+<p>往非手牌区中加入一组牌组。</p>
+<h3 id="record">Record</h3>
+<h4 id="_17">成员变量</h4>
+<h5 id="stdmap-stdstring-int-mppublic">std::map&lt; std::string, int &gt; mp(public)</h5>
+<p>一个牌（用字符串表示）到剩余可见数的映射表。</p>
+<h4 id="_18">成员函数</h4>
+<h5 id="void-reset_2">void Reset()</h5>
+<p>重置映射表。</p>
+<h3 id="card">Card</h3>
+<p>Card 类定义于 sdk/card.h 中，部分成员函数实现于 sdk/card.cpp 中，该类封装了一张牌应该有的状态，并提供了一些预定义枚举类型（如有需要可以去代码中查看）。</p>
+<p>牌类提供了多种方便构造方法，包括直接使用字符串构造，如有需要请查看代码。</p>
+<p>牌有以下两种字符串表示：</p>
+<p><strong>纯粹字符串表示：</strong>由两个字符组成，第一个字符表示数字，第二个字符表示类别，万用 <code>m</code> 表示，饼用 <code>p</code> 表示，索用 <code>s</code> 表示，字用 <code>z</code> 表示。</p>
+<p>例如红五万用 <code>0m</code> 表示，九索用 <code>9s</code> 表示，东用 <code>0z</code> 表示。</p>
+<p><strong>字符串表示：</strong>由两到三个字符组成，前两个字符表示纯粹字符串表示，如果存在第三个字符，有两种可能：</p>
+<ol>
+<li><code>$</code> ——表示该牌是横置的，如牌河中的立直宣言牌、副露里来自舍家的牌等。</li>
+<li><code>!</code> ——表示该牌是最后一张接受牌，如刚摸上来的牌、别家放炮的铳牌等。</li>
+</ol>
+<h4 id="_19">成员变量</h4>
+<h5 id="int-typepublic_1">int type(public)</h5>
+<p>一张牌的类型，对应如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>type</code></th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center">万</td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center">饼</td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="center">索</td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="center">字</td>
+</tr>
+</tbody>
+</table>
+<h5 id="int-numpublic">int num(public)</h5>
+<p>牌的数字。</p>
+<p>对于类型为万、饼或索的牌，数字的范围为 [0, 9] ，其中 0 表示红五，其余数字表示对应数字的普通牌。</p>
+<p>对于类型为字的牌，数字和实际的对应如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>num</code></th>
+<th align="center">牌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center">东</td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center">南</td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="center">西</td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="center">北</td>
+</tr>
+<tr>
+<td align="center"><code>4</code></td>
+<td align="center">白</td>
+</tr>
+<tr>
+<td align="center"><code>5</code></td>
+<td align="center">发</td>
+</tr>
+<tr>
+<td align="center"><code>6</code></td>
+<td align="center">中</td>
+</tr>
+</tbody>
+</table>
+<h5 id="int-idpublic_2">int id(public)</h5>
+<p>一张牌的唯一 id ，可以通过 type 和 num 计算得来。</p>
+<p>id = type * 10 + num + 1</p>
+<h5 id="int-tuple_typepublic">int tuple_type(public)</h5>
+<p>牌在牌组中的类型，1表示竖置的牌，2表示横置的牌(在字符串表示中最后会加$)，3表示最后得到的牌(在字符串表示中最后会加!)</p>
+<h5 id="bool-is_moqiepublic">bool is_moqie(public)</h5>
+<p>是否为被摸切掉的牌，默认为 false ， true 表示是被摸切掉的牌。（当玩家查看他人牌河中的牌时，这是一个有用信息）</p>
+<h4 id="_20">成员函数</h4>
+<h5 id="int-getnum">int GetNum()</h5>
+<p>获得牌的数字大小，红五会得到 5 而不是 0 ，用于比较同类型牌的大小。</p>
+<h5 id="stdstring-getstring">std::string GetString()</h5>
+<p>获得牌的纯粹字符串表示。</p>
+<h5 id="stdstring-to_string_2">std::string to_string()</h5>
+<p>获得牌的字符串表示。</p>
+<h3 id="cardtuple">CardTuple</h3>
+<p>CardTuple 类定义于 sdk/cardtuple.h 中，部分成员函数实现于 sdk/cardtuple.cpp 中，该类是一个抽象类表示牌组，其继承类有顺子、刻子、对子、明杠子和暗杠。</p>
+<p>每个类的构造方法都有传入各张牌或传入字符串表示两种，对于后者你需要按照各类牌组的字符串表示规则传入，将在下面有所介绍。</p>
+<p>每个类中都保存了组成该牌组的各张牌，以及一些额外的必要信息：</p>
+<ol>
+<li>对于顺子类，各张牌已按从小到大的顺序排好， from_other 将会保存从上家吃来的是从小到大数第几张牌（从 1 开始计数，如果 from_other 为 0 可以表示这是暗顺）。</li>
+<li>对于刻子类，区分红五与普通五， from_other 将会保存是从哪家碰来的， 1 表示从上家碰的， 2 表示从对家碰的， 3 表示从下家碰的， 0 表示是暗刻。你同样可以通过查看对应顺序的牌得知碰来的是不是红五（如 from_other 为 2 ，那么 card2 表示从 对家那碰的牌）。</li>
+<li>对于明杠子类，区分红五与普通五， from_other 将会保存是从哪家碰或杠来的（与刻子类一致）， is_jia_gang 保存是否是经过加杠得到的杠子。 你同样可以通过查看对应顺序的牌得知红五的情况，第一张牌代表上家的牌，第二张牌代表对家的牌，第三张牌代表加杠的牌（如果有），第四张牌代表下家的牌（如 from_other 为 2 ， is_jia_gang  为 true ，代表从对家碰牌后用摸到的同牌加杠，可以查看 card2 和 card3 确认碰的和摸到的杠材分别是不是红五）。</li>
+<li>对于暗杠类，不区分红五与普通五，只有一个成员变量 card 保存这是关于哪种牌的暗杠（关于 5 的暗杠不能出现 0 ，此谓不区分红五与普通五）。</li>
+<li>对于对子类，只保存两张牌分别是什么，你可以查看其中有没有红五。</li>
+</ol>
+<p>关于各个牌组的字符串表示：</p>
+<ol>
+<li>对于顺子类，以大写 C 开头，接下来还有 7 个字符，表示一个吃出来的顺子面子，将被吃的牌放在第一位，后面跟一个$，其余两张按数字大小排在后（如 <code>C4p$3p0p</code>）。</li>
+<li>对于刻子类，以大写 P 开头，接下来还有 7 个字符，表示一个碰出来的刻子面子，在三张牌某一张牌的后面加入$表示从哪一家碰来的，同时这张牌也是对应家舍出的碰材。第一张代表上家，第二张代表对家，第三张代表下家（如 <code>P5s0s$5s</code>）。</li>
+<li>对于明杠子类，以大写 G 开头，接下来还有 9~10 个字符，表示一个被明杠或加杠出来的杠子面子，在四张牌某一张或两张牌的后面会加入<span class="arithmatex">\(，同时这张牌也是对应家舍出的碰材/杠材或自家的加杠牌。第一张代表上家，第二张代表对家，第三张代表自家，第四张代表下家。出现两个\)</span>的情况必然是加杠（如 <code>G5m5m5m$0m$</code>）。</li>
+<li>对于暗杠类，以大写 A 开头，接下来只有 2 个字符，表示这是哪张牌的暗杠（如 <code>A5m</code>）。</li>
+<li>对于对子类，以大写 Q 开头，接下来有 4 个字符，表示是哪两张牌（如 <code>Q5m0m</code>）。</li>
+</ol>
+<h3 id="cardriver">CardRiver</h3>
+<p>CardRiver 类定义于 sdk/cardriver.h 中，部分成员函数实现于 sdk/cardriver.cpp 中，该类用于保存牌河相关信息，并提供一些方便的接口。</p>
+<p>牌河的字符串表示是一个<strong>有序牌集</strong>（可查看本文档关于有序牌集的说明部分），其由各张牌的字符串表示按顺序拼接而成，并在末尾加上 <code>#</code> 。</p>
+<p>例如： <code>2m0p1z$4s2p#</code></p>
+<h4 id="_21">成员变量</h4>
+<h5 id="stdvector-card-cardspublic">std::vector&lt; Card &gt; cards(public)</h5>
+<p>按顺序保存牌河中的各张牌的牌列表。</p>
+<h4 id="_22">成员函数</h4>
+<h5 id="void-insertcard_1">void Insert(Card)</h5>
+<p>往牌河中加入一张牌。</p>
+<h5 id="bool-is_existcard_1">bool is_exist(Card)</h5>
+<p>判断牌河中是否存在同种牌，不区分红五与普通五（将它们视为同种牌），可以接受传入红五（将会判断牌河中是否存在同类型的五）。</p>
+<h5 id="void-reset_3">void Reset()</h5>
+<p>清空牌河的排列表。</p>
+<h5 id="stdstring-to_string_3">std::string to_string()</h5>
+<p>获得牌河的字符串表示。</p>
+<h2 id="_23">牌型表示</h2>
+<p>牌型表示将会介绍各种接口对于牌型的表示方法，如果你希望使用 sdk/logic.hpp 中提供的逻辑接口，请先熟悉这部分的表示。</p>
+<h3 id="_24">有序牌集</h3>
+<p>按顺序表示每张牌，横置牌后面加 <code>$</code> ，用 <code>#</code> 结尾。</p>
+<p>示例——</p>
+<p><code>5m2p0s2z$0z3m#</code></p>
+<h3 id="_25">无序牌型</h3>
+<p>由两部分用 <code>#</code> 拼接而成：</p>
+<p>1、手牌区的牌，按万、筒、索、字和数字大小的顺序排列，每张牌由 2 个字符表示。数牌是数字+花色，数字上特例是红宝牌数字为 0 ，花色上万、筒、索分别用 m 、 p 、 s 表示。字牌东用 0z 表示，南用 1z 表示，西用 2z 表示，北用 3z 表示，白用 4z 表示，发用 5z 表示，中用 6z 表示。</p>
+<p>2、非手牌区的牌，按进入非手牌区的时间顺序<strong>从早到晚排列</strong>，每个面子使用牌组的字符串表示（可查看本文档中 CardTuple 类中的说明），并在结尾有一个 <code>_</code> 作分割。</p>
+<p>示例——</p>
+<p><code>1m2m!2m2m3m#C4p$3p0p_P5s0s$5s_G5m5m5m$0m$_</code></p>
+<p><code>1m1m1m2m3m4m5m6m7m!7m8m9m9m9m#</code></p>
+<p>手牌区里是一万、三个二万、一个三万，一组一二三万当顺子，剩余两个二万是雀头。非手牌区是一个用三筒和红五筒吃了上家四筒的顺子，碰了对家红五索的五索刻子，碰了下家的红五万后摸到五万加杠。</p>
+<p>第二个例子是门清状态。</p>
+<h3 id="_26">有序牌型</h3>
+<p>开头有一个大写字母， M 表示这是面子牌型， D 表示这是对子牌型， G 表示这是国士无双牌型，后面跟两个 <code>_</code>。</p>
+<p>对于对子牌型，按万、筒、索、字和数字大小的顺序将张牌排列，共计 7 个对子 14 张牌。</p>
+<p>示例——</p>
+<p><code>D__1m1m3m3m5m!0m9s9s5s5s1z1z4z4z</code></p>
+<p>对于国士无双牌型，需要用 0 和 1 表示是否是国士无双十三面， 1 表示是。以及多出来的牌和最后摸到的牌（详见示例）。</p>
+<p>示例——</p>
+<p><code>G__0_9p1s!</code></p>
+<p>=&gt; <code>1m9m1p9p9p1s!9s0z1z2z3z4z5z6z</code></p>
+<p><code>G__1_9p!</code></p>
+<p>=&gt; <code>1m9m1p9p9p!1s9s0z1z2z3z4z5z6z</code></p>
+<p>对于面子牌型，同样用 <code>#</code> 拼接手牌区和非手牌区，每边以面子为单位用 <code>_</code> 分隔，手牌区雀头将会放在最后(大写字母为 Q ），最后摸到的牌后面会加 <code>!</code> 。</p>
+<p>示例——</p>
+<p><code>M__C1m2m!3m_C4m0m6m_Q5m0m#P9m$9m9m_C8m$7m9m_</code></p>
+<h2 id="_27">逻辑接口</h2>
+<p>在 sdk/logic.hpp 中，我们为你提供了许多的静态方法，方便进行各种判断，你可以阅读本文档牌型表示部分后根据该部分的说明使用。</p>
+<p>在此只介绍几个重要的接口（你可以在 sdk/logic.hpp 中根据名字的拼音缩写找到，看到更详细的参数类型信息），其余的接口如有需要可以去源码中查看。</p>
+<h3 id="_28">和牌型接口（将无序牌型转化为可能的有序牌型）</h3>
+<p>内涵：判断一副牌型是否符合和牌型（面子型 <code>4*3+2</code> ，对子型 <code>7*2</code> ，国士无双型），不判断是否有役，给出所有可能的和牌型</p>
+<p>传入：无序牌型</p>
+<p>返回：有序牌型的列表，每一项都是一种可能的和牌型</p>
+<p>返回格式：用 <code>%</code> 来连接不同的有序牌型，结尾也有 <code>%</code> </p>
+<p>示例——</p>
+<p><code>M__C1m2m!3m_C1m2m3m_C7m8m9m_C7m8m9m_Q5m0m#%D__1m1m2m!2m3m3m5m0m7m7m8m8m9m9m%</code></p>
+<h3 id="_29">算役接口（判断无序牌型是否有役）</h3>
+<p>内涵：判断一副牌型是否有役，并给出最大的“牌型番数”和符数。“牌型番数”是不考虑红宝牌、里宝牌、偶然役（岭上开花、河底摸鱼、海底摸鱼、抢杠）、悬赏役（一发）的番数计算。</p>
+<p>传入：无序牌型，是否自摸，立直状态，场风，役牌的有序牌集，表宝牌的有序牌集</p>
+<p>返回：是否符合和牌型，是否有役，“牌型番数”是多少，符数是多少，和牌型是什么，由哪些役及分别多少番组成</p>
+<p>返回格式：用/连接四个数字，第一个数字1/0表示是/否符合和牌型，第二个数字1/0表示有/无役，倒数第二个数字（用两个字符表示，个位数补0）表示“牌型番数”（若无役则无意义），最后一个数字表示符数。然后用+开始连接和牌型、役种和番数序列，役种用拼音，和番数间用/隔开。</p>
+<p>示例——</p>
+<p><code>1/1/03/30+M__C1m2m!3m_C1m2m3m_C7m8m9m_C7m8m9m_Q5m0m+duanyaojiu/1+baopai/2</code></p>
+<p><code>0/0/00/00</code></p>
+<h3 id="_30">听牌接口（判断无序牌型是否听牌）</h3>
+<p>内涵：判断一副牌是否听牌，听哪些牌（不含红五），每张听牌是否有役，有多大“牌型番数”，整幅牌是否振听（也包括立直振听和同巡振听）</p>
+<p>传入：无序牌型，立直状态（2/1 （两）立直 0 没立直），场风，役牌的有序牌集，是否振听中，表宝牌的有序牌集</p>
+<p>返回：是否振听，听牌面的列表（每一项描述了所听的一张牌、该听牌是否有役以及有多少的“牌型番数”）</p>
+<p>返回格式：不同项间用+相连，第一个数字1/0表示是/否振听，听牌面列表每一项用/连接听牌、1/0表示是/否有役和“牌型番数”，“牌型番数”占两个字符</p>
+<p>示例——</p>
+<p><code>0+6p/1/03+9p/0/03</code></p>
+<h3 id="_31">和牌接口（判断无序牌型接受一种牌后是否和牌）</h3>
+<p>内涵：判断一副牌在接受一张牌后能否和牌，和多大的牌（符数在该接口中计算），需要考虑振听（舍张振听在接口内判断，立直振听与同巡振听通过参数传入），需要考虑和牌时机（也就是偶然役与悬赏役），需要考虑所有宝牌（也包括红宝牌和立直后翻出的里宝牌）</p>
+<p>使用场景：判断是否放铳或自摸</p>
+<p>传入：无序牌型，最后接受牌，和牌方式（自摸/荣和），立直状态，是否庄家，是否是无人鸣牌的第一巡，场风，役牌的有序牌集，是否振听中，是否接受海底牌，是否接受岭上牌，是否加杠，（是否燕返），（是否杠振），是否一发，宝牌的有序牌集</p>
+<p>返回：是否和牌（不考虑振听），是否振听，和牌基本点数（在算点接口定义），和牌型是什么，由哪些役及分别多少番组成</p>
+<p>返回格式：用/连接五个数字，第一个数字2/1/0分别表示满足和牌但无役/能和牌/不能和牌，第二个数字1/0表示是/否振听，第三个数字表示番数，第四个数字表示符数，第五个数字表示和牌基本点数。然后用+开始连接和牌型、役种和番数序列，役种用拼音，和番数间用/隔开。</p>
+<p>示例——</p>
+<p><code>1/1/01/30/240+M__C1m2m!3m_C1m2m3m_C7m8m9m_C7m8m9m_Q5m0m+duanyaojiu/1</code></p>
+<h3 id="_32">算点接口（计算一次和牌最终得点）</h3>
+<p>内涵：根据和牌基本点数（庄家和牌得点是基本点数的6倍，闲家则是4倍），和牌家是否是庄家，场供情况，计算最终打点</p>
+<p>使用场景：和牌后结算</p>
+<p>传入：位置号，庄家位置号，放铳位置号（自摸为-1），和牌基本点数，本场场供数，积棒场供数</p>
+<p>返回：点数变动的列表，每一项描述了一个玩家的点数变动情况</p>
+<p>返回格式：用/连接四个数字，每个数字表示对应位置号的玩家点数变动情况，正数首字符是+，负数首字符是-</p>
+<p>示例——</p>
+<p><code>-4000/+8000/-2000/-2000</code></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

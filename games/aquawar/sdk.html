@@ -1,0 +1,3977 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="rules.html">
+      
+      
+        <link rel="next" href="communication.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>SDK手册 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sdk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SDK手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/miracle.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="true">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aquawar.html" class="md-nav__link">
+        快速入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SDK手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sdk.html" class="md-nav__link md-nav__link--active">
+        SDK手册
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    选手填写函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手填写函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pickgame" class="md-nav__link">
+    Pick(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Pick(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertgame" class="md-nav__link">
+    Assert(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Assert(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actgame" class="md-nav__link">
+    Act(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Act(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    Action的简单使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    选手可调用函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手可调用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug_msgstdstring" class="md-nav__link">
+    debug_msg(std::string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_remain_fishes" class="md-nav__link">
+    get_my_remain_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_idint" class="md-nav__link">
+    get_enemy_id(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_hpint" class="md-nav__link">
+    get_enemy_hp(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_idint" class="md-nav__link">
+    get_my_id(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_hpint" class="md-nav__link">
+    get_my_hp(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_atkint" class="md-nav__link">
+    get_my_atk(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_lowest_health_enemy" class="md-nav__link">
+    get_lowest_health_enemy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_lowest_health_enemies" class="md-nav__link">
+    get_lowest_health_enemies()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_living_fishes" class="md-nav__link">
+    get_enemy_living_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_living_fishes" class="md-nav__link">
+    get_my_living_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_living_allyint" class="md-nav__link">
+    get_my_living_ally(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_avatar_id" class="md-nav__link">
+    get_avatar_id()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_first_mover" class="md-nav__link">
+    get_first_mover()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_skill_usedint" class="md-nav__link">
+    get_skill_used(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_valid_actionint-action" class="md-nav__link">
+    auto_valid_action(int, Action*)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    预定义枚举变量
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义枚举变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fish_type" class="md-nav__link">
+    fish_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#err_type" class="md-nav__link">
+    err_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type" class="md-nav__link">
+    passive_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill_type" class="md-nav__link">
+    skill_type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    预定义类
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action_1" class="md-nav__link">
+    Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-actiontypeprivate" class="md-nav__link">
+    int actionType(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-actionfishprivate" class="md-nav__link">
+    int actionFish(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemytargetprivate" class="md-nav__link">
+    int enemyTarget(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friendtargetprivate" class="md-nav__link">
+    int friendTarget(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-gameprivate" class="md-nav__link">
+    Game game(private)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_action_typeint" class="md-nav__link">
+    set_action_type(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_action_fishint" class="md-nav__link">
+    set_action_fish(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_enemy_targetint" class="md-nav__link">
+    set_enemy_target(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_friend_targetint" class="md-nav__link">
+    set_friend_target(int)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo" class="md-nav__link">
+    ActionInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="ActionInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-action_fishpublic" class="md-nav__link">
+    int action_fish(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_excepted_injurypublic" class="md-nav__link">
+    int enemy_excepted_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injurypublic" class="md-nav__link">
+    int enemy_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injury_idpublic" class="md-nav__link">
+    int enemy_injury_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injury_timestamppublic" class="md-nav__link">
+    int enemy_injury_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_passive_idpublic" class="md-nav__link">
+    int enemy_passive_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_passive_timestamppublic" class="md-nav__link">
+    int enemy_passive_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-enemy_injury_traceablepublic" class="md-nav__link">
+    bool enemy_injury_traceable[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-enemy_passive_valuepublic" class="md-nav__link">
+    double enemy_passive_value[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_targetspublic" class="md-nav__link">
+    int enemy_targets[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type-enemy_typespublic" class="md-nav__link">
+    passive_type enemy_types[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_excepted_injurypublic" class="md-nav__link">
+    int friend_excepted_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injurypublic" class="md-nav__link">
+    int friend_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injury_idpublic" class="md-nav__link">
+    int friend_injury_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injury_timestamppublic" class="md-nav__link">
+    int friend_injury_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-friend_injury_traceablepublic" class="md-nav__link">
+    bool friend_injury_traceable[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_passive_idpublic" class="md-nav__link">
+    int friend_passive_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_passive_timestamppublic" class="md-nav__link">
+    int friend_passive_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-friend_passive_valuepublic" class="md-nav__link">
+    double friend_passive_value[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_targetspublic" class="md-nav__link">
+    int friend_targets[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type-friend_typespublic" class="md-nav__link">
+    passive_type friend_types[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_skillpublic" class="md-nav__link">
+    bool is_skill(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_injurypublic" class="md-nav__link">
+    int num_enemy_injury(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_targetspublic" class="md-nav__link">
+    int num_enemy_targets(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_passivespublic" class="md-nav__link">
+    int num_enemy_passives(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_injurypublic" class="md-nav__link">
+    int num_friend_injury(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_targetspublic" class="md-nav__link">
+    int num_friend_targets(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_passivespublic" class="md-nav__link">
+    int num_friend_passives(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill_type-typepublic" class="md-nav__link">
+    skill_type type(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_empty" class="md-nav__link">
+    bool is_empty()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo" class="md-nav__link">
+    AssertInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="AssertInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-assertcontentpublic" class="md-nav__link">
+    int assertContent(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-assertpospublic" class="md-nav__link">
+    int assertPos(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-assertresultpublic" class="md-nav__link">
+    bool assertResult(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_empty_1" class="md-nav__link">
+    bool is_empty()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish" class="md-nav__link">
+    Fish
+  </a>
+  
+    <nav class="md-nav" aria-label="Fish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-hppublic" class="md-nav__link">
+    int hp(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-atkpublic" class="md-nav__link">
+    int atk(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game" class="md-nav__link">
+    Game
+  </a>
+  
+    <nav class="md-nav" aria-label="Game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo-enemy_actionpublic" class="md-nav__link">
+    ActionInfo enemy_action(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo-enemy_assertpublic" class="md-nav__link">
+    AssertInfo enemy_assert(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish-enemy_fishpublic" class="md-nav__link">
+    Fish enemy_fish[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo-my_actionpublic" class="md-nav__link">
+    ActionInfo my_action(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo-my_assertpublic" class="md-nav__link">
+    AssertInfo my_assert(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish-my_fishpublic" class="md-nav__link">
+    Fish my_fish[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-roundpublic" class="md-nav__link">
+    int round(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-avatar_idpublic" class="md-nav__link">
+    int avatar_id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-first_moverpublic" class="md-nav__link">
+    bool first_mover(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round1_winpublic" class="md-nav__link">
+    bool round1_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round2_winpublic" class="md-nav__link">
+    bool round2_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round3_winpublic" class="md-nav__link">
+    bool round3_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-last_round_finish_reasonpublic" class="md-nav__link">
+    int last_round_finish_reason(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-state_limit_exceedpublic" class="md-nav__link">
+    bool state_limit_exceed(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stl" class="md-nav__link">
+    STL简介
+  </a>
+  
+    <nav class="md-nav" aria-label="STL简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector" class="md-nav__link">
+    std::vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdpair" class="md-nav__link">
+    std::pair
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="false">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="false">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-lite.html" class="md-nav__link">
+        Python ADK 用户说明 (Lite)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    选手填写函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手填写函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pickgame" class="md-nav__link">
+    Pick(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Pick(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertgame" class="md-nav__link">
+    Assert(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Assert(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actgame" class="md-nav__link">
+    Act(Game)
+  </a>
+  
+    <nav class="md-nav" aria-label="Act(Game)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    Action的简单使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    选手可调用函数
+  </a>
+  
+    <nav class="md-nav" aria-label="选手可调用函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug_msgstdstring" class="md-nav__link">
+    debug_msg(std::string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_remain_fishes" class="md-nav__link">
+    get_my_remain_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_idint" class="md-nav__link">
+    get_enemy_id(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_hpint" class="md-nav__link">
+    get_enemy_hp(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_idint" class="md-nav__link">
+    get_my_id(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_hpint" class="md-nav__link">
+    get_my_hp(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_atkint" class="md-nav__link">
+    get_my_atk(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_lowest_health_enemy" class="md-nav__link">
+    get_lowest_health_enemy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_lowest_health_enemies" class="md-nav__link">
+    get_lowest_health_enemies()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_enemy_living_fishes" class="md-nav__link">
+    get_enemy_living_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_living_fishes" class="md-nav__link">
+    get_my_living_fishes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_my_living_allyint" class="md-nav__link">
+    get_my_living_ally(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_avatar_id" class="md-nav__link">
+    get_avatar_id()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_first_mover" class="md-nav__link">
+    get_first_mover()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_skill_usedint" class="md-nav__link">
+    get_skill_used(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_valid_actionint-action" class="md-nav__link">
+    auto_valid_action(int, Action*)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    预定义枚举变量
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义枚举变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fish_type" class="md-nav__link">
+    fish_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#err_type" class="md-nav__link">
+    err_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type" class="md-nav__link">
+    passive_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill_type" class="md-nav__link">
+    skill_type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    预定义类
+  </a>
+  
+    <nav class="md-nav" aria-label="预定义类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action_1" class="md-nav__link">
+    Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-actiontypeprivate" class="md-nav__link">
+    int actionType(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-actionfishprivate" class="md-nav__link">
+    int actionFish(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemytargetprivate" class="md-nav__link">
+    int enemyTarget(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friendtargetprivate" class="md-nav__link">
+    int friendTarget(private)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-gameprivate" class="md-nav__link">
+    Game game(private)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_action_typeint" class="md-nav__link">
+    set_action_type(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_action_fishint" class="md-nav__link">
+    set_action_fish(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_enemy_targetint" class="md-nav__link">
+    set_enemy_target(int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_friend_targetint" class="md-nav__link">
+    set_friend_target(int)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo" class="md-nav__link">
+    ActionInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="ActionInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-action_fishpublic" class="md-nav__link">
+    int action_fish(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_excepted_injurypublic" class="md-nav__link">
+    int enemy_excepted_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injurypublic" class="md-nav__link">
+    int enemy_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injury_idpublic" class="md-nav__link">
+    int enemy_injury_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_injury_timestamppublic" class="md-nav__link">
+    int enemy_injury_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_passive_idpublic" class="md-nav__link">
+    int enemy_passive_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_passive_timestamppublic" class="md-nav__link">
+    int enemy_passive_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-enemy_injury_traceablepublic" class="md-nav__link">
+    bool enemy_injury_traceable[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-enemy_passive_valuepublic" class="md-nav__link">
+    double enemy_passive_value[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-enemy_targetspublic" class="md-nav__link">
+    int enemy_targets[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type-enemy_typespublic" class="md-nav__link">
+    passive_type enemy_types[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_excepted_injurypublic" class="md-nav__link">
+    int friend_excepted_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injurypublic" class="md-nav__link">
+    int friend_injury[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injury_idpublic" class="md-nav__link">
+    int friend_injury_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_injury_timestamppublic" class="md-nav__link">
+    int friend_injury_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-friend_injury_traceablepublic" class="md-nav__link">
+    bool friend_injury_traceable[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_passive_idpublic" class="md-nav__link">
+    int friend_passive_id[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_passive_timestamppublic" class="md-nav__link">
+    int friend_passive_timestamp[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-friend_passive_valuepublic" class="md-nav__link">
+    double friend_passive_value[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-friend_targetspublic" class="md-nav__link">
+    int friend_targets[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive_type-friend_typespublic" class="md-nav__link">
+    passive_type friend_types[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_skillpublic" class="md-nav__link">
+    bool is_skill(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_injurypublic" class="md-nav__link">
+    int num_enemy_injury(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_targetspublic" class="md-nav__link">
+    int num_enemy_targets(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_enemy_passivespublic" class="md-nav__link">
+    int num_enemy_passives(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_injurypublic" class="md-nav__link">
+    int num_friend_injury(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_targetspublic" class="md-nav__link">
+    int num_friend_targets(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-num_friend_passivespublic" class="md-nav__link">
+    int num_friend_passives(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill_type-typepublic" class="md-nav__link">
+    skill_type type(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_empty" class="md-nav__link">
+    bool is_empty()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo" class="md-nav__link">
+    AssertInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="AssertInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-assertcontentpublic" class="md-nav__link">
+    int assertContent(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-assertpospublic" class="md-nav__link">
+    int assertPos(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-assertresultpublic" class="md-nav__link">
+    bool assertResult(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    成员函数
+  </a>
+  
+    <nav class="md-nav" aria-label="成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bool-is_empty_1" class="md-nav__link">
+    bool is_empty()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish" class="md-nav__link">
+    Fish
+  </a>
+  
+    <nav class="md-nav" aria-label="Fish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-idpublic" class="md-nav__link">
+    int id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-hppublic" class="md-nav__link">
+    int hp(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-atkpublic" class="md-nav__link">
+    int atk(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game" class="md-nav__link">
+    Game
+  </a>
+  
+    <nav class="md-nav" aria-label="Game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    成员变量
+  </a>
+  
+    <nav class="md-nav" aria-label="成员变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo-enemy_actionpublic" class="md-nav__link">
+    ActionInfo enemy_action(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo-enemy_assertpublic" class="md-nav__link">
+    AssertInfo enemy_assert(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish-enemy_fishpublic" class="md-nav__link">
+    Fish enemy_fish[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actioninfo-my_actionpublic" class="md-nav__link">
+    ActionInfo my_action(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertinfo-my_assertpublic" class="md-nav__link">
+    AssertInfo my_assert(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fish-my_fishpublic" class="md-nav__link">
+    Fish my_fish[](public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-roundpublic" class="md-nav__link">
+    int round(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-avatar_idpublic" class="md-nav__link">
+    int avatar_id(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-first_moverpublic" class="md-nav__link">
+    bool first_mover(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round1_winpublic" class="md-nav__link">
+    bool round1_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round2_winpublic" class="md-nav__link">
+    bool round2_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-round3_winpublic" class="md-nav__link">
+    bool round3_win(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-last_round_finish_reasonpublic" class="md-nav__link">
+    int last_round_finish_reason(public)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-state_limit_exceedpublic" class="md-nav__link">
+    bool state_limit_exceed(public)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stl" class="md-nav__link">
+    STL简介
+  </a>
+  
+    <nav class="md-nav" aria-label="STL简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdvector" class="md-nav__link">
+    std::vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdpair" class="md-nav__link">
+    std::pair
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sdk">sdk手册</h1>
+<div class="toc">
+<ul>
+<li><a href="#sdk">sdk手册</a><ul>
+<li><a href="#_1">选手填写函数</a><ul>
+<li><a href="#pickgame">Pick(Game)</a><ul>
+<li><a href="#_2">功能</a></li>
+<li><a href="#_3">参数</a></li>
+<li><a href="#_4">返回值</a></li>
+</ul>
+</li>
+<li><a href="#assertgame">Assert(Game)</a><ul>
+<li><a href="#_5">功能</a></li>
+<li><a href="#_6">参数</a></li>
+<li><a href="#_7">返回值</a></li>
+<li><a href="#_8">提示</a></li>
+</ul>
+</li>
+<li><a href="#actgame">Act(Game)</a><ul>
+<li><a href="#_9">功能</a></li>
+<li><a href="#_10">参数</a></li>
+<li><a href="#_11">返回值</a></li>
+<li><a href="#action">Action的简单使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_12">选手可调用函数</a><ul>
+<li><a href="#debug_msgstdstring">debug_msg(std::string)</a></li>
+<li><a href="#get_my_remain_fishes">get_my_remain_fishes()</a></li>
+<li><a href="#get_enemy_idint">get_enemy_id(int)</a></li>
+<li><a href="#get_enemy_hpint">get_enemy_hp(int)</a></li>
+<li><a href="#get_my_idint">get_my_id(int)</a></li>
+<li><a href="#get_my_hpint">get_my_hp(int)</a></li>
+<li><a href="#get_my_atkint">get_my_atk(int)</a></li>
+<li><a href="#get_lowest_health_enemy">get_lowest_health_enemy()</a></li>
+<li><a href="#get_lowest_health_enemies">get_lowest_health_enemies()</a></li>
+<li><a href="#get_enemy_living_fishes">get_enemy_living_fishes()</a></li>
+<li><a href="#get_my_living_fishes">get_my_living_fishes()</a></li>
+<li><a href="#get_my_living_allyint">get_my_living_ally(int)</a></li>
+<li><a href="#get_avatar_id">get_avatar_id()</a></li>
+<li><a href="#get_first_mover">get_first_mover()</a></li>
+<li><a href="#get_skill_usedint">get_skill_used(int)</a></li>
+<li><a href="#auto_valid_actionint-action">auto_valid_action(int, Action*)</a></li>
+</ul>
+</li>
+<li><a href="#_13">预定义枚举变量</a><ul>
+<li><a href="#fish_type">fish_type</a></li>
+<li><a href="#err_type">err_type</a></li>
+<li><a href="#passive_type">passive_type</a></li>
+<li><a href="#skill_type">skill_type</a></li>
+</ul>
+</li>
+<li><a href="#_14">预定义类</a><ul>
+<li><a href="#action_1">Action</a><ul>
+<li><a href="#_15">成员变量</a><ul>
+<li><a href="#int-actiontypeprivate">int actionType(private)</a></li>
+<li><a href="#int-actionfishprivate">int actionFish(private)</a></li>
+<li><a href="#int-enemytargetprivate">int enemyTarget(private)</a></li>
+<li><a href="#int-friendtargetprivate">int friendTarget(private)</a></li>
+<li><a href="#game-gameprivate">Game game(private)</a></li>
+</ul>
+</li>
+<li><a href="#_16">成员函数</a><ul>
+<li><a href="#set_action_typeint">set_action_type(int)</a></li>
+<li><a href="#set_action_fishint">set_action_fish(int)</a></li>
+<li><a href="#set_enemy_targetint">set_enemy_target(int)</a></li>
+<li><a href="#set_friend_targetint">set_friend_target(int)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#actioninfo">ActionInfo</a><ul>
+<li><a href="#_17">成员变量</a><ul>
+<li><a href="#int-action_fishpublic">int action_fish(public)</a></li>
+<li><a href="#int-enemy_excepted_injurypublic">int enemy_excepted_injury[](public)</a></li>
+<li><a href="#int-enemy_injurypublic">int enemy_injury[](public)</a></li>
+<li><a href="#int-enemy_injury_idpublic">int enemy_injury_id[](public)</a></li>
+<li><a href="#int-enemy_injury_timestamppublic">int enemy_injury_timestamp[](public)</a></li>
+<li><a href="#int-enemy_passive_idpublic">int enemy_passive_id[](public)</a></li>
+<li><a href="#int-enemy_passive_timestamppublic">int enemy_passive_timestamp[](public)</a></li>
+<li><a href="#bool-enemy_injury_traceablepublic">bool enemy_injury_traceable[](public)</a></li>
+<li><a href="#double-enemy_passive_valuepublic">double enemy_passive_value[](public)</a></li>
+<li><a href="#int-enemy_targetspublic">int enemy_targets[](public)</a></li>
+<li><a href="#passive_type-enemy_typespublic">passive_type enemy_types[](public)</a></li>
+<li><a href="#int-friend_excepted_injurypublic">int friend_excepted_injury[](public)</a></li>
+<li><a href="#int-friend_injurypublic">int friend_injury[](public)</a></li>
+<li><a href="#int-friend_injury_idpublic">int friend_injury_id[](public)</a></li>
+<li><a href="#int-friend_injury_timestamppublic">int friend_injury_timestamp[](public)</a></li>
+<li><a href="#bool-friend_injury_traceablepublic">bool friend_injury_traceable[](public)</a></li>
+<li><a href="#int-friend_passive_idpublic">int friend_passive_id[](public)</a></li>
+<li><a href="#int-friend_passive_timestamppublic">int friend_passive_timestamp[](public)</a></li>
+<li><a href="#double-friend_passive_valuepublic">double friend_passive_value[](public)</a></li>
+<li><a href="#int-friend_targetspublic">int friend_targets[](public)</a></li>
+<li><a href="#passive_type-friend_typespublic">passive_type friend_types[](public)</a></li>
+<li><a href="#bool-is_skillpublic">bool is_skill(public)</a></li>
+<li><a href="#int-num_enemy_injurypublic">int num_enemy_injury(public)</a></li>
+<li><a href="#int-num_enemy_targetspublic">int num_enemy_targets(public)</a></li>
+<li><a href="#int-num_enemy_passivespublic">int num_enemy_passives(public)</a></li>
+<li><a href="#int-num_friend_injurypublic">int num_friend_injury(public)</a></li>
+<li><a href="#int-num_friend_targetspublic">int num_friend_targets(public)</a></li>
+<li><a href="#int-num_friend_passivespublic">int num_friend_passives(public)</a></li>
+<li><a href="#skill_type-typepublic">skill_type type(public)</a></li>
+</ul>
+</li>
+<li><a href="#_18">成员函数</a><ul>
+<li><a href="#bool-is_empty">bool is_empty()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assertinfo">AssertInfo</a><ul>
+<li><a href="#_19">成员变量</a><ul>
+<li><a href="#int-assertcontentpublic">int assertContent(public)</a></li>
+<li><a href="#int-assertpospublic">int assertPos(public)</a></li>
+<li><a href="#bool-assertresultpublic">bool assertResult(public)</a></li>
+</ul>
+</li>
+<li><a href="#_20">成员函数</a><ul>
+<li><a href="#bool-is_empty_1">bool is_empty()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#fish">Fish</a><ul>
+<li><a href="#_21">成员变量</a><ul>
+<li><a href="#int-idpublic">int id(public)</a></li>
+<li><a href="#int-hppublic">int hp(public)</a></li>
+<li><a href="#int-atkpublic">int atk(public)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#game">Game</a><ul>
+<li><a href="#_22">成员变量</a><ul>
+<li><a href="#actioninfo-enemy_actionpublic">ActionInfo enemy_action(public)</a></li>
+<li><a href="#assertinfo-enemy_assertpublic">AssertInfo enemy_assert(public)</a></li>
+<li><a href="#fish-enemy_fishpublic">Fish enemy_fish[](public)</a></li>
+<li><a href="#actioninfo-my_actionpublic">ActionInfo my_action(public)</a></li>
+<li><a href="#assertinfo-my_assertpublic">AssertInfo my_assert(public)</a></li>
+<li><a href="#fish-my_fishpublic">Fish my_fish[](public)</a></li>
+<li><a href="#int-roundpublic">int round(public)</a></li>
+<li><a href="#int-avatar_idpublic">int avatar_id(public)</a></li>
+<li><a href="#bool-first_moverpublic">bool first_mover(public)</a></li>
+<li><a href="#bool-round1_winpublic">bool round1_win(public)</a></li>
+<li><a href="#bool-round2_winpublic">bool round2_win(public)</a></li>
+<li><a href="#bool-round3_winpublic">bool round3_win(public)</a></li>
+<li><a href="#int-last_round_finish_reasonpublic">int last_round_finish_reason(public)</a></li>
+<li><a href="#bool-state_limit_exceedpublic">bool state_limit_exceed(public)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#stl">STL简介</a><ul>
+<li><a href="#stdvector">std::vector</a></li>
+<li><a href="#stdpair">std::pair</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">选手填写函数</h2>
+<p>需要选手填写的sdk函数为<strong>Pick(Game)</strong>，<strong>Assert(Game)</strong>和 <strong>Act(Game)</strong>三个函数。</p>
+<h3 id="pickgame">Pick(Game)</h3>
+<p>选鱼函数</p>
+<h4 id="_2">功能</h4>
+<p>给定当前局面，从剩余的鱼中挑选4条鱼出战。值得注意的是拟态鱼的格式略有不同，将在下方说明。</p>
+<p>这个函数的调用时机是游戏刚开始的时候，或是一轮对战结束，进入下一轮对战并开始选鱼的时候。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Pick</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="_3">参数</h4>
+<p>传入的参数是一个表示当前局面的类<strong>Game</strong>，其定义<a href="#game">点击这里</a>查看。</p>
+<h4 id="_4">返回值</h4>
+<p>返回的值是一个<strong>std::vector&lt;int></strong>。不熟悉<strong>STL</strong>的参赛选手可以<a href="#stdvector">点击这里</a>查看使用方法。</p>
+<p>一个合法的返回值应该包含4个<strong>int</strong>类型变量，其含义为挑选的4条鱼的ID。鱼的编号从1至12分别代表射水鱼，喷火鱼，电鳗，翻车鱼，梭子鱼，蝠鲼，海龟，章鱼，大白鲨，锤头鲨，小丑鱼，拟态鱼。其中12不能作为合法的挑选类型存在，因为拟态鱼需要选择一条其他鱼进行拟态，所以拟态鱼的编号应该设置为<code>12+X</code>，其中 <code>X</code>的含义为模仿的鱼的编号。所以一个合法的返回值，其形式可能为<code>(1, 2, 4, 15)</code>，代表出战的鱼为射水鱼，喷火鱼，翻车鱼和拟态鱼(模仿电鳗)。</p>
+<p>当然，使用integer类型表示鱼显得很不直观。为此我们提供了预定义的枚举类型<strong>fish_type</strong>，使用鱼的名字作为返回值。关于该枚举变量，可以<a href="#fish_type">点击这里</a>查看所有鱼的定义。</p>
+<h3 id="assertgame">Assert(Game)</h3>
+<p>断言函数</p>
+<h4 id="_5">功能</h4>
+<p>给定当前局面，选择是否需要<strong>断言</strong>一条敌方的鱼。关于断言是什么，可以查看游戏规则介绍文档。</p>
+<p>这个函数的调用时机是一个回合开始时，此时选手需要断言。由于此时对方理应完成了一个回合的操作，所以<strong>Game</strong>中的一些信息会对应更新。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Assert</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="_6">参数</h4>
+<p>传入的参数是一个表示当前局面的类<strong>Game</strong>，其定义<a href="#game">点击这里</a>查看。</p>
+<h4 id="_7">返回值</h4>
+<p>返回的值是一个<strong>std::pair&lt;int, int></strong>。不熟悉<strong>STL</strong>的参赛选手可以<a href="#stdpair">点击这里</a>查看使用方法。</p>
+<p>对于断言操作而言，我们只需要获取两个变量：敌方鱼的<strong>位置</strong>和“断言”敌方鱼的<strong>ID</strong>。所以返回值的含义十分清楚：第一个int代表的是敌方鱼的<strong>位置</strong>，其取值范围为<code>[0, 3]</code>；第二个int代表的是敌方鱼的<strong>ID</strong>，其取值范围为<code>[1, 12]</code>。敌方鱼的ID也可以使用枚举类型<strong>fish_type</strong>来表示。关于该枚举变量，可以<a href="#fish_type">点击这里</a>查看所有鱼的定义。</p>
+<p>当然，如果你不能确定敌方鱼是什么，可以令第一个int值为-1，来表示这一回合放弃断言。</p>
+<p>所以一个合法的返回值，其形式可能为<strong>std::pair&lt;0, 3&gt;</strong>，其含义为断言敌方0号鱼是电鳗；还有可能是<strong>std::pair&lt;-1, -1&gt;</strong>，其含义为我方该回合放弃断言。</p>
+<h4 id="_8">提示</h4>
+<p>如果你没有把握自己的AI有一定的推断能力，那么建议AI不要轻易断言——因为断言失败会带来很大的负面效果！所以如果你对自己的AI没有信心，可以复制下面这段代码来跳过断言阶段：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="actgame">Act(Game)</h3>
+<p>行动函数</p>
+<h4 id="_9">功能</h4>
+<p>给定当前局面，选择这一回合需要进行的行动。</p>
+<p>这个函数的调用时机是断言阶段结束后，行动回合开始阶段。如果你在断言阶段进行了一次断言，那么<strong>Game</strong>里的内容会随之进行更新(主要是<strong>my_assert</strong>)。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Action</span><span class="w"> </span><span class="nf">AI::Act</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="_10">参数</h4>
+<p>传入的参数是一个表示当前局面的类<strong>Game</strong>，其定义<a href="#game">点击这里</a>查看。</p>
+<h4 id="_11">返回值</h4>
+<p>返回值是一个类<strong>Action</strong>，代表这一回合做出的行动。关于<strong>Action</strong>，可以<a href="#action">点击这里</a>查看定义和使用方法。</p>
+<h4 id="action">Action的简单使用</h4>
+<p>由于每条鱼的主动技能不一样，所以做出的操作会比较复杂。为了让这件事情变得更简单一些，我们定义了一个<strong>Action</strong>类，里面存有这一回合的操作。下面将介绍怎么使用<strong>Action</strong>类进行行动的操作。</p>
+<p>首先，选手需要做的事情是创建一个<strong>Action</strong>类的实例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Action</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">game</span><span class="p">);</span>
+</code></pre></div>
+<p>这一行代码不需要改动。这样我们就拥有了一个<strong>Action</strong>类实例。接下来只需要向<strong>action</strong>中添加行动，再返回<strong>action</strong>即可。</p>
+<p>其次，选手需要挑选一条该回合能行动的鱼，并通过<strong>set_action_fish()</strong>函数向<strong>action</strong>中添加行动的鱼的信息。举个例子，假设我方2号位的鱼是海龟，我想让海龟这一回合进行行动，那么我需要写以下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">action</span><span class="p">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<p>参数“2”代表行动的鱼是2号位的鱼。</p>
+<p>然后，选手需要指定选中的鱼这一回合是需要进行普通攻击还是使用技能。假设我让海龟使用技能，那么我需要写以下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">action</span><span class="p">.</span><span class="n">set_action_type</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
+<p>参数“1”代表使用主动技能，“0”代表使用普通攻击。</p>
+<p>接下来，由于海龟的主动技能需要选中一个友方随从和一个敌方随从，所以在返回<strong>action</strong>之前还需要再指定两个目标。对于指定目标为友方鱼的情况，我需要使用<strong>set_friend_target()</strong>来选择友方随从。假设我选择友方1号鱼为友方目标，那么我需要写以下代码:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">action</span><span class="p">.</span><span class="n">set_friend_target</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
+<p>参数“1”代表选中的友方目标是位置为1的友方鱼。</p>
+<p>最后我们考虑选择敌方目标。我需要使用<strong>set_enemy_target()</strong>函数来选择敌方随从。假设我选择敌方3号鱼为目标，那么我需要写以下代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">action</span><span class="p">.</span><span class="n">set_enemy_target</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre></div>
+<p>参数“3”代表选中的敌方目标是位置为3的敌方鱼。</p>
+<p>这时候，我已经设置完了全部的行动参数了！所以我需要提交我的行动，将<strong>action</strong>返回：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">return</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
+</code></pre></div>
+<p>这样子，我就完成了这个函数的任务了。</p>
+<p><strong>注意：以上函数的调用次序最好不要更改！否则可能会导致设置行动失败！</strong></p>
+<h2 id="_12">选手可调用函数</h2>
+<h3 id="debug_msgstdstring">debug_msg(std::string)</h3>
+<p>该函数的作用是将一个给定字符串输出到一个名为<strong>ai_debug_info.txt</strong>的文件里，可以输出调试信息。</p>
+<p><strong>注意：该函数只能在本地运行的时候使用，不能在saiblo上使用，否则可能导致AI错误！</strong></p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">debug_msg</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="err">；</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">debug_msg</span><span class="p">(</span><span class="s">&quot;This is a debug info&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>等到本地运行结束后，在<strong>judger.py</strong>文件的同级目录下会出现一个名为<strong>ai_debug_info.txt</strong>的文件，里面写有"This is a debug info"。</p>
+<p>关于本地运行，可以参考游戏包内的文档<strong>judger使用说明</strong>。</p>
+<h3 id="get_my_remain_fishes">get_my_remain_fishes()</h3>
+<p>该函数的作用是将当前剩余可选的鱼以<strong>std::vector&lt;int></strong>的形式返回给选手，一般在选鱼阶段使用。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_my_remain_fishes</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">remain_fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_remain_fishes</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_enemy_idint">get_enemy_id(int)</h3>
+<p>该函数的作用是获取对方指定位置的鱼的id(或者称之为种类)。如果这一条鱼已经被断言成功，则返回这条鱼的id；如果这一条鱼还没有被断言成功，则返回-1。</p>
+<p>可以直接访问<strong>Game</strong>中的变量来替代本函数：(pos为敌方鱼的位置)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">enemy_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">enemy_id</span><span class="p">[</span><span class="n">pos</span><span class="p">].</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_enemy_id</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">enemy_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_enemy_id</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="get_enemy_hpint">get_enemy_hp(int)</h3>
+<p>该函数的作用是获取对方指定位置的鱼的hp。</p>
+<p>可以直接访问<strong>Game</strong>中的变量来替代本函数：(pos为敌方鱼的位置)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">enemy_hp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">enemy_id</span><span class="p">[</span><span class="n">pos</span><span class="p">].</span><span class="n">hp</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_enemy_hp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">enemy_hp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_enemy_hp</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="get_my_idint">get_my_id(int)</h3>
+<p>该函数的作用是获取我方指定位置的鱼的id。如果这一条鱼已经被断言成功，则返回这条鱼的id的相反数；如果这一条鱼还没有被断言成功，则返回这条鱼的id。</p>
+<p>可以直接访问<strong>Game</strong>中的变量来替代本函数：(pos为我方鱼的位置)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">my_id</span><span class="p">[</span><span class="n">pos</span><span class="p">].</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_my_id</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_id</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="get_my_hpint">get_my_hp(int)</h3>
+<p>该函数的作用是获取我方指定位置的鱼的hp。</p>
+<p>可以直接访问<strong>Game</strong>中的变量来替代本函数：(pos为我方鱼的位置)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_hp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">my_id</span><span class="p">[</span><span class="n">pos</span><span class="p">].</span><span class="n">hp</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_my_hp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_hp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_hp</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="get_my_atkint">get_my_atk(int)</h3>
+<p>该函数的作用是获取我方指定位置的鱼的攻击力。</p>
+<p>可以直接访问<strong>Game</strong>中的变量来替代本函数：(pos为我方鱼的位置)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_atk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">my_id</span><span class="p">[</span><span class="n">pos</span><span class="p">].</span><span class="n">atk</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_my_atk</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_atk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_atd</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="get_lowest_health_enemy">get_lowest_health_enemy()</h3>
+<p>该函数的作用是获取敌方血量最低的一条鱼。</p>
+<p>返回值为一个<strong>int</strong>，代表敌方血量最少的鱼的位置。如果有多条敌方鱼是敌方血量最低的鱼，则返回位置编号最小的鱼。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_lowest_health_enemy</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1">// lowest_health_enemy是一个0~3的整数，代表敌方鱼的位置。</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">lowest_health_enemy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_lowest_health_enemy</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_lowest_health_enemies">get_lowest_health_enemies()</h3>
+<p>该函数的作用是获取敌方血量最低的所有鱼。</p>
+<p>返回值为一个<strong>std::vector&lt;int></strong>，里面储存了所有敌方血量最少的鱼的位置。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_lowest_health_enemies</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1">// lowest_health_enemies是一个vector，里面存储敌方所有血量最少的鱼。</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lowest_health_enemies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_lowest_health_enemies</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_enemy_living_fishes">get_enemy_living_fishes()</h3>
+<p>该函数的作用是获取所有敌方当前存活的鱼。</p>
+<p>返回值为一个<strong>std::vector&lt;int></strong>，里面储存了所有敌方活着的鱼的位置。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>std::vector&lt;int&gt; get_enemy_living_fishes();
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1">// enemy_living_fishes是一个vector，里面储存敌方所有活着的鱼。</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">enemy_living_fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_enemy_living_fishes</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_my_living_fishes">get_my_living_fishes()</h3>
+<p>该函数的作用是获取所有我方当前存活的鱼。</p>
+<p>返回值为一个<strong>std::vector&lt;int></strong>，里面储存了所有我方活着的鱼的位置。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_my_living_fishes</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1">// my_living_fishes是一个vector，里面储存我方所有活着的鱼。</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_living_fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_living_fishes</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_my_living_allyint">get_my_living_ally(int)</h3>
+<p>该函数的作用是获取我方一条鱼的其余存活队友。</p>
+<p>返回值为一个<strong>std::vector&lt;int></strong>， 里面储存了传入的鱼之外的我方活着的鱼的位置。</p>
+<p>与<strong>get_my_living_fishes()</strong>相比，这个函数需要额外指定一条友方鱼，获取其余的友方活着的鱼的位置。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_my_living_ally</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1">// 假设当前我需要发动位置为3的鱼的主动</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="c1">// 当前这条鱼的主动需要选取一个存活的队友，所以我用my_living_ally来表示其余的存活队友</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_living_ally</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_living_ally</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="get_avatar_id">get_avatar_id()</h3>
+<p>该函数的作用是获取己方拟态鱼本轮模仿的鱼的编号（如果存在拟态鱼）。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_avatar_id</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1">// avatar_id是我方拟态鱼模仿的鱼的编号</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">avatar_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_avatar_id</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="get_first_mover">get_first_mover()</h3>
+<p>该函数的作用是获取己方这一轮是否是先手，如果是先手会得到 1。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">get_first_mover</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">get_first_mover</span><span class="p">()){</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="p">...</span><span class="w">  </span><span class="c1">//  展开我的先手策略！</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="p">}</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="w">    </span><span class="p">...</span><span class="w">  </span><span class="c1">//  可恶，启用备用方案！</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="get_skill_usedint">get_skill_used(int)</h3>
+<p>该函数的作用是获取自己的一条鱼的主动技能使用次数。</p>
+<p>传入参数是己方鱼的位置，返回值是这条鱼的主动技能使用次数。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_skill_used</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1">// skill_used_times表示我方第3条鱼使用主动技能的次数</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">skill_used_times</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_skill_used</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="auto_valid_actionint-action">auto_valid_action(int, Action*)</h3>
+<p>入门神器！新手福音！</p>
+<p>如果你不知道行动回合该进行什么操作的话，请使用这个函数来进行自动行动。</p>
+<p>该函数的作用是自动为一个位置的鱼选取合法的行动目标，优先高概率使用主动技能，如果不可能合法则使用普通攻击。但是在这之前请先在<strong>Action</strong>中设置你的选鱼，否则会出现错误。</p>
+<p>注意：长时间使用主动技能可能会让对手更容易地猜出你的鱼的配置，从而进行断言获得优势。</p>
+<p>传入参数是一个<strong>int</strong>（代表鱼的位置）和一个<strong>Action</strong>*（代表鱼的行动）。</p>
+<p><strong>函数原型</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">auto_valid_action</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="o">*</span><span class="n">action</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>使用示范</strong></p>
+<p>以一个最简单的行动作示范：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">Action</span><span class="w"> </span><span class="nf">AI::Act</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="p">{</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">Action</span><span class="w"> </span><span class="n">action</span><span class="p">(</span><span class="n">game</span><span class="p">);</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">    </span><span class="c1">// 获取我这一回合行动的鱼。</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">my_pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">get_my_living_fishes</span><span class="p">())[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">    </span><span class="c1">// 设置这一回合行动的鱼。</span>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="w">    </span><span class="n">action</span><span class="p">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="n">my_pos</span><span class="p">);</span>
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="w">    </span><span class="c1">// 自动行动</span>
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a><span class="w">    </span><span class="n">auto_valid_action</span><span class="p">(</span><span class="n">my_pos</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">action</span><span class="p">);</span>
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="_13">预定义枚举变量</h2>
+<h3 id="fish_type">fish_type</h3>
+<p><strong>fish_type</strong>是为了让鱼的id更加直观而定义的一个枚举变量，其对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>鱼的名称</th>
+<th>ID</th>
+<th>fish_type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>射水鱼</td>
+<td>1</td>
+<td>spray</td>
+</tr>
+<tr>
+<td>喷火鱼</td>
+<td>2</td>
+<td>flame</td>
+</tr>
+<tr>
+<td>电鳗</td>
+<td>3</td>
+<td>eel</td>
+</tr>
+<tr>
+<td>翻车鱼</td>
+<td>4</td>
+<td>sunfish</td>
+</tr>
+<tr>
+<td>梭子鱼</td>
+<td>5</td>
+<td>barracuda</td>
+</tr>
+<tr>
+<td>蝠鲼</td>
+<td>6</td>
+<td>mobula</td>
+</tr>
+<tr>
+<td>海龟</td>
+<td>7</td>
+<td>turtle</td>
+</tr>
+<tr>
+<td>章鱼</td>
+<td>8</td>
+<td>octopus</td>
+</tr>
+<tr>
+<td>大白鲨</td>
+<td>9</td>
+<td>whiteshark</td>
+</tr>
+<tr>
+<td>锤头鲨</td>
+<td>10</td>
+<td>hammerhead</td>
+</tr>
+<tr>
+<td>小丑鱼</td>
+<td>11</td>
+<td>clownfish</td>
+</tr>
+<tr>
+<td>拟态鱼</td>
+<td>12</td>
+<td>imitator</td>
+</tr>
+</tbody>
+</table>
+<p>使用<strong>fish_type</strong>可以替换对应的<strong>ID</strong>，比如下面的代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">chosen_fish</span><span class="p">;</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="n">chosen_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">spray</span><span class="p">);</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="n">chosen_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">sunfish</span><span class="p">);</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="n">chosen_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">barracuda</span><span class="p">);</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="n">chosen_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">imitator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">turtle</span><span class="p">);</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="k">return</span><span class="w"> </span><span class="n">chosen_fish</span><span class="p">;</span>
+</code></pre></div>
+<p>这段代码表示的是选中射水鱼，翻车鱼，蝠鲼和拟态鱼(模仿海龟)出战。</p>
+<h3 id="err_type">err_type</h3>
+<p><strong>err_type</strong>定义了<strong>Action</strong>类中一些常见的错误操作，同时也是<strong>Action</strong>中<strong>SET</strong>类型函数的返回值。</p>
+<table>
+<thead>
+<tr>
+<th>错误类型</th>
+<th>Value</th>
+<th>err_type</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标选取错误</td>
+<td>0</td>
+<td>err_target</td>
+<td>当鱼行动时选取了非法目标(比如选取己方鱼作为攻击对象)</td>
+</tr>
+<tr>
+<td>目标位置错误</td>
+<td>1</td>
+<td>err_target_out_of_range</td>
+<td>通过位置指定鱼的时候，pos不在<code>[0, 3]</code>内</td>
+</tr>
+<tr>
+<td>目标行动类型错误</td>
+<td>2</td>
+<td>err_action_type</td>
+<td>set_action_type的时候参数值不为0或1</td>
+</tr>
+<tr>
+<td>选取的鱼ID错误</td>
+<td>3</td>
+<td>err_action_fish</td>
+<td>正常情况下不会出现该错误</td>
+</tr>
+<tr>
+<td>未选定行动类型</td>
+<td>4</td>
+<td>err_action_not_choose</td>
+<td>未指定行动类型的时候调用set_enemy_target或set_friend_target</td>
+</tr>
+<tr>
+<td>未选取鱼</td>
+<td>5</td>
+<td>err_fish_not_choose</td>
+<td>未选取鱼的时候调用set_enemy_target或set_friend_target</td>
+</tr>
+<tr>
+<td>成功</td>
+<td>6</td>
+<td>success</td>
+<td>操作成功</td>
+</tr>
+</tbody>
+</table>
+<h3 id="passive_type">passive_type</h3>
+<p>被动技能的类型，比较粗糙的归类，避免透露过多信息。</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>counter</td>
+<td>膨胀反伤</td>
+</tr>
+<tr>
+<td>deflect</td>
+<td>承伤</td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>减伤</td>
+</tr>
+<tr>
+<td>heal</td>
+<td>回血</td>
+</tr>
+<tr>
+<td>explode</td>
+<td>爆炸</td>
+</tr>
+</tbody>
+</table>
+<h3 id="skill_type">skill_type</h3>
+<p>主动行动的类型，比较粗糙的归类，避免透露过多信息。</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aoe</td>
+<td>群体伤害</td>
+</tr>
+<tr>
+<td>infight</td>
+<td>伤害队友</td>
+</tr>
+<tr>
+<td>crit</td>
+<td>暴击</td>
+</tr>
+<tr>
+<td>subtle</td>
+<td>无作为</td>
+</tr>
+<tr>
+<td>normalattack</td>
+<td>普通攻击</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">预定义类</h2>
+<h3 id="action_1">Action</h3>
+<p><strong>Action</strong>类用于定义鱼在一回合内的操作，是<strong>Act(Game)</strong>函数的返回值。</p>
+<p><strong>Action</strong>类默认实现了一些简单的操作正确性检查。如果出现了非法操作，则会以返回值的形式告诉选手错误类型，方便选手判断和修改。错误类型是<strong>err_type</strong>，<a href="#err_type">点击此处</a>了解该枚举类型的详细信息。</p>
+<h4 id="_15">成员变量</h4>
+<h5 id="int-actiontypeprivate">int actionType(<em>private</em>)</h5>
+<p>操作类型。0代表普通攻击，1代表使用主动技能。初始值为-1。</p>
+<h5 id="int-actionfishprivate">int actionFish(<em>private</em>)</h5>
+<p>进行操作的鱼的位置(pos)。取值范围为<code>[0, 3]</code>。初始值为-1。</p>
+<h5 id="int-enemytargetprivate">int enemyTarget(<em>private</em>)</h5>
+<p>选取的敌方目标鱼的位置(pos)。如果只选取一条鱼作为目标，则其值为位置，取值范围为<code>[0, 3]</code>；如果选取敌方所有鱼作为目标(aoe)，则其值为<code>-2</code>。初始值为-1。</p>
+<h5 id="int-friendtargetprivate">int friendTarget(<em>private</em>)</h5>
+<p>选取的友方目标鱼的位置(pos)。取值范围为<code>[0, 3]</code>。初始值为-1。</p>
+<h5 id="game-gameprivate">Game game(<em>private</em>)</h5>
+<p>局面变量。用于协助判断操作正确性。</p>
+<h4 id="_16">成员函数</h4>
+<h5 id="set_action_typeint">set_action_type(int)</h5>
+<p>设置操作类型<strong>actionType</strong>。如果参数值为0或1，将其赋值给<strong>acitionType</strong>并返回<strong>success</strong>，否则返回<strong>err_action_type</strong>。</p>
+<h5 id="set_action_fishint">set_action_fish(int)</h5>
+<p>设置行动鱼<strong>actionFish</strong>。如果参数值在区间<code>[0, 3]</code>内，将其赋值给<strong>actionFish</strong>并返回<strong>success</strong>，否则返回<strong>err_target_out_of_range</strong>。</p>
+<h5 id="set_enemy_targetint">set_enemy_target(int)</h5>
+<p>设置敌方目标<strong>enemyTarget</strong>。如果选取的行动为普通攻击，或者选取的行动为发动技能且需要指定敌方鱼为目标，则调用此函数。</p>
+<p>如果传入参数在区间<code>[0, 3]</code>内，则检查当前鱼和行动类型是否支持当前操作；若否，则根据错误类型返回对应参数。如果选取了鱼且发动主动且鱼的主动是对敌方的aoe，则传入任意参数都将会把<strong>enemyTarget</strong>置为-2。</p>
+<h5 id="set_friend_targetint">set_friend_target(int)</h5>
+<p>同上。但是由于没有对友方鱼的群体技能，所以传入参数区间限定在<code>[0, 3]</code>。</p>
+<h3 id="actioninfo">ActionInfo</h3>
+<p>用于描述某一方在一个回合内进行的操作。</p>
+<h4 id="_17">成员变量</h4>
+<h5 id="int-action_fishpublic">int action_fish(<em>public</em>)</h5>
+<p>行动的鱼的位置(pos)。初始值为-1。</p>
+<h5 id="int-enemy_excepted_injurypublic">int enemy_excepted_injury[](<em>public</em>)</h5>
+<p>该行动玩家的敌方预期受到的伤害(与实际受到的伤害相对)。数组中数据顺序与<strong>enemy_targets[]</strong>一致。即假设enemy_expected_injury[0] = 50，enemy_targets[0] = 1，则代表行动玩家的敌方1号位置的鱼预期受到50点伤害。</p>
+<h5 id="int-enemy_injurypublic">int enemy_injury[](<em>public</em>)</h5>
+<p>该行动玩家的敌方实际受到伤害。数组中数据顺序与<strong>enemy_injury_id[]</strong>一致。</p>
+<h5 id="int-enemy_injury_idpublic">int enemy_injury_id[](<em>public</em>)</h5>
+<p>该行动玩家的敌方实际受到伤害的鱼的位置(pos)。数组中数据顺序与<strong>enemy_injury[]</strong>一致。</p>
+<h5 id="int-enemy_injury_timestamppublic">int enemy_injury_timestamp[](<em>public</em>)</h5>
+<p>该次伤害的时间戳，即结算过程中，该次伤害结算的次序（第几个进行结算的，从1开始标号，这个标号从小到大记录了敌我方被动技能、敌我方受到伤害事件的结算顺序）。数组中数据顺序与<strong>enemy_injury[]</strong>和<strong>enemy_injury_id[]</strong>一致。</p>
+<h5 id="int-enemy_passive_idpublic">int enemy_passive_id[](<em>public</em>)</h5>
+<p>该行动玩家的敌方触发的被动的鱼的位置(pos)。数组中数据顺序与<strong>enemy_passive_value[]</strong>和<strong>enemy_types[]</strong>一致。</p>
+<h5 id="int-enemy_passive_timestamppublic">int enemy_passive_timestamp[](<em>public</em>)</h5>
+<p>该次被动的时间戳，即结算过程中，该次被动结算的次序（第几个进行结算的，从1开始标号，这个标号从小到大记录了敌我方被动技能、敌我方受到伤害事件的结算顺序）。数组中数据顺序与<strong>enemy_passive_id[]</strong>和<strong>enemy_passive_value[]</strong>，<strong>enemy_types[]</strong>一致。</p>
+<h5 id="bool-enemy_injury_traceablepublic">bool enemy_injury_traceable[](<em>public</em>)</h5>
+<p>该次伤害是否可追踪，即该次伤害来源是否是由攻击和技能<strong>直接</strong>造成的伤害；如果是，则对应值为true，如果不是则为false。数组中数据顺序与<strong>enemy_injury[]</strong>和<strong>enemy_injury_id[]</strong>一致。</p>
+<h5 id="double-enemy_passive_valuepublic">double enemy_passive_value[](<em>public</em>)</h5>
+<p>如果该行动玩家的敌方触发的被动类型为减少伤害(<strong>reduce</strong>)，则其值为减伤比；</p>
+<p>如果该行动玩家的敌方触发的被动类型为治疗(<strong>heal</strong>)，则其值为<strong>实际治疗量</strong>（考虑了血量上限），</p>
+<p>否则其值无意义。数组中数据顺序与<strong>enemy_passive_id[]</strong>和<strong>enemy_types[]</strong>一致。</p>
+<h5 id="int-enemy_targetspublic">int enemy_targets[](<em>public</em>)</h5>
+<p>该行动玩家选取的敌方鱼的位置(pos)。数组中数据顺序与<strong>enemy_excepted_injury[]</strong>一致。</p>
+<h5 id="passive_type-enemy_typespublic">passive_type enemy_types[](<em>public</em>)</h5>
+<p>该行动玩家的敌方触发的被动类型。被动类型<strong>passive_type</strong><a href="#passive_type">点击这里</a>查看定义。数组中数据顺序与<strong>enemy_passive_id[]</strong>和<strong>enemy_passive_value[]</strong>一致。</p>
+<h5 id="int-friend_excepted_injurypublic">int friend_excepted_injury[](<em>public</em>)</h5>
+<p>该行动玩家的友方预期受到的伤害(与实际受到的伤害相对)。数组中数据顺序与<strong>friend_targets[]</strong>一致。即假设friend_expected_injury[0] = 50，friend_targets[0] = 1，则代表行动玩家的友方1号位置的鱼预期受到50点伤害。</p>
+<h5 id="int-friend_injurypublic">int friend_injury[](<em>public</em>)</h5>
+<p>该行动玩家的友方实际受到伤害。数组中数据顺序与<strong>friend_injury_id[]</strong>一致。</p>
+<h5 id="int-friend_injury_idpublic">int friend_injury_id[](<em>public</em>)</h5>
+<p>该行动玩家的友方实际受到伤害的鱼的位置(pos)。数组中数据顺序与<strong>friend_injury[]</strong>一致。</p>
+<h5 id="int-friend_injury_timestamppublic">int friend_injury_timestamp[](<em>public</em>)</h5>
+<p>该次伤害的时间戳，即结算过程中，该次伤害结算的次序（第几个进行结算的，从1开始标号，这个标号从小到大记录了敌我方被动技能、敌我方受到伤害事件的结算顺序）。数组中数据顺序与<strong>friend_injury[]</strong>和<strong>friend_injury_id[]</strong>一致。</p>
+<h5 id="bool-friend_injury_traceablepublic">bool friend_injury_traceable[](<em>public</em>)</h5>
+<p>该次伤害是否可追踪，即该次伤害来源是否是由攻击和技能<strong>直接</strong>造成的伤害；如果是，则对应值为true，如果不是则为false。数组中数据顺序与<strong>friend_injury[]</strong>和<strong>friend_injury_id[]</strong>一致。</p>
+<h5 id="int-friend_passive_idpublic">int friend_passive_id[](<em>public</em>)</h5>
+<p>该行动玩家的友方触发的被动的鱼的位置(pos)。数组中数据顺序与<strong>friend_passive_value[]</strong>和<strong>friend_types[]</strong>一致。</p>
+<h5 id="int-friend_passive_timestamppublic">int friend_passive_timestamp[](<em>public</em>)</h5>
+<p>该次被动的时间戳，即结算过程中，该次被动结算的次序（第几个进行结算的，从1开始标号，这个标号从小到大记录了敌我方被动技能、敌我方受到伤害事件的结算顺序）。数组中数据顺序与<strong>friend_passive_id[]</strong>和<strong>friend_passive_value[]</strong>，<strong>friend_types[]</strong>一致。</p>
+<h5 id="double-friend_passive_valuepublic">double friend_passive_value[](<em>public</em>)</h5>
+<p>如果该行动玩家的友方触发的被动类型为减少伤害(<strong>reduce</strong>)，则其值为减伤比；</p>
+<p>如果该行动玩家的友方触发的被动类型为治疗(<strong>heal</strong>)，则其值为<strong>实际治疗量</strong>（考虑了血量上限），</p>
+<p>否则其值无意义。数组中数据顺序与<strong>friend_passive_id[]</strong>和<strong>friend_types[]</strong>一致。</p>
+<h5 id="int-friend_targetspublic">int friend_targets[](<em>public</em>)</h5>
+<p>该行动玩家选取的友方鱼的位置(pos)。数组中数据顺序与<strong>friend_excepted_injury[]</strong>一致。</p>
+<h5 id="passive_type-friend_typespublic">passive_type friend_types[](<em>public</em>)</h5>
+<p>该行动玩家的友方触发的被动类型。被动类型<strong>passive_type</strong><a href="#passive_type">点击这里</a>查看定义。数组中数据顺序与<strong>friend_passive_id[]</strong>和<strong>friend_passive_value[]</strong>一致。</p>
+<h5 id="bool-is_skillpublic">bool is_skill(<em>public</em>)</h5>
+<p>该次行动是否使用了技能。true代表使用了技能，false代表使用了普通攻击。初始值为false。</p>
+<h5 id="int-num_enemy_injurypublic">int num_enemy_injury(<em>public</em>)</h5>
+<p>该行动玩家的敌方受伤鱼的数量。需要注意的是，该值为数组<strong>enemy_injury[]</strong>，<strong>enemy_injury_id[]</strong>的长度。</p>
+<h5 id="int-num_enemy_targetspublic">int num_enemy_targets(<em>public</em>)</h5>
+<p>该行动玩家选取的敌方目标个数。需要注意的是，该值为数组<strong>enemy_targets[]</strong>，<strong>enemy_excepted_injury[]</strong>的长度。初始值为0。</p>
+<h5 id="int-num_enemy_passivespublic">int num_enemy_passives(<em>public</em>)</h5>
+<p>该行动玩家的敌方鱼触发被动的个数。需要注意的是，该值为数组<strong>enemy_passive_id[]</strong>，<strong>enemy_types[]</strong>和<strong>enemy_passive_value[]</strong>的长度。初始值为0。</p>
+<h5 id="int-num_friend_injurypublic">int num_friend_injury(<em>public</em>)</h5>
+<p>该行动玩家的友方受伤鱼的数量。需要注意的是，该值为数组<strong>friend_injury[]</strong>，<strong>friend_injury_id[]</strong>的长度。初始值为0。</p>
+<h5 id="int-num_friend_targetspublic">int num_friend_targets(<em>public</em>)</h5>
+<p>该行动玩家选取的友方目标个数。需要注意的是，该值为数组<strong>friend_targets[]</strong>，<strong>friend_excepted_injury[]</strong>的长度。初始值为0。</p>
+<h5 id="int-num_friend_passivespublic">int num_friend_passives(<em>public</em>)</h5>
+<p>该行动玩家的友方鱼触发被动的个数。需要注意的是，该值为数组<strong>friend_passive_id[]</strong>，<strong>friend_types[]</strong>和<strong>friend_passive_value[]</strong>的长度。初始值为0。</p>
+<h5 id="skill_type-typepublic">skill_type type(<em>public</em>)</h5>
+<p>如果行动类型为主动，则<strong>type</strong>表示该玩家发动的主动的类型。关于<strong>skill_type</strong>，<a href="#skill_type">点击这里</a>查看具体定义。</p>
+<h4 id="_18">成员函数</h4>
+<h5 id="bool-is_empty">bool is_empty()</h5>
+<p>判定当前Info是否为空，即上一回合玩家是否有操作。</p>
+<h3 id="assertinfo">AssertInfo</h3>
+<p>用于描述某一方的断言操作和断言结果。</p>
+<h4 id="_19">成员变量</h4>
+<h5 id="int-assertcontentpublic">int assertContent(<em>public</em>)</h5>
+<p>断言鱼的ID。初始值为0。</p>
+<p><strong>注意</strong>：当对手上一回合没有进行断言的时候，该变量值为0。</p>
+<h5 id="int-assertpospublic">int assertPos(<em>public</em>)</h5>
+<p>被断言鱼的位置(pos)。初始值为0。</p>
+<p><strong>注意</strong>：当对手上一回合没有进行断言的时候，该变量值为0。所以不要用该变量来判断对手上一回合是否进行了断言。</p>
+<h5 id="bool-assertresultpublic">bool assertResult(<em>public</em>)</h5>
+<p>断言结果。true代表断言成功，false代表断言失败。初始值为false。</p>
+<p><strong>注意</strong>：当对手上一回合没有进行断言的时候，该变量值为false。</p>
+<h4 id="_20">成员函数</h4>
+<h5 id="bool-is_empty_1">bool is_empty()</h5>
+<p>判定当前Info是否为空，即上一回合玩家是否有操作。</p>
+<h3 id="fish">Fish</h3>
+<p>用于描述一条鱼的信息。</p>
+<h4 id="_21">成员变量</h4>
+<h5 id="int-idpublic">int id(<em>public</em>)</h5>
+<p>鱼的id。如果是己方鱼，则id为其真实id；如果是敌方鱼，则如果这条鱼已经被断言成功，它的id是其真实id，否则是-1。</p>
+<h5 id="int-hppublic">int hp(<em>public</em>)</h5>
+<p>鱼的血量。</p>
+<h5 id="int-atkpublic">int atk(<em>public</em>)</h5>
+<p>鱼的攻击力。如果是己方鱼，则该值为其实际攻击力；如果是敌方鱼，则这个值无意义。</p>
+<h3 id="game">Game</h3>
+<p>描述当前游戏局面的类。</p>
+<h4 id="_22">成员变量</h4>
+<h5 id="actioninfo-enemy_actionpublic">ActionInfo enemy_action(<em>public</em>)</h5>
+<p>描述了敌方的行动及其结果。关于<strong>ActionInfo</strong>，<a href="#actioninfo">点击这里</a>查看其定义。</p>
+<h5 id="assertinfo-enemy_assertpublic">AssertInfo enemy_assert(<em>public</em>)</h5>
+<p>描述了敌方的断言及其结果。关于<strong>AssertInfo</strong>，<a href="#assertinfo">点击这里</a>查看其定义。</p>
+<h5 id="fish-enemy_fishpublic">Fish enemy_fish[](<em>public</em>)</h5>
+<p>描述了敌方的四条鱼的状态。关于<strong>Fish</strong>，<a href="#fish">点击这里</a>查看其定义。</p>
+<h5 id="actioninfo-my_actionpublic">ActionInfo my_action(<em>public</em>)</h5>
+<p>描述了我方上一回合的行动及其结果。关于<strong>ActionInfo</strong>，<a href="#actioninfo">点击这里</a>查看其定义。</p>
+<h5 id="assertinfo-my_assertpublic">AssertInfo my_assert(<em>public</em>)</h5>
+<p>描述了我方上一回合的断言及其结果。关于<strong>AssertInfo</strong>，<a href="#assertinfo">点击这里</a>查看其定义。</p>
+<h5 id="fish-my_fishpublic">Fish my_fish[](<em>public</em>)</h5>
+<p>描述了我方的四条鱼的现在的状态。关于<strong>Fish</strong>，<a href="#fish">点击这里</a>查看其定义。</p>
+<h5 id="int-roundpublic">int round(<em>public</em>)</h5>
+<p>当前回合数，取值范围为<code>[1, 3]</code>。</p>
+<h5 id="int-avatar_idpublic">int avatar_id(<em>public</em>)</h5>
+<p>当前回合己方拟态鱼模仿的鱼的id（如果没有的话是-1）。</p>
+<h5 id="bool-first_moverpublic">bool first_mover(<em>public</em>)</h5>
+<p>当前回合我方是不是先手（如果是的话是true）。</p>
+<h5 id="bool-round1_winpublic">bool round1_win(<em>public</em>)</h5>
+<p>描述第一局结果。如果第一局我方获胜，则该值为true，否则为false。</p>
+<h5 id="bool-round2_winpublic">bool round2_win(<em>public</em>)</h5>
+<p>描述第二局结果，同上。</p>
+<h5 id="bool-round3_winpublic">bool round3_win(<em>public</em>)</h5>
+<p>描述第三局结果，同上~~虽然完全没有用但为了满足强迫症我还是加上了~~。</p>
+<h5 id="int-last_round_finish_reasonpublic">int last_round_finish_reason(<em>public</em>)</h5>
+<p>描述上一轮结束原因和时刻。取值说明如下：</p>
+<ul>
+<li>0：第一轮，没有上一轮的值。</li>
+<li>1：我方断言后上一轮结束。</li>
+<li>2：我方行动回合结束后上一轮结束。</li>
+<li>3：敌方断言后上一轮结束。</li>
+<li>4：敌方行动回合结束后上一轮结束。</li>
+</ul>
+<h5 id="bool-state_limit_exceedpublic">bool state_limit_exceed(<em>public</em>)</h5>
+<p>上一轮结束原因是否是到达时间上限。</p>
+<h2 id="stl">STL简介</h2>
+<h3 id="stdvector">std::vector</h3>
+<p>可以将其理解为一个可变长数组。完成AI只需要知道以下操作即可：</p>
+<ul>
+<li><strong>clear()</strong>：清空vector。</li>
+<li><strong>push_back()</strong>：在vector的尾部添加一个元素。</li>
+<li><strong>size()</strong>：获取vector的长度。</li>
+<li>访问vector的形式与访问数组的形式一样，使用中括号即可。</li>
+</ul>
+<p>以下是操作示例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample</span><span class="p">;</span><span class="w">    </span><span class="c1">//定义一个存放类型为int的vector，可以将其类比为int sample[?]</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="n">sample</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w">             </span><span class="c1">//清空sample内的元素。</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="n">sample</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">        </span><span class="c1">//将2放在sample的尾部。此时sample内存放的数据为{2}</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="n">sample</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">        </span><span class="c1">//将3放在sample的尾部。此时sample内存放的数据为{2, 3}</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="n">sample</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w">              </span><span class="c1">//取sample的大小。结果为2.</span>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="n">sample</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">                  </span><span class="c1">//取sample[1]的值。结果为3.</span>
+</code></pre></div>
+<h3 id="stdpair">std::pair</h3>
+<p>可以将其理解为将两个基本数据捆绑在一起。比如<strong>std::pair&lt;int, int></strong>就是将两个int类型的数据捆绑在一起。</p>
+<p>不理解也没关系，只需要先计算出<strong>Assert(Game)</strong>函数中要求返回的两个数，假定其为<strong>A</strong>和<strong>B</strong>，则加入以下代码即可：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Assert</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="p">{</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="w">    </span><span class="c1">// Calculate the value of A and B</span>
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">);</span>
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

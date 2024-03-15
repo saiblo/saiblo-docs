@@ -1,0 +1,2278 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../miracle/logic.html">
+      
+      
+        <link rel="next" href="rules.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>快速入门 - Saiblo Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-header__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Saiblo Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              快速入门
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Saiblo Wiki" class="md-nav__button md-logo" aria-label="Saiblo Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Saiblo Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/user.html" class="md-nav__link">
+        用户手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          AI 编写手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI 编写手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AI 编写手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai.html" class="md-nav__link">
+        AI 编写手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-clion.html" class="md-nav__link">
+        基于 CLion 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/cpp-env-vscode.html" class="md-nav__link">
+        基于 VS Code 的 C++ 环境配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/developer.html" class="md-nav__link">
+        游戏开发者手册
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          游戏手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="游戏手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          游戏手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reversi.html" class="md-nav__link">
+        黑白棋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          四子棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="四子棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          四子棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/connect4.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/sdk.html" class="md-nav__link">
+        实验框架介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/saiblo-guide.html" class="md-nav__link">
+        在线平台介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/local-guide.html" class="md-nav__link">
+        本地评测工具介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect4/submission.html" class="md-nav__link">
+        作业提交与评分细则
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          神迹之战
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="神迹之战" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          神迹之战
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/miracle.html" class="md-nav__link">
+        游戏介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/communicate.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miracle/logic.html" class="md-nav__link">
+        游戏逻辑文档
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="true">
+          鱼洋陷役
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="鱼洋陷役" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          鱼洋陷役
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          快速入门
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="aquawar.html" class="md-nav__link md-nav__link--active">
+        快速入门
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    零、游戏包介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、鱼洋陷役游戏规则
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    二、编写AI代码简易教程
+  </a>
+  
+    <nav class="md-nav" aria-label="二、编写AI代码简易教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav" aria-label="C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    我应该在哪里写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    我应该怎么写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    我应该在哪里写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    我应该怎么写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    三、本地编译
+  </a>
+  
+    <nav class="md-nav" aria-label="三、本地编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    AI编译
+  </a>
+  
+    <nav class="md-nav" aria-label="AI编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav" aria-label="C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linuxmacos" class="md-nav__link">
+    Linux/MacOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    依赖库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-macos" class="md-nav__link">
+    Linux 或 macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    逻辑编译
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    四、本地测试
+  </a>
+  
+    <nav class="md-nav" aria-label="四、本地测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    环境说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    编译游戏逻辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    AI 和 AI 对战
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    测试模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    关于输出调试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    五、播放器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai_2" class="md-nav__link">
+    六、代码提交与AI对战
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sdk.html" class="md-nav__link">
+        SDK手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eggs.html" class="md-nav__link">
+        抢金蛋
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" tabindex="0" aria-expanded="false">
+          失落深空
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="失落深空" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          失落深空
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/lostspace.html" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/communication.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-quick-start.html" class="md-nav__link">
+        C++ AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-quick-start.html" class="md-nav__link">
+        Python AI 快速上手文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/cpp-sdk.html" class="md-nav__link">
+        C++ AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/py-sdk.html" class="md-nav__link">
+        Python AI SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lostspace/replay.html" class="md-nav__link">
+        回放文件格式说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" tabindex="0" aria-expanded="false">
+          日本麻将
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日本麻将" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          日本麻将
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/mahjong.html" class="md-nav__link">
+        游戏引导
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/rules.html" class="md-nav__link">
+        游戏规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/sdk.html" class="md-nav__link">
+        SDK 文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mahjong/player.html" class="md-nav__link">
+        播放器使用说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" tabindex="0" aria-expanded="false">
+          贪吃蛇围棋
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="贪吃蛇围棋" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          贪吃蛇围棋
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/snake-go.html" class="md-nav__link">
+        详细规则及边界情况
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-lite.html" class="md-nav__link">
+        Python ADK 用户说明 (Lite)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/adk-advanced.html" class="md-nav__link">
+        Python ADK 用户说明 (Advanced)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/cpp-guide.html" class="md-nav__link">
+        C++ ADK 用户说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/faq.html" class="md-nav__link">
+        常见问题解答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/ai-protocol.html" class="md-nav__link">
+        通讯协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake-go/replay-guide.html" class="md-nav__link">
+        回放文件格式简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" tabindex="0" aria-expanded="false">
+          冰雪杯
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="冰雪杯" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          冰雪杯
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/snow-cup.pdf" class="md-nav__link">
+        游戏简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/cpp-intro.pdf" class="md-nav__link">
+        C++ SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snow-cup/py-intro.pdf" class="md-nav__link">
+        Python SDK 手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" tabindex="0" aria-expanded="false">
+          AntWar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AntWar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          AntWar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/info.pdf" class="md-nav__link">
+        游戏说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/player_manual.pdf" class="md-nav__link">
+        播放器操作指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../antwar/replay-guide.html" class="md-nav__link">
+        回放文件格式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geek-rabbit.html" class="md-nav__link">
+        疯狂 Geek 兔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    零、游戏包介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、鱼洋陷役游戏规则
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    二、编写AI代码简易教程
+  </a>
+  
+    <nav class="md-nav" aria-label="二、编写AI代码简易教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav" aria-label="C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    我应该在哪里写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    我应该怎么写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    我应该在哪里写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    我应该怎么写
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    三、本地编译
+  </a>
+  
+    <nav class="md-nav" aria-label="三、本地编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    AI编译
+  </a>
+  
+    <nav class="md-nav" aria-label="AI编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++
+  </a>
+  
+    <nav class="md-nav" aria-label="C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linuxmacos" class="md-nav__link">
+    Linux/MacOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    依赖库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-macos" class="md-nav__link">
+    Linux 或 macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    逻辑编译
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    四、本地测试
+  </a>
+  
+    <nav class="md-nav" aria-label="四、本地测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    环境说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    编译游戏逻辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    AI 和 AI 对战
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    测试模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    关于输出调试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    五、播放器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai_2" class="md-nav__link">
+    六、代码提交与AI对战
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">鱼洋陷役快速入门教程</h1>
+<p>这个文档的目的是帮助选手可以快速上手游戏并提交有效AI。</p>
+<div class="toc">
+<ul>
+<li><a href="#_1">鱼洋陷役快速入门教程</a><ul>
+<li><a href="#_2">零、游戏包介绍</a></li>
+<li><a href="#_3">一、鱼洋陷役游戏规则</a></li>
+<li><a href="#ai">二、编写AI代码简易教程</a><ul>
+<li><a href="#c">C++</a><ul>
+<li><a href="#_4">我应该在哪里写</a></li>
+<li><a href="#_5">我应该怎么写</a></li>
+<li><a href="#_6">总结</a></li>
+</ul>
+</li>
+<li><a href="#python">Python</a><ul>
+<li><a href="#_7">我应该在哪里写</a></li>
+<li><a href="#_8">我应该怎么写</a></li>
+<li><a href="#_9">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_10">三、本地编译</a><ul>
+<li><a href="#ai_1">AI编译</a><ul>
+<li><a href="#c_1">C++</a><ul>
+<li><a href="#linuxmacos">Linux/MacOS</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a href="#python_1">Python</a><ul>
+<li><a href="#_11">依赖库</a></li>
+<li><a href="#windows_1">Windows</a></li>
+<li><a href="#linux-macos">Linux 或 macOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_12">逻辑编译</a></li>
+</ul>
+</li>
+<li><a href="#_13">四、本地测试</a><ul>
+<li><a href="#_14">环境说明</a></li>
+<li><a href="#_15">使用说明</a><ul>
+<li><a href="#_16">编译游戏逻辑</a></li>
+<li><a href="#ai-ai">AI 和 AI 对战</a></li>
+<li><a href="#_17">测试模式</a></li>
+<li><a href="#_18">关于输出调试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_19">五、播放器</a></li>
+<li><a href="#ai_2">六、代码提交与AI对战</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">零、游戏包介绍</h2>
+<p>游戏包内有若干文件夹和两篇文档。两篇文档分别是<strong>必看文档</strong>和本文档，所以这里介绍一下各个文件夹的内容。</p>
+<ul>
+<li>AI_SDK：AI文件夹。这一个文件夹是AI所在的文件夹，后文介绍如何编写AI代码时提到的<strong>Action.cpp</strong>和<strong>Action.py</strong>就在本文件夹下。</li>
+<li>logic：逻辑文件夹，游戏逻辑代码在该文件夹下。</li>
+<li>judger：评测文件夹。本地评测所需要的python文件在该文件夹下。</li>
+</ul>
+<h2 id="_3">一、鱼洋陷役游戏规则</h2>
+<p>鱼洋陷役由两个玩家挑选角色、构建队伍、进行回合制对抗的SRPG游戏</p>
+<p>本游戏中的角色库中共有12条鱼，所有鱼都有相同的攻击力和血量值，但有着不完全相同的技能组（包括一个主动技能和一个被动技能）。</p>
+<p>双方玩家用12条鱼进行三轮比拼，每轮需要选择尚未被选择的4条鱼上场进行对战。三轮中获得两轮及以上胜利的玩家成为最终的胜者。</p>
+<p>详细规则请参见<a href="rules.html">游戏规则</a>文档。</p>
+<h2 id="ai">二、编写AI代码简易教程</h2>
+<h3 id="c">C++</h3>
+<p><strong>AI_SDK</strong>是给选手提供的AI开发工具包（以下简称<strong>SDK</strong>），其中<strong>Action.cpp</strong>是唯一需要选手修改的文件，如果需要添加新的文件，请对应修改makefile并确保编译成功。</p>
+<p>为帮助选手快速上手，我们提供了简易的<strong>Action_sample.cpp</strong>作为样例AI供选手参考</p>
+<h4 id="_4">我应该在哪里写</h4>
+<p>鱼洋陷役对战共有三种操作：<strong>选鱼</strong>，<strong>断言</strong>和<strong>攻击</strong>(<strong>主动</strong>)。这三个操作需要选手自行实现。</p>
+<p>选手实现的<strong>选鱼</strong>的功能需要写在<strong>Action.cpp</strong>中的<strong>Pick(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Pick</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>选手实现的<strong>断言</strong>功能需要写在<strong>Action.cpp</strong>中的<strong>Assert(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Assert</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>选手实现的<strong>攻击</strong>(<strong>主动</strong>)功能需要写在<strong>Action.cpp</strong>中的<strong>Act(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Action</span><span class="w"> </span><span class="nf">AI::Act</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">// TODO: fill your code</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>有基础和有兴趣的选手可以自行查看sdk内的代码并改动，但是请自行确保修改后的正确性。</p>
+<h4 id="_5">我应该怎么写</h4>
+<p>下面将编写一个最简单的AI来展示AI的编写流程。</p>
+<p><strong>【选鱼】</strong></p>
+<p>在<strong>Pick(Game)</strong>函数中，需要做的事情是挑选这一轮需要出战的鱼。</p>
+<p>查阅<a href="sdk.html">SDK手册</a>，可以调用函数<strong>get_my_remain_fishes()</strong>来知道还有哪些鱼能挑选。</p>
+<p>一个<strong>简易</strong>的AI就直接选择返回的前4条鱼就OK了，在<strong>Pick</strong>函数编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// 获取剩余的鱼</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">remain_fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_remain_fishes</span><span class="p">();</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">// 挑选的鱼的vector</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pick_fish</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">pick_fish</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// 挑选前四条鱼</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">// 特殊处理一下拟态鱼</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remain_fishes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="c1">// 固定拟态鱼模仿射水鱼</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="c1">// 将挑选的鱼放进vector里</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">pick_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">picked_fish_id</span><span class="p">);</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">return</span><span class="w"> </span><span class="n">pick_fish</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>【断言】</strong></p>
+<p>在<strong>Assert(Game)</strong>函数中，我需要做的事情是对敌方的一条鱼进行断言。</p>
+<p>断言操作是可选的，最<strong>简易</strong>的AI当然是什么都不做，跳过断言阶段。</p>
+<p>在<strong>Assert</strong>函数下编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="o">&lt;</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>【行动】</strong></p>
+<p>在<strong>Act(Game)</strong>函数中，需要做的事情是操作我的鱼进行进攻。</p>
+<p>查阅<a href="sdk.html">SDK手册</a>，有一个函数叫做<strong>auto_valid_action(int, Action*)</strong>，可以进行简单的自动行动，在<strong>Act</strong>函数下编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// 创建Action类的实例action</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">Action</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">game</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">// 获取我能出战的鱼的位置</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">my_pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">get_my_living_fishes</span><span class="p">())[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// 设置我出战的鱼</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">action</span><span class="p">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="n">my_pos</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">// 到我的回合了，自动行动！</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">auto_valid_action</span><span class="p">(</span><span class="n">my_pos</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">action</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">// 行动！</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">return</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="_6">总结</h4>
+<p>写出来的完整代码应该是长这样子的：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Action.cpp&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Pick</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="c1">// 获取剩余的鱼</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">my_remain_fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_my_remain_fishes</span><span class="p">();</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="c1">// 挑选的鱼的vector</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pick_fish</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">pick_fish</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="c1">// 挑选前四条鱼</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="c1">// 特殊处理一下拟态鱼</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_remain_fishes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="c1">// 固定拟态鱼模仿射水鱼</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="n">picked_fish_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">        </span><span class="c1">// 将挑选的鱼放进vector里</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="n">pick_fish</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">picked_fish_id</span><span class="p">);</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pick_fish</span><span class="p">;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="p">}</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Assert</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="p">{</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="o">&lt;</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="o">&gt;</span><span class="p">;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="p">}</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="n">Action</span><span class="w"> </span><span class="n">AI</span><span class="o">::</span><span class="n">Act</span><span class="p">(</span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="p">{</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="c1">// 创建Action类的实例action</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">    </span><span class="n">Action</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">game</span><span class="p">);</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="c1">// 获取我能出战的鱼的位置</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">my_pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">get_my_living_fishes</span><span class="p">())[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">    </span><span class="c1">// 设置我出战的鱼</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">    </span><span class="n">action</span><span class="p">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="n">my_pos</span><span class="p">);</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">    </span><span class="c1">// 到我的回合了，自动行动！</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">    </span><span class="n">auto_valid_action</span><span class="p">(</span><span class="n">my_pos</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">action</span><span class="p">);</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">    </span><span class="c1">// 行动！</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="p">}</span>
+</code></pre></div>
+<p>可以发现这个简易的AI使用的固定的出阵规则，完全没有利用断言功能，行动也没有充分利用场面信息，是一个智商不是很高的AI。如果你想编写出更厉害的AI，请查阅<a href="sdk.html">SDK手册</a>获取更多接口信息，也可以直接查看AI_SDK下的源码。</p>
+<p>但是至少我们已经成功编写了一个可以跑起来的AI了，在接下来的教程中，将教会大家如何进行本地测试和提交到评测网站进行对局。</p>
+<h3 id="python">Python</h3>
+<p><strong>AI_SDK</strong>是给选手提供的AI开发工具包（以下简称<strong>SDK</strong>），其中<strong>Action.py</strong>是唯一需要选手修改的文件。</p>
+<p>为帮助选手快速上手，我们提供了简易的<strong>Action_sample.py</strong>作为样例AI供选手参考</p>
+<h4 id="_7">我应该在哪里写</h4>
+<p>鱼洋陷役对战共有三种操作：<strong>选鱼</strong>，<strong>断言</strong>和<strong>攻击</strong>(<strong>主动</strong>)。这三个操作需要选手自行实现。</p>
+<p>选手实现的<strong>选鱼</strong>的功能需要写在<strong>Action.py</strong>中的<strong>Pick(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">Pick</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">AI</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="c1"># TODO: fill your code</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="o">...</span>
+</code></pre></div>
+<p>选手实现的<strong>断言</strong>功能需要写在<strong>Action.py</strong>中的<strong>Assert(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">Assert</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">AI</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="c1"># TODO: fill your code</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="o">...</span>
+</code></pre></div>
+<p>选手实现的<strong>攻击</strong>(<strong>主动</strong>)功能需要写在<strong>Action.py</strong>中的<strong>Act(Game)</strong>函数里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">Act</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">AI</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Action</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="c1"># TODO: fill your code</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="o">...</span>
+</code></pre></div>
+<p>有基础和有兴趣的选手可以自行查看sdk内的代码并改动，但是请自行确保修改后的正确性。</p>
+<h4 id="_8">我应该怎么写</h4>
+<p>下面将编写一个最简单的AI来展示AI的编写流程。</p>
+<p><strong>【选鱼】</strong></p>
+<p>在<strong>Pick(Game)</strong>函数中，需要做的事情是挑选这一轮需要出战的鱼。</p>
+<p>查阅<a href="sdk.html">SDK手册</a>，可以调用函数<strong>get_my_remain_fishes()</strong>来知道还有哪些鱼能挑选。</p>
+<p>一个<strong>简易</strong>的AI就直接选择返回的前4条鱼就OK了，在<strong>Pick</strong>函数编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># 获取剩余的鱼</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">remain_fishes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_my_remain_fishes</span><span class="p">()</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># 挑选的鱼的list</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">pick_fish</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span> <span class="c1"># 特殊处理一下拟态鱼</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="k">lambda</span> <span class="n">fish</span><span class="p">:</span> <span class="mi">13</span> <span class="k">if</span> <span class="n">fish</span> <span class="o">==</span> <span class="mi">12</span> <span class="k">else</span> <span class="n">fish</span><span class="p">,</span> <span class="c1"># 固定拟态鱼模仿射水鱼</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">remain_fishes</span><span class="p">))[:</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># 挑选前四条鱼</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">return</span> <span class="n">pick_fish</span>
+</code></pre></div>
+<p><strong>【断言】</strong></p>
+<p>在<strong>Assert(Game)</strong>函数中，我需要做的事情是对敌方的一条鱼进行断言。</p>
+<p>断言操作是可选的，最<strong>简易</strong>的AI当然是什么都不做，跳过断言阶段。</p>
+<p>在<strong>Assert</strong>函数下编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>【行动】</strong></p>
+<p>在<strong>Act(Game)</strong>函数中，需要做的事情是操作我的鱼进行进攻。</p>
+<p>查阅<a href="sdk.html">SDK手册</a>，有一个函数叫做<strong>auto_valid_action(int, Action)</strong>，可以进行简单的自动行动，在<strong>Act</strong>函数下编写代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># 创建Action类的实例action</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">action</span> <span class="o">=</span> <span class="n">Action</span><span class="p">(</span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># 获取我能出战的鱼的位置</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">my_pos</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_my_living_fishes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1"># 设置我出战的鱼</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">action</span><span class="o">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="n">my_pos</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># 到我的回合了，自动行动！</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_valid_action</span><span class="p">(</span><span class="n">my_pos</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_9">总结</h4>
+<p>写出来的完整代码应该是长这样子的：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">from</span> <span class="nn">sdk.ai_client</span> <span class="kn">import</span> <span class="n">Action</span><span class="p">,</span> <span class="n">AIClient</span><span class="p">,</span> <span class="n">Game</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">class</span> <span class="nc">AI</span><span class="p">(</span><span class="n">AIClient</span><span class="p">):</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    <span class="k">def</span> <span class="nf">Pick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        <span class="c1"># 获取剩余的鱼</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        <span class="n">remain_fishes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_my_remain_fishes</span><span class="p">()</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        <span class="c1"># 挑选的鱼的list</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>        <span class="n">pick_fish</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span> <span class="c1"># 特殊处理一下拟态鱼</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>            <span class="k">lambda</span> <span class="n">fish</span><span class="p">:</span> <span class="mi">13</span> <span class="k">if</span> <span class="n">fish</span> <span class="o">==</span> <span class="mi">12</span> <span class="k">else</span> <span class="n">fish</span><span class="p">,</span> <span class="c1"># 固定拟态鱼模仿射水鱼</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>            <span class="n">remain_fishes</span><span class="p">))[:</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># 挑选前四条鱼</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>        <span class="k">return</span> <span class="n">pick_fish</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="k">def</span> <span class="nf">Assert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>        <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="k">def</span> <span class="nf">Act</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game</span><span class="p">:</span> <span class="n">Game</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Action</span><span class="p">:</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="c1"># 创建Action类的实例action</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="n">action</span> <span class="o">=</span> <span class="n">Action</span><span class="p">(</span><span class="n">game</span><span class="p">)</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="c1"># 获取我能出战的鱼的位置</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>        <span class="n">my_pos</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_my_living_fishes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>        <span class="c1"># 设置我出战的鱼</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>        <span class="n">action</span><span class="o">.</span><span class="n">set_action_fish</span><span class="p">(</span><span class="n">my_pos</span><span class="p">)</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>        <span class="c1"># 到我的回合了，自动行动！</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_valid_action</span><span class="p">(</span><span class="n">my_pos</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+</code></pre></div>
+<p>可以发现这个简易的AI使用的固定的出阵规则，完全没有利用断言功能，行动也没有充分利用场面信息，是一个智商不是很高的AI。如果你想编写出更厉害的AI，请查阅<a href="sdk.html">SDK手册</a>获取更多接口信息，也可以直接查看AI_SDK下的源码。</p>
+<p>但是至少我们已经成功编写了一个可以跑起来的AI了，在接下来的教程中，将教会大家如何进行本地测试和提交到评测网站进行对局。</p>
+<h2 id="_10">三、本地编译</h2>
+<p>我们提供了Makefile文件来帮助大家把AI和逻辑编译成可执行文件。首先先介绍一下需要用到的工具：</p>
+<p><strong>g++</strong>：g++是编译c++文件的编译器。</p>
+<p><strong>make</strong>：make是协助编译的一种工具。</p>
+<ul>
+<li>对于<strong>MacOS</strong>系统而言，需要安装Xcode的<strong>Command Line Tools</strong>工具。首先在终端里运行<code>g++ -v</code>，如果出现版本信息则说明电脑上已经安装了g++；再在终端里运行<code>make</code>，如果提示没有目标则说明电脑上已经安装了make。否则，在Xcode的prefrence-&gt;components里找到<strong>Command Line Tools</strong>，点击安装即可。</li>
+<li>对于<strong>Linux</strong>而言，运行指令<code>sudo apt-get install g++ make -y</code>即可安装g++和make。</li>
+<li>对于Windows系统的选手而言，为了能够使用g++指令，需要使用<strong>MinGW</strong>工具进行安装。由于安装的教程长度比较长，所以请查阅游戏包中 Windows下的g++和make安装指导 文档获取安装教程。</li>
+</ul>
+<p><strong>CMake</strong>：CMake 是<strong>只在</strong>编译 Python AI SDK 使用的动态链接库时需要的工具。可以直接到 <a href="https://cmake.org/">CMake 官网</a>下载安装。</p>
+<p>介绍完工具，下面介绍怎么进行编译。</p>
+<h3 id="ai_1">AI编译</h3>
+<h4 id="c_1">C++</h4>
+<h5 id="linuxmacos">Linux/MacOS</h5>
+<p>打开终端(terminal)，进入到AI_SDK目录下（本目录下有一个名叫Makefile的文件，同时也有main.cpp，Action.cpp等文件），输入make，回车即可。在AI_SDK/C++/目录下可以找到生成的名为<strong>main</strong>的AI。</p>
+<h5 id="windows">Windows</h5>
+<p>进入到AI_SDK目录下（本目录下有一个名叫Makefile的文件，同时也有main.cpp，Action.cpp等文件），在上方的文件栏里输入<strong>cmd</strong>，按下回车就会弹出一个命令行窗口。在窗口里输入“make”，按下回车即可。在AI_SDK/C++/目录下可以找到生成的名为<strong>main</strong>的AI。</p>
+<p><strong>注意</strong>：对于 Windows 用户，如果提示 make 命令不存在，则可能需要将命令修改为 mingw32-make 后再次尝试。</p>
+<h4 id="python_1">Python</h4>
+<p>Python 版本的 AI SDK 是通过 pybind11 让 Python 调用 C++ 动态链接库实现的，因此您需要先将相关的 C++ 代码编译。在游戏包的 AI_SDK/Python/sdk/pyd/ 目录下，我们已经提供了预先编译好的适用于 Python 3.8 版本的动态链接库，您可以先尝试使用它们，如果无法 <code>import</code> 再自行编译。</p>
+<h5 id="_11">依赖库</h5>
+<p>需要安装 pybind11 2.6.x，例如使用 pip，在终端输入：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pybind11
+</code></pre></div>
+<p>而后，您需要将游戏包 AI_SDK/Python/sdk/CMakeLists.txt 的第 16 行修改为包含 pybind11Config.cmake 的目录。如果您是使用 pip 安装的话，可以通过命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>pip<span class="w"> </span>show<span class="w"> </span>pybind11
+</code></pre></div>
+<p>查看 pybind11 的安装目录，而后直接将 <code>&lt;pybind11-install-path&gt;</code> 改为对应的目录即可。</p>
+<h5 id="windows_1">Windows</h5>
+<p>由于 Windows 版本的 Python 是用 MSVC 编译的，因此也需要使用 MSVC 编译供 Python 调用的 C++ 动态链接库。如果您的 Python 不是 MSVC 编译的，请按照 Linux 版本的教程进行编译。</p>
+<p>在目录 AI_SDK/Python/sdk/ 下打开终端：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>cmake<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build
+</code></pre></div>
+<p>而后输入：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>devenv<span class="w"> </span>build/py_ai_sdk.sln<span class="w"> </span>/Build<span class="w"> </span>release
+</code></pre></div>
+<p>如果提示命令不存在，且您<strong>安装了 Visual Studio</strong>，则您需要将 devenv.com 所在目录添加至 PATH 环境变量。devenv.com 应该在形如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>C:<span class="se">\P</span>rogram<span class="w"> </span>Files<span class="w"> </span><span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft<span class="w"> </span>Visual<span class="w"> </span>Studio<span class="se">\2</span><span class="m">019</span><span class="se">\E</span>nterprise<span class="se">\C</span>ommon7<span class="se">\I</span>DE<span class="se">\</span>
+</code></pre></div>
+<p>的目录下。关于如何将一个目录添加至 PATH 环境变量，请自行查阅有关资料。</p>
+<p>编译好的动态链接库应该在 AI_SDK/Python/sdk/build/bin/Release/ 下，为 .pyd 文件。</p>
+<h5 id="linux-macos">Linux 或 macOS</h5>
+<p>在目录 AI_SDK/Python/sdk/ 下打开终端，输入：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>cmake<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">cd</span><span class="w"> </span>build
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>make
+</code></pre></div>
+<p>编译好的动态链接库应该在 AI_SDK/Python/sdk/build/bin/ 下，为 .so 文件。</p>
+<p><strong>注意</strong>：如果您的电脑中存在多个版本的 Python，请确保 CMake 找到的 Python 和运行 judger.py 的版本相同。如果 CMake 找到了错误的版本，可以将第 14 行的 “#” 去除，将 <code>&lt;Python-version&gt;</code> 替换为您运行 judger.py 的 Python 版本；如果还有问题，可以考虑去除第 13 行的 “#”，将 <code>&lt;Python-path&gt;</code> 替换为 Python 的安装目录。</p>
+<h3 id="_12">逻辑编译</h3>
+<p>逻辑编译同 C++ AI 的编译，只是目录不一样。</p>
+<p>进入到文件包中的logic/目录下，在这个目录里打开终端/cmd，运行make指令即可编译逻辑。编译成功的逻辑在文件包中的logic/bin/目录下，名为<strong>main</strong>。</p>
+<h2 id="_13">四、本地测试</h2>
+<p>使用本地测试功能需要先安装python3。没有python3的选手可以参考<a href="https://www.runoob.com/python3/python3-install.html">菜鸟教程</a>来安装python3。</p>
+<p>同时，judger的使用还需要pip3安装一些内容，所以还需要安装pip3。没有pip3的选手可以参考<a href="https://www.runoob.com/w3cnote/python-pip-install-usage.html">菜鸟教程</a>来安装pip3。</p>
+<h3 id="_14">环境说明</h3>
+<ul>
+<li>
+<p>Python 版本：建议版本为 3.7.6 及以上。</p>
+</li>
+<li>
+<p>依赖库：judger.py 依赖 websockets 库。以使用 pip 安装为例，在终端输入：</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>websockets
+</code></pre></div>
+<h3 id="_15">使用说明</h3>
+<p>judger.py 在游戏包的 judger/ 目录下，供选手进行简单的本地测试，提供了简陋的本地人人、人机和机机对战功能。</p>
+<p>需要<strong>注意</strong>的是，为了提高评测的安全性和选手的可调试性，以及出于性能方面的考虑，网站评测端进行了从架构到代码各方面的彻底重构，只兼容了 judger.py 的接口和通信协议。由于本地环境和网站评测环境可能存在差异，且 judger.py 和网站评测在输入输出限制和空间限制等方面略有不同，因此通过了 judger.py 的测试并不能代表提交到网站上就绝对没有问题。但是使用 judger.py 进行测试可以帮助您在提交到网站上之前发现绝大多数的错误。</p>
+<h4 id="_16">编译游戏逻辑</h4>
+<p>您需要先将游戏包中 logic/ 目录下的游戏逻辑模块编译为可执行文件，流程和编译 AI 的完全一样，请参考编译部分的教程，这里不再赘述。</p>
+<h4 id="ai-ai">AI 和 AI 对战</h4>
+<p>在 judger.py 所在目录下（interactive_judger/）使用命令行参数启动，格式如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>python<span class="w"> </span>judger.py<span class="w"> </span>&lt;游戏逻辑的可执行文件路径&gt;<span class="w"> </span>&lt;0号AI启动命令&gt;<span class="w"> </span>&lt;1号AI启动命令&gt;<span class="w"> </span>&lt;配置信息&gt;<span class="w"> </span>&lt;回放文件输出路径&gt;
+</code></pre></div>
+<p>其中：</p>
+<ul>
+<li>
+<p>文件路径应为绝对路径或相对于 judger.py 的路径。</p>
+</li>
+<li>
+<p>AI 启动指令：</p>
+<ul>
+<li>
+<p>若 AI 为 Python 脚本，则命令为将普通的运行命令中空格替换为“+”号后的命令。例如，原本是<code>python ../my_ai/main.py</code>，应输入<code>python+../my_ai/main.py</code>。</p>
+</li>
+<li>
+<p>若 AI 为可执行文件，则启动命令为该可执行文件的路径。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>配置信息：这是一个暂时废弃的参数，随便输入一个字符串即可，如 <code>config</code>.</p>
+</li>
+<li>
+<p>回放文件输出路径：根据您的需要指定即可。请<strong>注意</strong>，回放文件是 JSON 格式，因此最好将文件名指定为 *.json.</p>
+</li>
+</ul>
+<p>一个可行的示例如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>python<span class="w"> </span>judger.py<span class="w"> </span>../logic/bin/main.exe<span class="w"> </span>python+../ai_0/main.py<span class="w"> </span>../ai_1/main.exe<span class="w"> </span>config<span class="w"> </span>../replay.json
+</code></pre></div>
+<p>其中，0 号 AI 为从 ../ai_0/main.py 启动的 Python 脚本，1 号 AI 为一个可执行文件，其相对于 judger.py 的路径为 ../ai_1/main.exe.</p>
+<p>运行命令后，终端会输出一些含有 <code>type</code> 和 <code>success</code> 之类的信息，如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&amp;{&quot;type&quot;: 4, &quot;success&quot;: 1, &quot;index&quot;: -1}
+</code></pre></div>
+<p>这是软件工程单元测试时使用的一些废弃协议，您可以忽略。</p>
+<p>在对战结束后，终端会有关于玩家分数的输出，例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>有关分数的定义，请参考游戏规则的说明文档。</p>
+<p>在对战结束后，您可在先前指定的路径下找到回放文件，可以使用播放器进行对局回放，详见播放器的使用说明文档。此外，如果你在ai中调用了<strong>debug_msg</strong>函数，则judger.py 所在目录下还会有你输出信息的文本记录<strong>ai_debug_info.txt</strong>用于调试。</p>
+<h4 id="_17">测试模式</h4>
+<p>在 judger.py 所在目录下打开终端：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>python<span class="w"> </span>judger.py<span class="w"> </span>test_mode
+</code></pre></div>
+<p>将进入较简陋的用于测试的测试模式，您可以输入 <code>help</code> 来查看可以使用的命令。</p>
+<ol>
+<li>启动 AI：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>0 &lt;玩家ID&gt; &lt;AI启动指令&gt;
+</code></pre></div>
+<p>其中 <code>玩家ID</code> 为 0 或 1，即先后手，对应于前一节的 AI 编号；<code>&lt;AI启动指令&gt;</code> 与前一节中的格式相同。一个示例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>0 0 python+../ai_0/main.py
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>0 1 ../ai_1/main.exe
+</code></pre></div>
+<ol>
+<li>添加人类玩家：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>1 &lt;玩家ID&gt; &lt;IP地址&gt; &lt;端口号&gt; &lt;房间号&gt;
+</code></pre></div>
+<p>其中<code>玩家ID</code>为 0 或 1，与上一节描述相同。对于本地测试而言，<code>IP地址</code>填<code>127.0.0.1</code>，<code>端口号</code>为一个整数，须确保没有被其他进程占用，<code>房间号</code>是废弃的协议，随便输入个数字即可。</p>
+<p>一个样例指令如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>1 1 127.0.0.1 9010 1
+</code></pre></div>
+<p>之后打开您的播放器, 在“在线对局”模式下输入</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&lt;IP地址&gt;:&lt;端口号&gt;/&lt;房间号&gt;/&lt;玩家名称&gt;/&lt;玩家ID&gt;
+</code></pre></div>
+<p>其中，<code>IP地址</code>、<code>端口号</code>、<code>房间号</code>、<code>玩家ID</code>与之前所描述的相同，<code>玩家名称</code>随便填入一个字符串即可。</p>
+<p>一个可行的样例是（对应上面的指令）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>127.0.0.1:9010/1/Aglove/1
+</code></pre></div>
+<p>在输入token后点击确定，播放器会提示你“连接成功，等待对手中”。</p>
+<p>在双方玩家无论是AI还是人类都已经启动或者连接成功后，进入下一环节。</p>
+<ol>
+<li>开始对战：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>4 &lt;游戏逻辑的可执行文件路径&gt; &lt;配置信息&gt; &lt;回放文件输出路径&gt;
+</code></pre></div>
+<p>其中的命令与前一节中的格式相同。一个示例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>4 ../logic/bin/main.exe config ../replay.json
+</code></pre></div>
+<ol>
+<li>对战结束：judger.py 的行为与前一节中的相同。</li>
+</ol>
+<p><strong>注意</strong>：测试模式下，命令的格式检查比较严格，参数间若含有多个空格，可能会引发错误。</p>
+<h4 id="_18">关于输出调试</h4>
+<p>judger.py 将 AI 和游戏逻辑的标准输入输出都进行了重定向，因此不建议您使用标准输入输出进行调试。几种可行的输出调试方案如下：</p>
+<ul>
+<li>将调试信息输出到文件。我们建议您在每次输出后及时进行 flush，以避免当 AI 进程结束后仍有部分消息在缓冲区中而没有写入文件。</li>
+<li>修改 judger.py. 由于 judger.py 的标准输入输出没有被重定向，因此您可以在其中添加一些语句以输出可供您调试使用的信息。如果您不想仔细研究 judger.py 的代码，可以只关注 <code>Player</code> 类的 <code>write</code> 方法和 <code>Judger</code> 类的 <code>write</code> 方法，分别对应着游戏逻辑向 AI 发送的消息和 AI 向游戏逻辑发送的消息。</li>
+<li>修改游戏逻辑的代码。您可以在游戏逻辑中添加一些语句，将一些变量输出到文件中（<strong>注意</strong>：游戏逻辑的标准输入输出将被重定向）。由于游戏逻辑的代码文件较多，您可以只关注 aqua_sdk.cpp 中的内容。</li>
+</ul>
+<h2 id="_19">五、播放器</h2>
+<p>播放器是用来将对局可视化的一个工具。AI对战生成的回放文件可以放进播放器里进行播放，具体内容参考游戏包中<strong>doc</strong>目录下的<strong>附录四 播放器使用说明</strong>。</p>
+<h2 id="ai_2">六、代码提交与AI对战</h2>
+<p>选手测试完AI之后，将需要把代码提交到<a href="https://www.saiblo.net">saiblo</a>上。关于如何提交代码到saiblo上和如何使用AI进行对战，请参考游戏包中<strong>doc</strong>目录下的<strong>附录五 AI的提交与对战</strong>。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
