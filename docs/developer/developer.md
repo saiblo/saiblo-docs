@@ -12,7 +12,31 @@
 
 ## 零、平台架构与游戏流程
 
-![](img/saiblo-structure.png)
+```mermaid
+graph TD
+    A[网站前端] -->|用户交互| B[网站后端]
+    B -->|请求对局/反馈结果| C[评测控制器]
+    C -->|编译| D[评测编译器]
+    C -->|控制对局/反馈结果| E[裁判程序]
+    E <-->|通信| F[选手的 AI 们]
+    E <-->|通信| G[游戏逻辑]
+
+    subgraph "对局进行：本文档的核心主题"
+        E
+        F
+        G
+    end
+
+    style A fill:#fff,stroke:#333,color:#007acc
+    style B fill:#fff,stroke:#333,color:#007acc
+    style C fill:#fff,stroke:#333,color:#007acc
+    style D fill:#fff,stroke:#333,color:#007acc
+    style E fill:#fff,stroke:#333,color:#007acc
+    style F fill:#fff,stroke:#333,color:#007acc
+    style G fill:#fff,stroke:#333,color:#007acc
+
+    linkStyle 0,1,2,3,4,5 stroke:#007acc,stroke-width:2px
+```
 
 ## 一、游戏逻辑
 
